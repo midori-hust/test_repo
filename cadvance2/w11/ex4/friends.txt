@@ -1,0 +1,4 @@
+Binh: Nam 3, Mai 8, Hung 5
+Hung: Hien 6, Trang 4
+Nam: Trang 9
+Mai: Binh 1, Trang 7

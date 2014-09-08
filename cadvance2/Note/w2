@@ -1,0 +1,14 @@
+Bo sung vao menu chuong trinh case study 1
+
+3. Them du lieu (phonecall.log)
+Input: n la si % du lieu moi. Khi n = 10 nhu vay du lieu da sap xep duoc tinh la 90% => tu do tinh duoc them can them moi bao nhieu du lieu
+Sinh ra du lieu ngau nhien duoc them vao duoi danh sach da sap xep
+Chay lai 3 thuat toan va bao cao lai ket qua
+Chu y: file RunningTime.txt duoc ghi noi tiep va co cau truc vi du nhu sau:
+
+Lan chay 1.
+So luong du lieu: 10000
+QuickSort: 10s - Insertion sort 100s - Selection Sort 200s
+Lan chay 2.
+So luong du lieu: 12000
+QuickSort: 12s - Insertion sort 10s - Selection Sort 250s

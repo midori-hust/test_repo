@@ -1,0 +1,5 @@
+How to use qsort() to sort an array in descendant order
+Thuc hien sap xep vi tri tren bang theo chieu giam dan
+
+Write your own generalized quick sort function (using 3-way partitioning algorithm)
+Lam bai tap loc email voi quick sort 3 duong, so sanh voi quick sort 2 duong, in ra thoi gian tren man hinh

@@ -1,0 +1,39 @@
+Bai 1:
+Write Jval TEST program which has the following interface
+Menu level 1:
+	1. Integer Data Type
+	2. String
+	3. Struct
+	4. Exit
+
+Menu level 2:
+	1. Create data
+	2. Sequential Search
+	3. Sort
+	4. Binary Search
+	5. Back
+
+(DONE)
+
+Dung du lieu phone, ip, domain... gi cung duoc
+Dung 1 tap Jval chung cho chuc nang menu
+
+
+Bai 2: Implement your Symbol Table data structure using Jval. Using it for the WebFilter exercise (or dictionary exercise)
+Suggestion for declaration of data type
+typedef struct {
+	Jval key;
+	Jval value;
+} Entry;
+
+Define a generic structure for symbol tables
+typedef struct {
+	Entry * entries;
+	int size, total;
+	Entry (*makeNode)(Jval*, Jval*);
+	int (*compare)(Jval*, Jval*);
+} SymbolTable;
+
+Bai 3:
+Viet lai bai tu dien bang Jval
+Sap xep roi tim kiem nhi phan

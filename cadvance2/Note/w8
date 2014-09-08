@@ -1,0 +1,21 @@
+Gui mail cho thay vao dia chi sau:
+cadvanced2011@gmail.com
+
+Bai tap tren lop: 
+Write a program that takes as command-line argument the name of a file containing a dictionary of words, and then reads strings from standard input and prints out any string that is not in the dictionary. Use the 600 000 + word dictionary words.utf-8.txt (DONE)
+
+B1:
+Write a program using Generic Symbol Table data structure (BST) that load the data in the file ip-to-country.csv to determine what country a given IP address is coming from. The data file has 5 fields
+	Beginning of IP address range
+	Ending of IP address range
+	Two character country code
+	Three character country code
+	And country name
+The IP address are non-overlapping
+Such a database tool can be used for: (DONE)
+
+A.B.C.D
+A*255^3 + B* 255^2 + C*255 + D
+
+B2: Viet chuong trinh web blocker tham so dong lenh, doi so la file chua danh sach cac file bi cam (domain.txt).
+Sau do, nhan cac duong dan dia chi web tu ban phim, in ra nhung trang web duoc chap nhan. (DONE)

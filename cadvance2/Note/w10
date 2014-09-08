@@ -1,0 +1,25 @@
+Iplookup
+Write a program using BST that load the data in the file ip-to-country to determine what country a given IP address is coming from. The data file has five fields
+	+ beginning of IP address range
+	+ ending of IP address range
+	+ two character country code
+	+ three character country code
+	+ and country name
+
+The IP address are non-overlapping
+Such a database tool can be used for: credit card fraud detection, span filtering, auto-selection of languageon a website, and web server log analysis.
+B/ Exercise: improve this program so that it can be used as a auto-selection of language on a website
+	+ First you make a list of IP address of users that access to your website
+	+ Base on the country of this user, propose the language of website
+(DONE)
+
+BT2:
+Phat trien Spell checking su dung thu vien JRB
+	Huong thuc hien: tu file du lieu - day cac tu vao cay do den. Tim kiem trong cay.
+
+Interface
+JRB spell checking
+1. Build Tree from data file
+2. Spell checking
+3. Exit
+(DONE)

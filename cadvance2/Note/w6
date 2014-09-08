@@ -1,0 +1,19 @@
+Ex1:
+Develop yourself a generic sort function based on the algorithm given in lesson 1
+
+void q3sort(
+	void *buf,
+	size_t num,
+	size_t size,
+	int (*compare)(void const *, void const *));
+
+Rewrite your programs in lesson 1 using the generic sort function
+
+
+Ex2:
+Develop yourself the following generic functions
++Find the min, the max of in a set of elements
++Reverse the array
++Find the maximal number of duplicated elements in array
+	Return the maximal number
+	Return the index of duplicated element in a parameter

@@ -1,0 +1,20 @@
+Ex1: Continue with the exercise about metro station
+Write a function that print out a unweighted shortest path between two given vertices and return its length
+
+int UShortestPath(Graph graph, int v1, int v2);
+(DONE)
+
+Ex2: Use your graph library using JRB to
+	+ Create a graph as the following figure (DONE)
+	+ check the connectivity if this graph (DONE)
+	+ print out the distance of two vertices given by user
+
+Tim theo chieu sau, tim theo chieu rong, in ra duong di theo chieu sau, in ra duong di theo chieu rong, (DONE)
+Duyet 1 dinh => in ra cac dinh con lai (DONE)
+Tinh khoang cach (BFS) giua 2 dinh (DONE)
+Ushortes (DONE)
+
+DFS: tim duong di giua 2 dinh (1 dinh va v1 v2) (DONE)
+Kiem tra la chu trinh hay khong
+
+Ap dung vao bai metro

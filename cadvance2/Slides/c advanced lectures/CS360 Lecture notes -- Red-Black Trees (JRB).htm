@@ -1,0 +1,377 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0063)http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/ -->
+<HTML><HEAD><TITLE>CS360 Lecture notes -- Red-Black Trees (JRB)</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff>
+<H1><A href="http://www.cs.utk.edu/~plank/plank/classes/cs360">CS360</A> Lecture 
+notes -- Red-Black Trees (JRB)</H1>
+<LI><A href="http://www.cs.utk.edu/~plank">Jim Plank</A> 
+<LI>Directory: <B>~plank/plank/classes/cs360/360/www-home/notes/JRB</B> 
+<LI>Lecture notes: <A 
+href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB"><B>http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB</B></A> 
+
+<LI>Fri Aug 27 16:03:04 EDT 1999 
+<HR>
+
+<HR>
+
+<H3>Compiling</H3>In order to use the red-black tree library, you should include 
+the file "jrb.h", which can be found in 
+<B>/blugreen/homes/plank/cs360/include</B>. Instead of including the full path 
+name in your C file, just do: <PRE>#include "jrb.h",
+</PRE>and then compile the program with: <PRE>gcc -I/blugreen/homes/plank/cs360/include
+</PRE>When you link your object files to make an executable, follow the 
+directions in the <A 
+href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/Libfdr">libfdr 
+lecture notes</A>. 
+<P>The makefile in this directory does both of these things for you. 
+<H2>Red-Black Trees</H2>Rb-trees are data structures based on balanced binary 
+trees. You don't need to know how they work -- just that they do work, and all 
+operations are in <I>O(log(n))</I> time, where <I>n</I> is the number of 
+elements in the tree. (If you really want to know more about red-black trees, 
+let me know and I can point you to some texts on them). 
+<P>The main struct for rb-trees is the <B>JRB</B>. Like dllists, all rb-trees 
+have a header node. You create a rb-tree by calling <B>make_jrb()</B>, which 
+returns a pointer to the header node of an empty rb-tree. This header points to 
+the main body of the rb-tree, which you don't need to care about, and to the 
+first and last external nodes of the tree. These external nodes are hooked 
+together with flink and blink pointers, so that you can view rb-trees as being 
+dlists with the property that they are sorted, and you can find any node in the 
+tree in <I>O(log(n))</I> time. 
+<P>Like dllists, each node in the tree has a <B>val</B> field, which is a Jval. 
+Additionally, each node has a <B>key</B> field, which is also a Jval. The 
+rb-tree tree makes sure that the keys are sorted. How they are sorted depends on 
+the tree. 
+<P>
+<HR>
+
+<H2>_str, _int, _dbl, _gen</H2>The jrb tree routines in <B>jrb.h/jrb.c</B> 
+implement four types of insertion/searching routines. The insertion routines 
+are: 
+<UL>
+  <LI><B>JRB jrb_insert_str(JRB tree, char *key, Jval val)</B>: insert a new 
+  node into the tree using a standard character string as the key. 
+  <B>Strcmp()</B> is used as the comparison function. See <A 
+  href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/strsort.c"><B>strsort.c</B></A> 
+  for a simple example of sorting standard input lexicographically with 
+  <B>jrb_insert_str()</B>. 
+  <P>Note that it returns a pointer to the new jrb tree node. Also note that if 
+  the key is already in the tree, then it still creates a new node and puts it 
+  into the tree. No guarantees are made concerning the relative ordering of 
+  duplicate keys. 
+  <P>Even though the key is a string, it will be converted into a <B>Jval</B> in 
+  the new node. Thus, if you want to get at the key of node <B>s</B>, you should 
+  either use <B>jval_s(s-&gt;key)</B> or <B>s-&gt;key.s</B>. 
+  <P></P>
+  <LI><B>JRB jrb_insert_int(JRB tree, int key, Jval val)</B>: insert into the 
+  tree using an integer as the key. See <A 
+  href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/nsort.c"><B>nsort.c</B></A> 
+  for an example of this. 
+  <P></P>
+  <LI><B>JRB jrb_insert_dbl(JRB tree, double key, Jval val)</B>: insert into the 
+  tree using a <B>double</B> as the key. 
+  <P></P>
+  <LI><B>JRB jrb_insert_gen(JRB tree, Jval key, Jval val, int (*func)(Jval, 
+  Jval))</B>: Now, your key is a <B>jval</B>. You provide a comparison function 
+  <B>func()</B>, which takes two <B>Jval</B>'s as arguments, and returns: 
+  <P>
+  <UL>
+    <LI>a negative integer if the first key is less than the second. 
+    <LI>a positive integer if the first key is greater than the second. 
+    <LI>zero if the keys are equal. </LI></UL>
+  <P>This lets you do more sophisticated things than simply sorting with 
+  integers and strings. For example, <A 
+  href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/strisort.c"><B>strisort.c</B></A> 
+  sorts strings but ignores case. <A 
+  href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/strrsort2.c"><B>strrsort2.c</B></A> 
+  sorts strings in reverse order. Read these over. </P></LI></UL>You can't mix and 
+match comparison functions within the same tree. In other words, you shouldn't 
+insert some keys with <B>jrb_insert_str()</B> and some with 
+<B>jrb_insert_int()</B>. To do so will be begging for a core dump. 
+<P>To find keys, you use one of <B>jrb_find_str()</B>, <B>jrb_find_int()</B>, 
+<B>jrb_find_dbl()</B> or <B>jrb_find_gen()</B>. Obviously, if you inserted keys 
+with <B>jrb_insert_str()</B>, then you should use <B>jrb_find_str()</B> to find 
+them. If the key that you're looking for is not in the tree, then 
+<B>jrb_find_<I>xxx</I>()</B> returns NULL. 
+<P>Finally, there are also: <B>jrb_find_gte_str()</B>, 
+<B>jrb_find_gte_int()</B>, <B>jrb_find_gte_dbl()</B> and 
+<B>jrb_find_gte_gen()</B>. These return the jrb tree node whose key is either 
+equal to the specified key, or whose key is the smallest one greater than the 
+specified key. If the specified key is greater than any in the tree, it will 
+return a pointer to the sentinel node. It has an argument <B>found</B> that is 
+set to tell you if the key was found or not. 
+<HR>
+You may use the macros <B>jrb_first()</B>, <B>jrb_last()</B>, <B>jrb_prev()</B> 
+and <B>jrb_next()</B>, just like their counterparts in the dllist library. 
+<HR>
+
+<H3>Example programs:</H3>
+<UL>
+  <LI><A 
+  href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/strsort.c"><B>strsort.c</B></A>: 
+  Uses red-black trees to sort standard input lexicographically. 
+  <LI><A 
+  href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/strrsort1.c"><B>strrsort1.c</B></A>: 
+  Uses red-black trees to sort standard input lexicographically in reverse 
+  order. It does this by traversing the tree in reverse order. 
+  <LI><A 
+  href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/strrsort2.c"><B>strrsort2.c</B></A>: 
+  Uses red-black trees to sort standard input lexicographically in reverse 
+  order. It does this by creating a new comparison function <B>revcomp</B>, 
+  which simply returns <B>-strcmp()</B>. Now the tree sorts in reverse order, so 
+  it is traversed in the forward direction. 
+  <LI><A 
+  href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/strusort.c"><B>strusort.c</B></A>: 
+  Uses red-black trees to sort standard input lexicographically, and it removes 
+  duplicate lines. It does this by checking for a line before inserting it into 
+  the tree. 
+  <LI><A 
+  href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/strisort.c"><B>strisort.c</B></A>: 
+  Uses red-black trees to sort standard input lexicographically, ignoring upper 
+  and lower case. It does this by creating a new comparison function 
+  <B>ucomp</B>, which duplicates <B>strcmp()</B>'s functionality but ignores 
+  case. 
+  <LI><A 
+  href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/nsort.c"><B>nsort.c</B></A>: 
+  Uses red-black trees to sort like <B>sort -n</B> -- i.e. it treats each line 
+  as an integer, and sorts it that way. If the lines are not integers, or there 
+  are duplicate lines, anything goes. 
+  <LI><A 
+  href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/nsort2.c"><B>nsort2.c</B></A>: 
+  Uses red-black trees to sort like <B>sort -n</B> only now if two lines have 
+  the same <B>atoi()</B> value, then they are sorted lexicographically. This 
+  uses <B>jrb_insert_gen()</B>. 
+  <LI><A 
+  href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/nsort3.c"><B>nsort3.c</B></A>: 
+  Same as <B>nsort2</B>, but instead it uses a two-level red-black tree. See 
+  below for explanation. </LI></UL>
+<H3>A two-level tree example</H3>Suppose we want to sort lines of text by their 
+<B>atoi()</B> value, but when two strings have the same <B>atoi()</B> value, to 
+sort them lexicographically. One way to do this is go use a beefed up comparison 
+function and then insert lines with <B>jrb_insert_gen()</B>, as in <A 
+href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/nsort2.c"><B>nsort2.c</B></A>. 
+Try it on <A 
+href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/input_n2"><B>input_n2</B></A>. 
+
+<P>A second way to do this is to have a two-level tree. The first tree has 
+integers as keys and is based on the <B>atoi()</B> value of each line. The 
+<B>val</B> field of each node, however, is another red-black tree. This 
+red-black tree contains each line whose <B>atoi()</B> value is equal to the key 
+of the node, sorted lexicographically. Thus, when you read a line, you first see 
+if its <B>atoi()</B> value is in the tree. If so, you get a pointer to the val 
+field of that node. Of not, you insert a new node into the tree whose key is the 
+<B>atoi()</B>, and whose <B>val</B> field is a new, empty red-black tree. Now, 
+you have a pointer to the red-black tree in the <B>val</B> field of the node 
+whose key is the <B>atoi()</B> value of the string. What you do now is insert 
+the string into this second red-black tree using <B>jrb_insert_str()</B>. When 
+you're done, you have a big two-level red-black tree. You traverse it by 
+traversing the top level tree, and for each node in that tree, you traverse the 
+tree in its <B>val</B> field and print out the strings. See the code. It is in 
+<A 
+href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/nsort3.c"><B>nsort3.c</B></A>. 
+
+<H3>Another Example: ``Golf''</H3>Here's a typical example of using a red-black 
+tree. Suppose we have a bunch of files with golf scores. Examples are in <A 
+href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/1998_Majors"><B>1998_Majors</B></A> 
+and <A 
+href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/1999_Majors"><B>1999_Majors</B></A>. 
+The format of these files is: <PRE><B>Name     sunday-score</B> F <B>total-score</B>
+</PRE>For example, the first few lines of <A 
+href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/1999_Majors/Masters"><B>1999_Majors/Masters</B></A> 
+are: <PRE>Jose Maria Olazabal                 -1 F -8
+Davis Love III                      -1 F -6
+Greg Norman                         +1 F -5
+Bob Estes                           +0 F -4
+Steve Pate                          +1 F -4
+David Duval                         -2 F -3
+Phil Mickelson                      -1 F -3
+...
+</PRE>Note that the name can have any number of words. 
+<P>Now, suppose that we want to do some data processing on these files. For 
+example, suppose we'd like to sort each player so that we first print out the 
+players that have played the most tournaments, and then within that, we sort by 
+the player with the lowest average score. 
+<P>This is what <A 
+href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/golf.c"><B>golf.c</B></A> 
+does. It takes score files on the command line, then reads in all the players 
+and scores. Then it sorts them by number of tournaments/average score, and 
+prints them out in that order, along with their score for each tournament. For 
+example, look at <A 
+href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/score1"><B>score1</B></A>: 
+<PRE>Jose Maria Olazabal                 -1 F -8
+Davis Love III                      -1 F -6
+Greg Norman                         +1 F -5
+</PRE>and <A 
+href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB/score2"><B>score2</B></A>: 
+<PRE>Greg Norman                          +1  F +9
+David Frost                          +3  F +10
+Davis Love III                       -2  F +11
+</PRE>The <B>golf</B> program reads in these two files, and ranks the four 
+players by number of tournaments, and then average score: <PRE>UNIX&gt; <B>golf score1 score2</B>
+Greg Norman                              :   2 tournaments :    2.00
+   -5 : score1
+    9 : score2
+Davis Love III                           :   2 tournaments :    2.50
+   -6 : score1
+   11 : score2
+Jose Maria Olazabal                      :   1 tournament  :   -8.00
+   -8 : score1
+David Frost                              :   1 tournament  :   10.00
+   10 : score2
+</PRE>
+<P>Ok, now how does <B>golf</B> work? Well it works in three phases. In the 
+first phase, it reads the input files to create a struct for each golfer. The 
+data structure for this is a red-black tree keyed on the golfer's name, and 
+whose val fields are <B>Golfer</B> structs that have the following defintion: <PRE>typedef struct {
+  char *name;
+  int ntourn;
+  int tscore;
+  Dllist scores;
+} Golfer;
+</PRE>The first three fields are obvious. The last field is a list of the 
+golfer's scores. Each element of the list points to a <B>Score</B> struct with 
+the following definition: <PRE>typedef struct {
+  char *tname;             /* File name */
+  int score;               /* Total score */
+} Score;
+</PRE>Note, in each file, we are going to ignore the ``sunday score.'' 
+<P>So, to read in the golfers, we create the jrb tree <B>golfers</B>, and then 
+read in each line of each input file. For each line, we construct the golfer's 
+name, and then we look to see if the golfer has an entry in the <B>golfers</B> 
+tree. If there is no such entry, then one is created. Once the entry is 
+found/created, the score for that file is added. When all the files have been 
+read, phase 1 is completed: <PRE>  Golfer *g;
+  Score *s;
+  JRB golfers, rnode;
+  int i, fn;
+  int tmp;
+  IS is;
+  char name[1000];
+  Dllist dnode;
+
+  golfers = make_jrb();
+
+  for (fn = 1; fn &lt; argc; fn++) {
+    is = new_inputstruct(argv[fn]);
+    if (is == NULL) { perror(argv[fn]); exit(1); }
+
+    while(get_line(is) &gt;= 0) {
+
+      /* Error check each line */
+
+      if (is-&gt;NF &lt; 4 || strcmp(is-&gt;fields[is-&gt;NF-2], "F") != 0 ||
+          sscanf(is-&gt;fields[is-&gt;NF-1], "%d", &amp;tmp) != 1 ||
+          sscanf(is-&gt;fields[is-&gt;NF-3], "%d", &amp;tmp) != 1) {
+        fprintf(stderr, "File %s, Line %d: Not the proper format\n",
+          is-&gt;name, is-&gt;line);
+        exit(1);
+      }
+      
+      /* Construct the golfer's name */
+      strcpy(name, is-&gt;fields[0]);
+      for (i = 1; i &lt; is-&gt;NF-3; i++) {
+        strcat(name, " ");
+        strcat(name, is-&gt;fields[i]);
+      }
+      
+      /* Search for the name */
+
+      rnode = jrb_find_str(golfers, name);
+
+      /* Create an entry if none exists. */
+
+      if (rnode == NULL) {
+        g = (Golfer *) malloc(sizeof(Golfer));
+        g-&gt;name = strdup(name);
+        g-&gt;ntourn = 0;
+        g-&gt;tscore = 0;
+        g-&gt;scores = new_dllist();
+        jrb_insert_str(golfers, g-&gt;name, new_jval_v(g));
+      } else {
+        g = (Golfer *) rnode-&gt;val.v;
+      }
+
+      /* Add the information to the golfer's struct */
+
+      s = (Score *) malloc(sizeof(Score));
+      s-&gt;tname = argv[fn];
+      s-&gt;score = atoi(is-&gt;fields[is-&gt;NF-1]);
+      g-&gt;ntourn++;
+      g-&gt;tscore += s-&gt;score;
+      dll_append(g-&gt;scores, new_jval_v(s));
+    }
+
+    /* Go on to the next file */
+
+    jettison_inputstruct(is);
+  }
+
+</PRE>Now, this gives us all the information on the golfers, but they are sorted 
+by the golfers' names, not by number of tournaments / average score. Thus, in 
+phase 2, we construct a second red-black tree which will sort the golfers 
+correctly. To do this, we need to construct our own comparison function that 
+compares golfers by number of tournaments / average score. Here is the 
+comparison function: <PRE>int golfercomp(Jval j1, Jval j2)
+{
+  Golfer *g1, *g2;
+
+  g1 = (Golfer *) j1.v;
+  g2 = (Golfer *) j2.v;
+
+  if (g1-&gt;ntourn &gt; g2-&gt;ntourn) return 1;
+  if (g1-&gt;ntourn &lt; g2-&gt;ntourn) return -1;
+  if (g1-&gt;tscore &lt; g2-&gt;tscore) return 1;
+  if (g1-&gt;tscore &gt; g2-&gt;tscore) return -1;
+  return 0;
+}
+</PRE>And here is the part of <B>main</B> where the second red-black tree is 
+built: <PRE>
+  sorted_golfers = make_jrb();
+
+  jrb_traverse(rnode, golfers) {
+    jrb_insert_gen(sorted_golfers, rnode-&gt;val, JNULL, golfercomp);
+  }
+
+</PRE>Note, you pass a <B>Jval</B> to <B>jrb_insert_gen</B>. 
+<P>Finally, the third phase is to traverse the <B>sorted_golfers</B> tree, 
+printing out the correct information for each golfer. This is straightforward, 
+and done below: <PRE>  jrb_rtraverse(rnode, sorted_golfers) {
+    g = (Golfer *) rnode-&gt;key.v;
+    printf("%-40s : %3d tournament%1s : %7.2f\n", g-&gt;name, g-&gt;ntourn,
+           (g-&gt;ntourn == 1) ? "" : "s", 
+           (float) g-&gt;tscore / (float) g-&gt;ntourn);
+    dll_traverse(dnode, g-&gt;scores) {
+      s = (Score *) dnode-&gt;val.v;
+      printf("  %3d : %s\n", s-&gt;score, s-&gt;tname);
+    }
+  }
+</PRE>Try it out. You'll see that Tiger Woods did the best in all four majors 
+this year: <PRE>UNIX&gt; <B>golf 1999_Majors/*</B>
+Tiger Woods                              :   4 tournaments :    0.25
+   10 : 1999_Majors/British_Open
+    1 : 1999_Majors/Masters
+  -11 : 1999_Majors/PGA_Champ
+    1 : 1999_Majors/US_Open
+Colin Montgomerie                        :   4 tournaments :    3.75
+   12 : 1999_Majors/British_Open
+   -1 : 1999_Majors/Masters
+   -6 : 1999_Majors/PGA_Champ
+   10 : 1999_Majors/US_Open
+Davis Love III                           :   4 tournaments :    4.50
+   10 : 1999_Majors/British_Open
+   -6 : 1999_Majors/Masters
+    5 : 1999_Majors/PGA_Champ
+    9 : 1999_Majors/US_Open
+Jim Furyk                                :   4 tournaments :    4.50
+   11 : 1999_Majors/British_Open
+    0 : 1999_Majors/Masters
+   -4 : 1999_Majors/PGA_Champ
+   11 : 1999_Majors/US_Open
+Nick Price                               :   4 tournaments :    4.75
+   17 : 1999_Majors/British_Open
+   -3 : 1999_Majors/Masters
+   -7 : 1999_Majors/PGA_Champ
+   12 : 1999_Majors/US_Open
+...
+</PRE></LI></BODY></HTML>

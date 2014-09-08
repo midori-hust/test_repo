@@ -1,0 +1,34 @@
+1. Prove that at a party of 5 people, there are two people that have the same number of friends.
+2. At a party, the number of guest who shake hand an odd number of times is even.
+
+So your programing task is - modelling an example of these problem using graph
+	A vertex corresponds a guest
+	(know someone) a handshake - an edge.
+
+Programs have menu interface that allows people to shake hand avec others.
+
+Ex2:
+In order to describe the metro lines of a city, we can store the data in a file as the following:
+[STATIONS]
+S1=Name of station 1
+S2=Name of station 2
+
+[LINES]
+M1=S1 S2 S4 S3 S7
+M2=S3 S5 S6 S8 S9
+(DONE)
+
+Make a program to read such a file and establish the network of metro stations in the memory using a 2 dimensional array
+Write a function to find all the stations directly connected to a station given by its name
+
+Ex3:
+Implement the feature: friend recommend as follows. The system will scan
+
+Prepare a text file describing the relationship in your group of friends in Facebook (A relationship can be: very good, good, normal, week (just add a weight for each edges)), such as:
+	Binh: Nam 3, Mai 8, Hung 5
+	Hung: Hien 6, Trang 4
+	Nam: Trang 9
+	Mai: Binh 1, Trang 7
+
+Your program have to auto insert the symetric relationship. For example: Binh is a friend of Hung so that Hung has a friend named Binh
+	Write a program using Graph library to create a friends network above

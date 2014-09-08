@@ -1,0 +1,78 @@
+Running times: 1
+Number of records: 10000
+Quick sort: 0.000000s - Insertion sort: 2.050000s - Selection sort: 0.320000s
+Running times: 2
+Number of records: 100
+Quick sort: 0.000000s - Insertion sort: 0.000000s - Selection sort: 0.000000s
+Running times: 3
+Number of records: 10000
+Quick sort: 0.000000s - Insertion sort: 2.050000s - Selection sort: 0.310000s
+Running times: 4
+Number of records: 100
+Quick sort: 0.000000s - Insertion sort: 0.000000s - Selection sort: 0.000000s
+Running times: 5
+Number of records: 100
+Quick sort: 0.000000s - Insertion sort: 0.000000s - Selection sort: 0.000000s
+Running times: 6
+Number of records: 100
+Quick sort: 0.000000s - Insertion sort: 0.000000s - Selection sort: 0.000000s
+Running times: 7
+Number of records: 10000
+Quick sort: 0.000000s - Insertion sort: 2.030000s - Selection sort: 0.320000s
+Running times: 8
+Number of records: 10000
+Quick sort: 0.010000s - Insertion sort: 2.020000s - Selection sort: 0.330000s
+Running times: 9
+Number of records: 100
+Quick sort: 0.000000s - Insertion sort: 0.000000s - Selection sort: 0.000000s
+Running times: 10
+Number of records: 400
+Quick sort: 0.000000s - Insertion sort: 0.000000s - Selection sort: 0.000000s
+Running times: 11
+Number of records: 200
+Quick sort: 0.000000s - Insertion sort: 0.000000s - Selection sort: 0.000000s
+Running times: 12
+Number of records: 200
+Quick sort: 0.000000s - Insertion sort: 0.000000s - Selection sort: 0.000000s
+Running times: 13
+Number of records: 400
+Quick sort: 0.000000s - Insertion sort: 0.010000s - Selection sort: 0.000000s
+Running times: 14
+Number of records: 20000
+Quick sort: 0.020000s - Insertion sort: 8.340000s - Selection sort: 2.200000s
+Running times: 15
+Number of records: 300
+Quick sort: 0.000000s - Insertion sort: 0.000000s - Selection sort: 0.000000s
+Running times: 16
+Number of records: 30000
+Quick sort: 0.000000s - Insertion sort: 2.030000s - Selection sort: 0.340000s
+Running times: 17
+Number of records: 30000
+Quick sort: 0.020000s - Insertion sort: 18.990000s - Selection sort: 6.440000s
+Running times: 18
+Number of records: 20000
+Quick sort: 0.020000s - Insertion sort: 6.240000s - Selection sort: 2.110000s
+Running times: 19
+Number of records: 30000
+Quick sort: 0.020000s - Insertion sort: 16.880000s - Selection sort: 6.450000s
+Running times: 20
+Number of records: 11000
+Quick sort: 0.010000s - Insertion sort: 0.420000s - Selection sort: 0.420000s
+Running times: 21
+Number of records: 11000
+Quick sort: 0.020000s - Insertion sort: 2.010000s - Selection sort: 0.340000s
+Running times: 22
+Number of records: 13888
+Quick sort: 0.010000s - Insertion sort: 0.720000s - Selection sort: 0.730000s
+Running times: 23
+Number of records: 12500
+Quick sort: 0.010000s - Insertion sort: 1.160000s - Selection sort: 0.560000s
+Running times: 24
+Number of records: 11111
+Quick sort: 0.000000s - Insertion sort: 0.480000s - Selection sort: 0.410000s
+Running times: 25
+Number of records: 22222
+Quick sort: 0.010000s - Insertion sort: 7.760000s - Selection sort: 2.880000s
+Running times: 26
+Number of records: 20000
+Quick sort: 0.020000s - Insertion sort: 6.320000s - Selection sort: 2.000000s

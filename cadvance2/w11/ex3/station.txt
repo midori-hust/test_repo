@@ -1,0 +1,14 @@
+[STATIONS]
+S1=Name of station 1
+S2=Name of station 2
+S3=Name of station 3
+S4=Name of station 4
+S5=Name of station 5
+S6=Name of station 6
+S7=Name of station 7
+S8=Name of station 8
+S9=Name of station 9
+[LINES]
+M1=S1 S2 S4 S3 S7
+M2=S3 S5 S6 S8 S9
+M3=S7 S8 S3 S1 S5

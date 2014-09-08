@@ -1,0 +1,22 @@
+BTVN:
+Quay lai voi du lieu email
+
+Dung ham min, max, reverse, maxduplicate, hsort de viet chuong trinh sau:
+1. Tao tap dia chi email ngau nhien trung nhau (1000)
+2. In ra dia chi email nho nhat - lon nhat:
+	Co do dai min - thu tu alphabetic min
+	Co do dai max - thu tu alphabetic max
+3. In ra email trung nhau nhieu nhat va so lan trung nhau
+4. Sap xep va in ra theo thu tu tang dan bang hsort - generic
+5. Dao nguoc va in ra
+
+B2:
+Bai tap phone book tren lop
+Bai tap symbol table tren lop (generic)
+
+BT3:
+Write a DNS lookup program that reads in a file ip.csv (provide by lecturer) and organize data in file in a symbol table.
+The program ask the IP address from input and return the Domain name as output.
+Add the functionality of DNS Reverse Lookup
+	Users provide domain name
+	Program return IP address

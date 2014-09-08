@@ -1,0 +1,261 @@
+ ac            6146       6175         29        253       4775    Ascension Island
+ ad           10587      10638         51         70      10093    Andorra
+ ae          130479     167430      36951        321        701    United Arab Emirates
+ aero           768        795         27        146        697    Air-transport industry
+ af              18         18          0          7         13    Afghanistan
+ ag            2200       2507        307        233       1900    Antigua And Barbuda
+ ai             397        426         29        140        207    Anguilla
+ al             798        824         26         20         44    Albania
+ am            9587      13086       3499        282       4266    Armenia
+ an            5106       5183         77        304       4839    Netherlands Antilles
+ ao            2516       2856        340         15        121    Angola
+ aq            8011       8013          2          3         77    Antarctica
+ ar         1464719    1635224     170505         36       7780    Argentina
+ arpa       7202233    7819210     616977         10       5147    Mistakes
+ as            1412       1469         57        265       1267    American Samoa
+ at         1957154    1976145      18991      13925     279137    Austria
+ au         6039486    6129033      89547         45      54995    Australia
+ aw            9507       9508          1         22       9502    Aruba
+ az             624        825        201         89        273    Azerbaijan
+ ba           20623      28890       8267        100       2627    Bosnia And Herzegowina
+ bb             266        309         43         74        171    Barbados
+ bd             296        297          1          8         22    Bangladesh
+ be         2546148    2578861      32713      10640     288250    Belgium
+ bf             377        379          2         50        376    Burkina Faso
+ bg          161405     170356       8951       1151     117401    Bulgaria
+ bh            2147       2152          5         10         69    Bahrain
+ bi             158        159          1         12         28    Burundi
+ biz          45934      48102       2168      18164      33944    Businesses
+ bj             858        863          5         16        858    Benin
+ bm           10918      11135        217        381       5474    Bermuda
+ bn            7237       7245          8          9       7190    Brunei Darussalam
+ bo           16274      16278          4         14        301    Bolivia
+ br         5094730    5143234      48504        487      56037    Brazil
+ bs             624        646         22         41        549    Bahamas
+ bt            6772       6783         11         12        165    Bhutan
+ bv               8          8          0          2          3    Bouvet Island
+ bw            1982       2060         78         84       1303    Botswana
+ by           32037      34659       2622        311      15507    Belarus
+ bz            3837       3875         38        769       2416    Belize
+ ca         3622706    4008534     385828      22015    1542120    Canada
+ cc           29255      36575       7320       4867      17661    Cocos (Keeling) Islands
+ cd            1512       1516          4        108        694    Congo (Democratic Republic)
+ cf              11         11          0          6         10    Central African Republic
+ cg               1          1          0          1          0    Congo (Republic)
+ ch         2125269    2253898     128629      24052     740854    Switzerland
+ ci            2224       2238         14         56       1693    Cote D'Ivoire
+ ck             932        933          1          4          7    Cook Islands
+ cl          462420     482839      20419       5724      26030    Chile
+ cm              37         41          4         22         29    Cameroon
+ cn          208277     404217     195940        482       3141    China
+ co          440585     444989       4404        107       1730    Colombia
+ com       69578775  116041415   46462640    1885165   14652451    Commercial
+ coop          2953       4007       1054        351       1785    Cooperatives
+ cr           12596      21406       8810         16        419    Costa Rica
+ cu            1964       2716        752        118        727    Cuba
+ cv               7          8          1          7          3    Cape Verde
+ cx            2190       2324        134        669       1843    Christmas Island
+ cy           56760      56842         82          8        485    Cyprus
+ cz          993778    1011344      17566      13238     328873    Czech Republic
+ de         9852798   10013373     160575     157261    1473206    Germany
+ dj              64         65          1         41         46    Djibouti
+ dk         2316370    2351638      35268      10275     185001    Denmark
+ dm             384        401         17         17        373    Dominica
+ do           98180      99372       1192         11        365    Dominican Republic
+ dz             763        763          0         30        242    Algeria
+ ec           17701      18149        448         47        959    Ecuador
+ edu        9806021   10054012     247991       4545    3269165    Educational
+ ee          355015     357869       2854       2559      58852    Estonia
+ eg           86548     102311      15763          8        270    Egypt
+ er               0          0          0          0          0    Eritrea
+ es         2459614    2545312      85698       4092     394457    Spain
+ et              87         88          1         12         41    Ethiopia
+ fi         2505805    2526287      20482      11213     962518    Finland
+ fj            5788       5813         25          6        147    Fiji
+ fk             103        103          0          4         11    Falkland Islands (Malvinas)
+ fm             505        532         27        281        337    Micronesia, Federated States Of
+ fo            6634       6670         36        337       1677    Faroe Islands
+ fr         6863156    7018115     154959      15115     456984    France
+ ga             138        139          1         43        132    Gabon
+ gb              20         20          0          1          1    United Kingdom
+ gd              17         17          0          4         17    Grenada
+ ge            9213       9528        315        498       7850    Georgia
+ gf             107        107          0          2        107    French Guiana
+ gg             121        129          8         47         98    Guernsey
+ gh            1783       1982        199         10         60    Ghana
+ gi            1249       1256          7         41       1247    Gibraltar
+ gl            5968       5979         11        118       5951    Greenland
+ gm              13         14          1         10          5    Gambia
+ gn             159        168          9          5          8    Guinea
+ gov         722543    1159775     437232       1015     304233    Government
+ gp             424        453         29        149        166    Guadeloupe
+ gq               9          9          0          4          9    Equatorial Guinea
+ gr          503685     519990      16305       8297     185152    Greece
+ gs            1250       1276         26         99        111    South Georgia And The South Sandwich Islands
+ gt           44535      52200       7665          8        605    Guatemala
+ gu              85         85          0          6         43    Guam
+ gw              89         90          1         89         37    Guinea-Bissau
+ gy             946       2841       1895          4          5    Guyana
+ hk          800794     803783       2989        107      23402    Hong Kong
+ hm             400       2848       2448         54        105    Heard And Mc Donald Islands
+ hn            4178       4261         83        109       1745    Honduras
+ hr          132130     133246       1116        735      38469    Croatia (local name: Hrvatska)
+ ht               5          5          0          5          3    Haiti
+ hu          894800     903341       8541       8816     170114    Hungary
+ id          154568     210467      55899         14       1988    Indonesia
+ ie          240958     244688       3730       4737      78382    Ireland
+ il         1212264    1228822      16558         18       4849    Israel
+ im             283        300         17          5        128    Isle of Man
+ in          838139     844037       5898        344       1806    India
+ info         60533      65529       4996      19507      46401    Info
+ int          15756      36918      21162        126       3263    International Organizations
+ io              62         65          3         20         49    British Indian Ocean Territory
+ iq               4          4          0          1          4    Iraq
+ ir            1127       1444        317         69        184    Iran (Islamic Republic Of)
+ is          191528     192770       1242       1832      70809    Iceland
+ it        11222960   11279864      56904      33494     448958    Italy
+ je             181        190          9         49        158    Jersey
+ jm            1400       1463         63          6        139    Jamaica
+ jo            9536       9648        112         62        430    Jordan
+ jobs             5          5          0          5          3    Jobs
+ jp        24903795   25044349     140554      38524     362632    Japan
+ ke           11695      11763         68          5        312    Kenya
+ kg           13973      14051         78         96       7411    Kyrgyzstan
+ kh            1388       1410         22          7         52    Cambodia
+ ki              39         39          0          8         24    Kiribati
+ km               5          5          0          3          5    Comoros
+ kn              50         50          0          5          6    Saint Kitts And Nevis
+ kr          245566     276638      31072         57       5829    Korea, Republic Of
+ kw            2269       2300         31          7        120    Kuwait
+ ky            7610       7862        252         82        171    Cayman Islands
+ kz           19251      19552        301        967       6555    Kazakhstan
+ la            1047       1106         59        328        846    Lao People's Democratic Republic
+ lb           14577      14992        415          5        277    Lebanon
+ lc              26         38         12         10         23    Saint Lucia
+ li            4927       5006         79        536       1915    Liechtenstein
+ lk            7010       9064       2054        396       1762    Sri Lanka
+ lr               3          3          0          3          0    Liberia
+ ls             161        204         43          5         46    Lesotho
+ lt          206581     207786       1205       1890     131024    Lithuania
+ lu           84257      97713      13456        843      63981    Luxembourg
+ lv           90536      92206       1670       1864      55166    Latvia
+ ly              29         30          1         14         26    Libyan Arab Jamahiriya
+ ma          250174     250231         57        289        570    Morocco
+ mc            5679       5688          9         96        691    Monaco
+ md           48907      49824        917        446      41145    Moldova, Republic Of
+ mg             815        822          7        131        759    Madagascar
+ mh               6          8          2          5          3    Marshall Islands
+ mil        1861535    2172422     310887        114     104647    US Military
+ mk            4266       4351         85          8        737    Macedonia, The Former Yugoslav Republic Of
+ ml             270        275          5          9         17    Mali
+ mm              43         43          0          7         20    Myanmar
+ mn             265        269          4         75        117    Mongolia
+ mo              85         85          0          5         21    Macau
+ mp              10         10          0          7          5    Northern Mariana Islands
+ mq              72         83         11         59         68    Martinique
+ mr              21         21          0          7         21    Mauritania
+ ms             371        410         39        158        240    Montserrat
+ mt           13786      14497        711         10        177    Malta
+ mu            4958       4974         16        120       4869    Mauritius
+ museum          22         28          6         12         12    Museums
+ mv            1355       1369         14          8         25    Maldives
+ mw             307        308          1         13        300    Malawi
+ mx         2555047    2616188      61141        117      34509    Mexico
+ my          154888     341776     186888         26       5919    Malaysia
+ mz            6973       6979          6         15        548    Mozambique
+ na            3224       3464        240         29       2150    Namibia
+ name          1267       1718        451        811        673    Individuals
+ nc           13114      13128         14        145       2849    New Caledonia
+ ne             143        143          0         40         44    Niger
+ net      171346396  174654486    3308090     228093   54423541    Networks
+ nf              94         98          4         20         40    Norfolk Island
+ ng            1545       1556         11          8         50    Nigeria
+ ni           18638      18836        198          9        243    Nicaragua
+ nl         7258159   14976121    7717962      50801     988262    Netherlands
+ no         2109283    2141478      32195       9790     404431    Norway
+ np            8853       8921         68          8        108    Nepal
+ nr              51         54          3          4          4    Nauru
+ nu          283470     284267        797       3690      56204    Niue
+ nz          971900     987896      15996         19      12049    New Zealand
+ om            3527       4095        568         42         80    Oman
+ org        1516898    1641550     124652     205959    1197137    Organizations
+ pa            6760       7666        906         12        327    Panama
+ pe          263786     265577       1791          9       2125    Peru
+ pf           14276      14519        243        127        475    French Polynesia
+ pg            1308       1325         17          5        144    Papua New Guinea
+ ph          107336     113286       5950        198       7064    Philippines
+ pk           59738      70721      10983          9       2890    Pakistan
+ pl         3941769    3978760      36991       8223     646272    Poland
+ pm               0          0          0          0          0    St. Pierre And Miquelon
+ pn               7          7          0          4          5    Pitcairn
+ pr             394        418         24          9         95    Puerto Rico
+ pro             36         42          6         31         19    Professionals
+ pt         1378817    1392403      13586       3044     193185    Portugal
+ pw               3          3          0          2          2    Palau
+ py           10840      12657       1817          6        384    Paraguay
+ qa             254        263          9         16        139    Qatar
+ re              26         26          0          6         26    Reunion
+ ro          446686     489902      43216       5360     268111    Romania
+ ru         1628987    1731866     102879      31913     657774    Russian Federation
+ rw            1585       1588          3          7         24    Rwanda
+ sa           62120      62770        650         14        456    Saudi Arabia
+ sb            1638       1656         18          6        113    Solomon Islands
+ sc             338        463        125         47        319    Seychelles
+ sd               1          1          0          1          1    Sudan
+ se         2817010    2834849      17839       9713     522945    Sweden
+ sg          804262     811676       7414         59       2629    Singapore
+ sh             323        345         22        112        237    St. Helena
+ si           61408      62209        801       1578      19100    Slovenia
+ sj               0          0          0          0          0    Svalbard And Jan Mayen Islands
+ sk          322753     331029       8276       3561     117395    Slovakia (Slovak Republic)
+ sl               1          1          0          1          1    Sierra Leone
+ sm            2635       2645         10         22       2626    San Marino
+ sn             412        414          2         32        400    Senegal
+ so               1          1          0          1          1    Somalia
+ sr             124        124          0         15         23    Suriname
+ st             838       1177        339        313        644    Sao Tome And Principe
+ su           27365      94333      66968        255      11157    Soviet Union
+ sv            4703       4763         60          9        369    El Salvador
+ sy              69         72          3         14         14    Syrian Arab Republic
+ sz            2610       2704         94         17        592    Swaziland
+ tc            2744       2925        181        220        629    Turks And Caicos Islands
+ td               5          5          0          2          5    Chad
+ tf              38         43          5         18         25    French Southern Territories
+ tg             228        233          5          3        228    Togo
+ th          787324     789396       2072         11       2922    Thailand
+ tj              80         81          1         22         41    Tajikistan
+ tk             297        345         48        166        201    Tokelau
+ tm             633        644         11         48        520    Turkmenistan
+ tn             260        267          7         49        223    Tunisia
+ to           18780      19160        380       1694       2305    Tonga
+ tp             215        215          0         11        210    East Timor
+ tr          794795     816536      21741         20       3877    Turkey
+ travel          15         15          0         14          6    Travel
+ tt           20283      21384       1101         16        139    Trinidad And Tobago
+ tv           28422      29463       1041       4643      19674    Tuvalu
+ tw         3943555    3967313      23758        114      19466    Taiwan, Province Of China
+ tz            9291       9320         29          4        244    Tanzania, United Republic Of
+ ua          192476     223974      31498        330      13269    Ukraine
+ ug            1362       1368          6         10        173    Uganda
+ uk         5778422    6655412     876990         72      72149    United Kingdom
+ um               0          0          0          0          0    United States Minor Outlying Islands
+ unknown     382287     716823     334536     137081     166803    Unknown
+ us         2441426    2493296      51870      12732      30172    United States
+ uy          125775     129553       3778          5       1778    Uruguay
+ uz            7923       8057        134        120        821    Uzbekistan
+ va              38         38          0          5         38    Vatican City State (Holy See)
+ vc              48         48          0         24         41    Saint Vincent And The Grenadines
+ ve           47614      58619      11005         32       6773    Venezuela
+ vg             505        524         19        111        411    Virgin Islands (British)
+ vi            3895       3912         17         53        561    Virgin Islands (U.S.)
+ vn            8285      74286      66001         19       7475    Viet Nam
+ vu             420        425          5         47         60    Vanuatu
+ wf               1          1          0          1          0    Wallis And Futuna Islands
+ ws           10896      11838        942       3051       3396    Samoa
+ ye               2          2          0          2          2    Yemen
+ yt               1          1          0          1          0    Mayotte
+ yu           48397      50927       2530         24      21521    Yugoslavia
+ za          496642     650485     153843         22      11593    South Africa
+ zm            2735       3965       1230         26       2591    Zambia
+ zr               0          0          0          0          0    Zaire
+ zw            6931       7398        467         10       1226    Zimbabwe

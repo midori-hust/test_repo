@@ -1,0 +1,77 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0066)http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/Libfdr/ -->
+<HTML><HEAD><TITLE>CS360 Lecture notes -- Libfdr: Jvals, Fields, Dllists, Red-Black Trees</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META content="MSHTML 6.00.2900.2180" name=GENERATOR></HEAD>
+<BODY bgColor=#ffffff>
+<H1><A href="http://www.cs.utk.edu/~plank/plank/classes/cs360">CS360</A> Lecture 
+notes -- Libfdr: Jvals, Fields, Dllists, Red-Black Trees</A></H1>
+<LI><A href="http://www.cs.utk.edu/~plank">Jim Plank</A> 
+<LI>Directory: <B>~plank/cs360/notes/Libfdr</B> 
+<LI>Lecture notes: <A 
+href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/Libfdr"><B>http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/Libfdr</B></A> 
+
+<LI>Wed Aug 25 11:01:12 EDT 1999 
+<HR>
+We will be doing a lot of hacking in this class. There are a few basic data 
+structures that we will be using. These are: 
+<UL>
+  <LI><A 
+  href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/Fields">Fields</A> 
+  - a library to simplify input processing 
+  <LI><A 
+  href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/Jval">Jvals</A> 
+  - a generic data type 
+  <LI><A 
+  href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/Dllists">Dllists</A> 
+  - a library for doubly-linked lists 
+  <LI><A 
+  href="http://www.cs.utk.edu/~plank/plank/classes/cs360/360/notes/JRB">Red-Black 
+  Trees</A> - a library for red-black trees </LI></UL>Each of these has a set of 
+lecture notes associated with them. You should read each of these to familiarize 
+yourself with them. Lab 1 makes you use all of them. 
+<P>A few notes: The Dllist library is different from the one that I have used in 
+CS360 in the past. The main difference is that it uses jvals rather than void 
+stars for its value field. If you are not used to this, go over the lecture 
+notes. The old library only had one `l' (``Dlist'' rather than ``Dllist''). Keep 
+it in mind in case you see stuff with one `l'. 
+<P>The red-black tree library is new as of fall, 1999. I got rid of all those 
+disgusting unions and bit fields, and I made the key and val fields jvals. The 
+new name for everything is ``jrb'' rather than ``rb''. 
+<P>
+<HR>
+
+<H2>Obtaining the Source Code</H2>You can get the source code as a shar file in 
+one of three ways: 
+<UL>
+  <LI>Anonymous ftp to <B>cs.utk.edu</B> in <B>pub/plank/libfdr/libfdr.shar</B>. 
+
+  <LI>At the web link <A 
+  href="http://www.cs.utk.edu/~plank/plank/libfdr/libfdr.shar"><B>href=http://www.cs.utk.edu/~plank/plank/libfdr/libfdr.shar</B></A> 
+
+  <LI>Locally at <B>/ruby/homes/ftp/pub/plank/libfdr/libfdr.shar</B>. </LI></UL>Or 
+you can get it as a <B>tar</B> file in one of three ways: 
+<UL>
+  <LI>Anonymous ftp to <B>cs.utk.edu</B> in <B>pub/plank/libfdr/libfdr.tar</B>. 
+  <LI>At the web link <A 
+  href="http://www.cs.utk.edu/~plank/plank/libfdr/libfdr.tar"><B>href=http://www.cs.utk.edu/~plank/plank/libfdr/libfdr.tar</B></A> 
+
+  <LI>Locally at <B>/ruby/homes/ftp/pub/plank/libfdr/libfdr.tar</B>. </LI></UL>
+<HR>
+
+<H2>Compilation and Linking</H2>To compile your code, you need to use the 
+complier flag <B>-I/blugreen/homes/plank/cs360/include</B>. For example, if you 
+have included ``fields.h'' and ``dllist.h'' in your program <B>lab1.c</B>, then 
+your first compilation step is: <PRE>gcc -g -I/blugreen/homes/plank/cs360/include -c lab1.c
+</PRE>That will make <B>lab1.o</B>. Now, when you go to link <B>lab1.o</B> into 
+an executable, you need to link with 
+<B>/blugreen/homes/plank/cs360/objs/libfdr.a</B>: <PRE>gcc -g -o lab1 lab1.o /blugreen/homes/plank/cs360/objs/libfdr.a
+</PRE>As always, you can do all of this in a makefile to make your life easier. 
+We will provide makefiles for the first few labs. After that, you'll probably be 
+on your own. 
+<HR>
+
+<H2>Using libfdr on other systems</H2>If you want to use libfdr.a on other 
+systems, copy all the files from <B>/blugreen/homes/plank/src/libfdr</B> and 
+type <B>make</B>. That should get you a libfdr.a for your system. 
+</LI></BODY></HTML>

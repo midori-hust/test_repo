@@ -1,0 +1,26 @@
+Ex1: Let a file describe the perquisites between classes as the following
+	CLASS CS140
+	PREREQ CS102
+	CLASS CS160
+	PREREQ CS102
+	CLASS CS302
+	PREREQ CS140
+	CLASS CS311
+	PREREQ MATH300
+	PREREQ CS302
+
+Use the last graph API to write a program to give a topological order of these classes
+
+Ex2:
+Consider the following items of clothing to wear:
+
+Shirt Slacks Shoes Socks Belt Undergarments
+  1     2      3    4     5        6
+
+There isn't exactly one order to put these items on, but we must adhere to certain restrictions
+	Socks must be put on before shoes
+	Undergarments must be put on before Slacks and Shirt
+	Slacks must be put on before Belt
+	Slacks must be put on before Shoes
+
+Create a directed graph representing this relationship, then check if it has a cycle or not. If not, shows one way we can dress ourselves

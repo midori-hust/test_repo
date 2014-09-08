@@ -1,0 +1,14 @@
+Bai 1:
+Viet chuong trinh loc bo du lieu trung lap ung dung thuat toan sap xep 3 duong
+a. Sinh du lieu thu nghiem: Viet chuc nang sinh ngau nhien 1000 dia chi email. Cau truc 1 dia chi email <user>@domain.
+Danh sach user va domain duoc tao truoc va ghi trong 2 file user.txt va domain.txt (Moi file chua 25 gia tri khac nhau)
+b. Sap xep danh sach cac dia chi email. In ra man hinh co phan trang (24 dong) va ghi ra file mail.txt
+c. Loai bo cac dia chi email trung nhau. In ket qua ra man hinh vao file: mailnodup.txt
+
+
+Bai 2:
+Viet chuong trinh ung dung thuat toan sap xep 3 duong. Lam viec tren tap cac diem (x, y) trong toa do decarter. x, y nguyen
+a. Sinh du lieu thu nghiem. Viet chuong trinh sinh 10000 diem (tham so tuy chon co the thay doi). Mien gia tri cua x va y bien thien trong 50 gia tri. Ghi du lieu data.dat hoac data.txt
+b. In ra tap cac diem dong tuyen tinh lon nhat (la cac diem co cung toa do x hoac y)
+c. In ra tap cac diem trung nhau lon nhat
+d. Load lai du lieu
