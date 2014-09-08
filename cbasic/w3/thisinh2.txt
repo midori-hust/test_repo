@@ -1,0 +1,4 @@
+Danh sach cac sinh vien diem lon hon 5:
+1	Pham Duy Hung
+	10.000000	2	Pham Dieu Huyen
+	9.000000	

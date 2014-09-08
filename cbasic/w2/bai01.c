@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAXLENGTH 100
+
+int main()
+{
+  int i, num, *ptr;
+
+    printf("How many numbers do you want to enter?\n"); scanf("%d", &num);
+
+  /* Allocate an int array of the proper size */
+  ptr = (int*)malloc(num*sizeof(int));
+  if(ptr==NULL)
+    {
+      printf("Memory allocation failed!\n");
+      return 1;
+    }
+  /* Get the numbers from the user */
+  printf("Please enter numbers now:\n");
+  for(i=0; i<num; i++) scanf("%d", &ptr[i]);
+
+  /* Display them in reverse */
+  printf("The numbers in reverse oreder are: \n");
+  for(i=num-1; i>=0; i--) printf(" %d ", ptr[i]);
+  printf("\n");
+
+  /* Free the allocated space */
+  free(ptr);
+  return 0;
+}
+

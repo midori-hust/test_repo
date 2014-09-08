@@ -1,0 +1,4 @@
+#!/bin/sh
+# created by cmake, don't edit, changes will be lost
+
+LD_LIBRARY_PATH=/home/library/hungpd/np/knights-2.5.0/build/lib/./:/lib:/usr/lib:/usr/lib/x86_64-linux-gnu${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH} "/home/library/hungpd/np/knights-2.5.0/build/src/knights" "$@"

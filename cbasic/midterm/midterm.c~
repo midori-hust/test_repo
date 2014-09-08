@@ -1,0 +1,36 @@
+#include "midterm.h"
+
+
+char menu()
+{
+  char ch;
+  printf("\t\tMENU\n\n");
+  printf("1. Doc thong tin.\n");
+  printf("2. Sap xep.\n");
+  printf("3. Tim theo so tuyen.\n");
+  printf("4. Tim kiem theo ten tuyen.\n");
+  printf("5. Ket thuc.\n");
+  printf("\tBan chon?\n");
+  ch = getchar();
+  char ch1;
+  while((ch1 = getchar()) != '\n');
+  printf("Processing...\n");
+  return ch;
+}
+
+void docThongTin(FILE f, )
+
+/*
+void sortPhoneName(PhoneInfo *phoneList, int n)
+{
+  int min;
+  int i, j;
+  for(i=0; i<n-1; i++)
+    {
+      min = i;
+      for(j=i+1; j<n; j++)
+	if(strcmp(phoneList[j].name, phoneList[min].name)<0) min = j;
+      swap(&(phoneList[min]), &(phoneList[i]));
+    }
+}
+*/

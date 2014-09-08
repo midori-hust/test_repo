@@ -1,0 +1,60 @@
+/* Cau 10 */
+/* Viet chuong trinh doc vao 1 so nguyen x va mang nguyen a, */
+/* sau do loai bo tat ca cac phan tu bang x trong mang. Dung */
+/* 2 con tro p1 vaf p2 de duyet mang. */
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+#define MAXLENGTH 100
+
+/* void *loaiPhanTu(int *ptr, int k, int n) //Loai phan tu thu k 
+ { 
+   int i; 
+   for(i=k; i<n; i++) 
+     { 
+       ptr[i] = ptr[i+1];
+     } 
+ } */
+
+int main()
+{
+  int x, n, i;
+  int a[MAXLENGTH];
+  int *p1 = a;
+  int *p2;
+
+  printf("Hay nhap vao so x: "); scanf("%d", &x);
+  printf("Hay nhap so phan tu cua mang so nguyen: "); scanf("%d", &n);
+  printf("Hap lan luot cac phan tu cua mang:\n");
+  for(i=0; i<n; i++)
+    {
+      printf("Phan tu thu %d: ",i+1); scanf("%d", &a[i]);
+    }
+  for(i=0; i<n; i++)
+    {
+      printf("Phan tu thu %d: %d\n", i+1, p1[i]);
+    }
+  
+
+  /* int k=0; */
+  /* for(i=0; i<n; i++) */
+  /*   { */
+  /*     printf("0"); */
+  /*     if(p1[i] != x)  */
+  /* 	{ */
+  /* 	  p2[k]=p1[i]; */
+  /* 	  k++; */
+  /* 	} */
+  /*   } */
+  /*
+  printf("Mang moi bao gom cac phan tu:\n");
+  for(i=0; i<=k; i++)
+    {
+      printf(" %d ", p2[i]);
+      }*/
+  
+  return 0;
+}
+

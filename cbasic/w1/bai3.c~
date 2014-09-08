@@ -1,0 +1,7 @@
+Cau 3: Viet chuong trinh nhap tu ban phim 2 so nguyen n va m.
+Sau dp nhap n so nguyen luu vao mang a, nhap m so nguyen luu vao mang b.
+- Hien thi ra man hinh so luong cac phan tu chung cua 2 mang nay, va 
+danh sach cac phan tu do.
+- Sap xep mang a va b theo thu tu tang dan. Hien thi ket qua ra man hinh.
+- Tu 2 mang a va b, gop lai thanh mang c sao cho cac phan tu trong c
+theo thu tu tang dan. Hien thi c ra man hinh

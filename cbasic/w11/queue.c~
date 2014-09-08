@@ -1,0 +1,33 @@
+#include "queue.h"
+
+void MakeNull_Queue()
+{
+  Q->Front = -1;
+  Q->Rear = -1;
+}
+
+int Empty_Queue()
+{
+  return Q.Front == -1;
+}
+
+int Full_Queue()
+{
+  return Q.Rear == MAXLENGTH - 1;
+}
+
+void EnQueue(int a)
+{
+  if(!Full_Queue())
+    {
+      if(Empty_Queue()) Q->Front = 0;
+      Q->Rear = Q->Rear + 1;
+      Q->elements[Q->Rear] = a;
+    }
+  else printf("Queue is full!\n");
+}
+
+void DeQueue(int *x)
+{
+  if(!Empty_Queue())
+}

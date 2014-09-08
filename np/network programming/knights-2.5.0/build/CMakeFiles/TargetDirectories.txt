@@ -1,0 +1,15 @@
+/home/library/hungpd/np/knights-2.5.0/build/doc/de/CMakeFiles/de-handbook.dir
+/home/library/hungpd/np/knights-2.5.0/build/doc/en_US/CMakeFiles/en_US-handbook.dir
+/home/library/hungpd/np/knights-2.5.0/build/doc/es/CMakeFiles/es-handbook.dir
+/home/library/hungpd/np/knights-2.5.0/build/doc/et/CMakeFiles/et-handbook.dir
+/home/library/hungpd/np/knights-2.5.0/build/doc/it/CMakeFiles/it-handbook.dir
+/home/library/hungpd/np/knights-2.5.0/build/src/CMakeFiles/knights.dir
+/home/library/hungpd/np/knights-2.5.0/build/src/CMakeFiles/knights_automoc.dir
+/home/library/hungpd/np/knights-2.5.0/build/doc/nl/CMakeFiles/nl-handbook.dir
+/home/library/hungpd/np/knights-2.5.0/build/po/ru/CMakeFiles/pofiles.dir
+/home/library/hungpd/np/knights-2.5.0/build/doc/pt/CMakeFiles/pt-handbook.dir
+/home/library/hungpd/np/knights-2.5.0/build/doc/pt_BR/CMakeFiles/pt_BR-handbook.dir
+/home/library/hungpd/np/knights-2.5.0/build/doc/ru/CMakeFiles/ru-handbook.dir
+/home/library/hungpd/np/knights-2.5.0/build/doc/sv/CMakeFiles/sv-handbook.dir
+/home/library/hungpd/np/knights-2.5.0/build/doc/uk/CMakeFiles/uk-handbook.dir
+/home/library/hungpd/np/knights-2.5.0/build/CMakeFiles/uninstall.dir

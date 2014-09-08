@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
+      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
+  <kcfgfile />
+  <group name="KGameTheme">
+        <entry name="Theme" type="String">
+	    <label>Theme file for the board</label>
+	    <default>themes/default.desktop</default>
+	</entry>
+  </group>
+  <group name="Notification Messages">
+      <entry name="askDiscard" type="Bool">
+          <label>whether to show a confirmation dialog before discarding game history</label>
+          <default>true</default>
+      </entry>
+      <entry name="dontAskInternal" type="String">
+          <label>internal variable controlling the confirm dialog</label>
+          <default>""</default>
+      </entry>
+  </group>
+  <group name="Preferences">
+    <entry name="animationSpeed" type="Enum">
+      <choices>
+        <choice name="Instant" />
+        <choice name="Fast" />
+        <choice name="Normal" />
+        <choice name="Slow" />
+      </choices>
+	  <label>Moves animation speed</label>
+	  <default>Normal</default>
+    </entry>
+    <entry name="animateBoard" type="Bool">
+      <label>whether the Board is animated during rotating and resizing</label>
+      <default>false</default>
+    </entry>
+    <entry name="flipBoard" type="Bool">
+      <label>whether to rotate the board when in local two-player mode</label>
+      <default>true</default>
+    </entry>
+    <entry name="borderDisplayType" type="Enum">
+      <choices>
+        <choice name="None" />
+        <choice name="Border" />
+        <choice name="Notation" />
+      </choices>
+	  <label>chessboard border type</label>
+	  <default>None</default>
+    </entry>
+    <entry name="showDanger" type="Bool">
+      <label>show check marker</label>
+      <default>true</default>
+    </entry>
+    <entry name="showMarker" type="Bool">
+      <label>show legal moves marker</label>
+      <default>true</default>
+    </entry>
+    <entry name="showMotion" type="Bool">
+      <label>show opponents move marker</label>
+      <default>true</default>
+    </entry>
+    <entry name="showClock" type="Bool">
+      <label>show clocks when time control is in use</label>
+      <default>true</default>
+    </entry>
+    <entry name="showChat" type="Bool">
+      <label>show chat window, if supported by the protocol</label>
+      <default>true</default>
+    </entry>
+    <entry name="showConsole" type="Bool">
+      <label>show the text console, if supported by the protocol</label>
+      <default>false</default>
+    </entry>
+    <entry name="showHistory" type="Bool">
+      <label>show move history</label>
+      <default>true</default>
+    </entry>
+  </group>
+  <group name="Time Control">
+    <entry name="timeLimit" type="Int">
+      <label>initial time limit for both players</label>
+      <default>10</default>
+    </entry>
+     <entry name="timeIncrement" type="Int">
+      <label>time increment per move (for Incremental time control)</label>
+      <default>0</default>
+    </entry>
+    <entry name="numberOfMoves" type="Int">
+      <label>the number of moves the player has to make in the specified time (for Conventional time control)</label>
+      <default>40</default>
+    </entry>
+    <entry name="timeEnabled" type="Bool">
+      <label>whether time limits are enabled and displayed</label>
+      <default>false</default>
+    </entry>
+  </group>
+  <group name="Protocols">
+    <entry name="player1Protocol" type="Enum">
+      <choices>
+	<choice name="Local" />
+        <choice name="XBoard"/>
+      </choices>
+      <label>protocol to be used for player 1</label>
+      <default>Local</default>
+    </entry>
+    <entry name="player2Protocol" type="Enum">
+      <choices>
+	<choice name="Local" />
+        <choice name="XBoard"/>
+        <choice name="Fics"/>
+      </choices>
+      <label>protocol to be used for player 1</label>
+      <default>Local</default>
+    </entry>
+    <entry name="color" type="Enum">
+      <choices>
+        <choice name="NoColor" />
+        <choice name="White" />
+        <choice name="Black" />
+      </choices>
+      <label>the local human player's color in a game against a computer or over the Internet.</label>
+      <default>NoColor</default>
+    </entry>
+    <entry name="programs" type="StringList">
+      <label>list of programs to run for playing against the computer</label>
+      <default>gnuchess,crafty</default>
+    </entry>
+    <entry name="player1Program" type="String">
+      <label>the last selected program for player 1</label>
+      <default>gnuchess</default>
+    </entry>
+    <entry name="player2Program" type="String">
+      <label>the last selected program for player 2</label>
+      <default>gnuchess</default>
+    </entry>
+    <entry name="computerSearchDepth" type="Int">
+      <label>the search depth of computer engines, when the difficulty is set to Configurable</label>
+      <default>29</default>
+    </entry>
+    <entry name="computerMemorySize" type="Int">
+      <label>the memory size used by computer engines, when the difficulty is set to Configurable</label>
+      <default>50</default>
+    </entry>
+    <entry name="servers" type="StringList">
+      <label>list of servers for playing over the Internet</label>
+      <default>freechess.org</default>
+    </entry>
+    <entry name="currentServer" type="String">
+      <label>the last selected server</label>
+      <default>freechess.org</default>
+    </entry>
+    <entry name="ficsUsername" type="String">
+      <label>username for the Free Internet Chess Server</label>
+      <default></default>
+    </entry>
+    <entry name="guest" type="Bool">
+      <label>whether to log in as guest</label>
+      <default>false</default>
+    </entry>
+    <entry name="autoLogin" type="Bool">
+      <label>whether to log in to chess server automatically</label>
+      <default>false</default>
+    </entry>
+    <entry name="computerDelay" type="Int">
+      <label>delay before a computer's move is reported, in milliseconds</label>
+      <default>500</default>
+    </entry>
+    <entry name="engineConfigurations" type="StringList">
+      <label>stored configurations of engine-specific settings</label>
+      <default>GNU Chess:gnuchess:xboard,Crafty:crafty:xboard,Stockfish:stockfish:uci,Sjeng:sjeng:xboard</default>
+    </entry>
+  </group>
+  <group name="Accessibility">
+      <entry name="speakOpponentsMoves" type="Bool">
+          <label>whether opponents' moves are spoken by Jovie</label>
+          <default>true</default>
+      </entry>
+      <entry name="allowExternalControl" type="Bool">
+          <label>whether commands over D-Bus are accepted</label>
+          <default>true</default>
+      </entry>
+  </group>
+</kcfg>

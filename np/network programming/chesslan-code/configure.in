@@ -1,0 +1,128 @@
+dnl Process this file with autoconf to produce a configure script.
+dnl Created by Anjuta - will be overwritten
+dnl If you don't want it to overwrite it,
+dnl 	Please disable it in the Anjuta project configuration
+
+AC_PREREQ(2.50)
+AC_INIT(chesslan, 0.1, http://chesslan.sf.net)
+AM_INIT_AUTOMAKE(chesslan, 0.1)
+AM_CONFIG_HEADER(config.h)
+
+AC_ISC_POSIX
+AC_PROG_CC
+AC_PROG_CXX
+AC_PROG_CPP
+AC_PROG_CXXCPP
+AM_PROG_CC_STDC
+AC_HEADER_STDC
+AM_PROG_LIBTOOL
+PKG_CHECK_MODULES(GTKMM, [gtkmm-2.4],,exit)
+dnl makes sense to use the thread.h header from libglibmm
+dnl PKG_CHECK_MODULES(GTHREAD, [gthread-2.0],,exit)
+AC_SUBST(GTKMM_LIBS)
+AC_SUBST(GTKMM_CFLAGS)
+dnl AC_SUBST(GTHREAD_LIBS)
+dnl AC_SUBST(GTHREAD_CFLAGS)
+dnl Checks for programs.
+dnl Checks for libraries.
+dnl Checks for header files.
+dnl Checks for typedefs, structures, and compiler characteristics.
+dnl Checks for library functions.
+dnl Checks for Additional stuffs.
+
+dnl Languages which your application supports
+GETTEXT_PACKAGE=chesslan
+AC_SUBST(GETTEXT_PACKAGE)
+AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE,"$GETTEXT_PACKAGE",
+		[the gettext domain])
+
+dnl Add the languages which your application supports here.
+ALL_LINGUAS=""
+AM_GNU_GETTEXT
+AM_GNU_GETTEXT_VERSION([0.18.1])
+
+dnl Set PACKAGE_LOCALE_DIR in config.h.
+if test "x${prefix}" = "xNONE"; then
+  AC_DEFINE_UNQUOTED(PACKAGE_LOCALE_DIR, "${ac_default_prefix}/${DATADIRNAME}/locale",
+		[the location of locale files])
+else
+  AC_DEFINE_UNQUOTED(PACKAGE_LOCALE_DIR, "${prefix}/${DATADIRNAME}/locale",
+		[the location of locale files])
+fi
+
+
+dnl Set PACKAGE SOURCE DIR in config.h.
+packagesrcdir=`cd $srcdir && pwd`
+
+dnl Set PACKAGE PREFIX
+if test "x${prefix}" = "xNONE"; then
+  packageprefix=${ac_default_prefix}
+else
+  packageprefix=${prefix}
+fi
+
+dnl Set PACKAGE DATA & DOC DIR
+packagedatadir=share/${PACKAGE}
+packagedocdir=doc/${PACKAGE}
+
+dnl Set PACKAGE DIRS in config.h.
+packagepixmapsdir=${packagedatadir}/pixmaps
+packagehelpdir=${packagedatadir}/help
+packagemenudir=${packagedatadir}
+
+dnl Subst PACKAGE_DATA_DIR.
+NO_PREFIX_PACKAGE_DATA_DIR="${packagedatadir}"
+AC_SUBST(NO_PREFIX_PACKAGE_DATA_DIR)
+PACKAGE_DATA_DIR="${packageprefix}/${packagedatadir}"
+AC_SUBST(PACKAGE_DATA_DIR)
+
+dnl Subst PACKAGE_DOC_DIR.
+NO_PREFIX_PACKAGE_DOC_DIR="${packagedocdir}"
+AC_SUBST(NO_PREFIX_PACKAGE_DOC_DIR)
+PACKAGE_DOC_DIR="${packageprefix}/${packagedocdir}"
+AC_SUBST(PACKAGE_DOC_DIR)
+
+dnl Subst PACKAGE_PIXMAPS_DIR.
+NO_PREFIX_PACKAGE_PIXMAPS_DIR="${packagepixmapsdir}"
+AC_SUBST(NO_PREFIX_PACKAGE_PIXMAPS_DIR)
+PACKAGE_PIXMAPS_DIR="${packageprefix}/${packagepixmapsdir}"
+AC_SUBST(PACKAGE_PIXMAPS_DIR)
+
+dnl Subst PACKAGE_HELP_DIR.
+NO_PREFIX_PACKAGE_HELP_DIR="${packagehelpdir}"
+AC_SUBST(NO_PREFIX_PACKAGE_HELP_DIR)
+PACKAGE_HELP_DIR="${packageprefix}/${packagehelpdir}"
+AC_SUBST(PACKAGE_HELP_DIR)
+
+dnl Subst PACKAGE_MENU_DIR.
+NO_PREFIX_PACKAGE_MENU_DIR="${packagemenudir}"
+AC_SUBST(NO_PREFIX_PACKAGE_MENU_DIR)
+PACKAGE_MENU_DIR="${packageprefix}/${packagemenudir}"
+AC_SUBST(PACKAGE_MENU_DIR)
+
+AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${packageprefix}/${packagedatadir}")
+AC_DEFINE_UNQUOTED(PACKAGE_DOC_DIR, "${packageprefix}/${packagedocdir}")
+AC_DEFINE_UNQUOTED(PACKAGE_PIXMAPS_DIR, "${packageprefix}/${packagepixmapsdir}")
+AC_DEFINE_UNQUOTED(PACKAGE_HELP_DIR, "${packageprefix}/${packagehelpdir}")
+AC_DEFINE_UNQUOTED(PACKAGE_MENU_DIR, "${packageprefix}/${packagemenudir}")
+AC_DEFINE_UNQUOTED(PACKAGE_SOURCE_DIR, "${packagesrcdir}")
+
+PKG_CHECK_MODULES(GNOMECANVASMM, libgnomecanvasmm-2.6)
+AC_SUBST(GNOMECANVASMM_LIBS)
+AC_SUBST(GNOMECANVASMM_CFLAGS)
+
+PKG_CHECK_MODULES(SIGCPP, sigc++-2.0)
+
+dnl libxmlrpc 0.7 and up
+dnl PKG_CHECK_MODULES(XMLRPCPP, libxmlrpc++)
+dnl AC_SUBST(XMLRPCPP_LIBS)
+dnl AC_SUBST(XMLRPCPP_CFLAGS)
+
+AC_OUTPUT([
+Makefile
+intl/Makefile
+po/Makefile.in
+src/Makefile
+pixmaps/Makefile
+])
+

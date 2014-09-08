@@ -1,0 +1,890 @@
+<?xml version="1.0" ?>
+<!DOCTYPE book PUBLIC "-//KDE//DTD DocBook XML V4.2-Based Variant V1.1//EN" "dtd/kdex.dtd" [
+  <!ENTITY knights "<application
+>Knights</application
+>">
+  <!ENTITY kappname "&knights;">
+  <!ENTITY package "extragear/games">
+  <!ENTITY kappversion "2.3 beta 1"
+><!--Application version. Use this variable everywhere it's needed.-->
+  <!ENTITY % addindex "IGNORE">
+  <!ENTITY % Italian "INCLUDE">
+]>
+<book lang="&language;">
+	<bookinfo>
+		<title
+>Manuale di &knights;</title>
+
+		<authorgroup>
+			<author
+><firstname
+>Miha</firstname
+> <surname
+>Čančula</surname
+> <affiliation
+> <address
+> <email
+>miha.cancula@gmail.com</email>
+					</address>
+				</affiliation>
+			</author>
+			<othercredit role="translator"
+><firstname
+>Valter</firstname
+> <surname
+>Mura</surname
+> <affiliation
+><address
+><email
+>valtermura@gmail.com</email
+></address
+></affiliation
+> <contrib
+>Traduzione italiana</contrib
+></othercredit
+> 
+
+		</authorgroup>
+		<copyright>
+			<year
+>2011</year>
+			<holder
+>Miha Čančula</holder>
+		</copyright>
+
+		<legalnotice
+>&FDLNotice;
+		</legalnotice>
+
+		<date
+>2011-02-16</date
+><!-- Date of (re)writing, or update.-->
+		<releaseinfo
+>&kappversion; </releaseinfo
+><!-- Application version number. Use the variable definitions within header to change this value.-->
+
+		<abstract>
+			<para
+>Questa documentazione descrive il gioco di &knights; versione &kappversion; </para>
+		</abstract>
+
+		<keywordset>
+			<keyword
+>KDE</keyword
+><!-- do not change this! -->
+			<keyword
+>kdegames</keyword
+><!-- do not change this! -->
+			<keyword
+>gioco</keyword
+><!-- do not change this! -->
+			<keyword
+>da tavolo</keyword>
+			<keyword
+>scacchi</keyword>
+			<keyword
+>knights</keyword>
+			<keyword
+>Knights</keyword>
+		</keywordset>
+
+	</bookinfo>
+
+	<chapter id="introduction">
+		<title
+>Introduzione</title>
+		<note>
+			<title
+>Tipo di gioco:</title>
+			<para
+>Da tavolo</para>
+		</note>
+		<note>
+			<title
+>Numero di giocatori possibili:</title>
+			<para
+>Uno o due</para>
+		</note>
+
+		<para
+>&knights; è un gioco di scacchi. Il tuo obbiettivo di giocatore è sconfiggere il tuo avversario tramite scacco matto al suo re. </para>
+	</chapter>
+
+	<chapter id="how-to-play"
+><title
+>Come si gioca</title
+> <!-- do not change this! -->
+		<!--Describe the objective of the game.-->
+		<sect1 id="objective">
+			<title
+>Scopo del gioco</title>
+			<para
+>Muovere i tuoi pezzi, catturare i pezzi dell'avversario per mettere sotto scacco il suo re fino a quando non ha più la possibilità di fermare l'attacco, mossa chiamata <quote
+>scacco matto</quote
+>.</para>
+			<para
+>Se ti sembra di non avere possibilità di vittoria, puoi giocare una partita patta. Muovi i pezzi fino a che esaurisci le mosse legali e il tuo re non è sotto scacco - mossa chiamata <quote
+>stallo</quote
+>. Potrebbero essere disponibili altre forme di pareggio, a seconda delle regole di scacchi usate per la partita.</para>
+		</sect1>
+
+		<!--How to play description. Don't be to specific on rules as they have a separate section in this document-->
+		<sect1 id="starting-the-game">
+			<title
+>Cominciare la partita</title>
+			<para
+>Quando avvii il programma o selezioni <menuchoice
+><guimenu
+>Partita</guimenu
+> <guimenuitem
+>Nuova</guimenuitem
+></menuchoice
+>, viene mostrata una finestra in cui è possibile specificare contro chi stai giocando, il tuo colore e i limiti di tempo. </para>
+				<mediaobject
+><imageobject
+><imagedata fileref="Knights-newgame-dialog.png"/></imageobject
+></mediaobject>
+			<para
+>Se desideri giocare contro un amico nello stesso computer, seleziona <guilabel
+>Umano (Tu)</guilabel
+> per il <guilabel
+>Giocatore 1</guilabel
+> e <guilabel
+>Umano</guilabel
+> per il <guilabel
+>Giocatore 2</guilabel
+>. </para>
+			<para
+>Se desideri giocare contro il computer, seleziona <guilabel
+>Umano (Tu)</guilabel
+> per il <guilabel
+>Giocatore 1</guilabel
+> e <guilabel
+>Motore computer</guilabel
+>  per il <guilabel
+>Giocatore 2</guilabel
+>. Scegli il programma contro cui desideri giocare e assicurati che esso sia installato e supporti il protocollo XBoard. </para>
+			<para
+>Se desideri giocare contro un avversario in Internet, seleziona <guilabel
+>Umano (Tu)</guilabel
+> per il <guilabel
+>Giocatore 1</guilabel
+> e <guilabel
+>Umano in un server di scacchi</guilabel
+> per il <guilabel
+>Giocatore 2</guilabel
+>. Dovrai accedere al server e trovare un avversario prima di iniziare a giocare. Il server Free Internet Chess (<ulink url="http://freechess.org"
+>FreeChess.org</ulink
+>) supporta gli ospiti, ma devi registrarti per giocare partite che modificano la tua classifica. </para>
+			<para
+>Puoi anche assistere a una partita tra computer selezionando <guilabel
+>Motore computer</guilabel
+> per entrambi i giocatori. </para>
+			<para
+>In modo simile, puoi far giocare un motore computer contro un avversario in un server di scacchi. C'è da dire, tuttavia, che il server di scacchi potrebbe avere delle politiche di restrizione riguardo questo tipo di gioco. Il server Free Internet Chess si trova <ulink url="http://www.freechess.org/Help/HelpFiles/computers.html"
+>qui</ulink
+>. </para>
+			<para
+>La sezione <guilabel
+>Usa controllo del tempo</guilabel
+> ti permette di attivare facoltativamente un timer. Knights usa il controllo del tempo standard degli scacchi, il quale possiede tre parametri: </para>
+			      <itemizedlist>
+				<listitem>
+				  <para
+><guilabel
+>Durata controllo del tempo</guilabel
+> specifica il numero di mosse dopo le quali il <guilabel
+>Limite iniziale di tempo</guilabel
+> viene aggiunto all'orologio del giocatore. Puoi disattivare questa aggiunta impostando il valore a zero. </para>
+				  <note
+><title
+>Nota</title>
+				    <para
+>Questa opzione non è disponibile quando si gioca in un server di gioco. </para>
+				  </note>
+				</listitem>
+				<listitem>
+				  <para
+>Il <guilabel
+>limite iniziale di tempo</guilabel
+> è la quantità di tempo con cui iniziano i giocatori. </para>
+				</listitem>
+				<listitem>
+				  <para
+><guilabel
+>Incremento per mossa</guilabel
+> specifica quanto tempo verrà aggiunto all'orologio del giocatore dopo aver eseguito una mossa. Può essere tranquillamente impostato su zero per disabilitare l'incremento dell'orologio. </para>
+				</listitem>
+				
+			</itemizedlist>
+			<para
+>Dopo aver premuto il pulsante <guibutton
+>Ok</guibutton
+>, la finestra verrà chiusa. Se hai selezionato un giocatore in un server di scacchi, dovrai effettuare l'accesso e cercare il tuo avversario. In caso contrario, la partita si avvierà immediatamente. </para>
+			<note
+><title
+>Nota</title>
+			<para
+>&knights; caricherà automaticamente un tema predefinito una volta avviata la partita, e sarà possibile iniziare subito a giocare. </para>
+			</note>
+		</sect1>
+		
+		<sect1 id="server-dialog">
+			<title
+>La finestra del server di scacchi</title>
+			<mediaobject
+><imageobject
+><imagedata fileref="Knights-server-account.png"/></imageobject
+></mediaobject>
+			<para
+>Se scegli di giocare in un server di scacchi, devi prima accedere al server. Se nel server possiedi già un account, digita il tuo nome utente e la password e seleziona <guilabel
+>Questo è un account registrato</guilabel
+>. Altrimenti digita un nome utente di tuo gusto e premi <guibutton
+>Accesso</guibutton
+>. </para>
+			<para
+>Esistono due metodi per scegliere l'avversario. Puoi inviare un annuncio relativo alla tua partita (chiamato «Ricerca») oppure rispondere alla ricerca di qualcun altro. </para>
+			<mediaobject
+><imageobject
+><imagedata fileref="Knights-server-challenges.png"/></imageobject
+></mediaobject>
+			<para
+>Per inviare una richiesta, vai nella scheda <guilabel
+>Sfide</guilabel
+> e premi <guibutton
+>Cerca</guibutton
+>. Se hai selezionato <guilabel
+>Avvia automaticamente la partita</guilabel
+>, la partita inizierà immediatamente, non appena un giocatore accetta la tua richiesta. In caso contrario, devi accettare manualmente la sfida selezionandola dall'elenco e premendo <guibutton
+>Accetta</guibutton
+>. </para>
+			<mediaobject
+><imageobject
+><imagedata fileref="Knights-server-list.png"/></imageobject
+></mediaobject>
+			<para
+>Per rispondere alle ricerche di altre persone, usa le schede <guilabel
+>Elenco di ricerca</guilabel
+> o <guilabel
+>Grafico ricerca</guilabel
+>. In entrambe le schede, seleziona la ricerca facendovi sopra clic e poi premendo <guibutton
+>Accetta</guibutton
+>. </para>
+			<mediaobject
+><imageobject
+><imagedata fileref="Knights-server-graph.png"/></imageobject
+></mediaobject>
+			<para
+>Il grafico di ricerca mostra tutte le ricerche inviate, ordinate per valutazione dell'avversario e durata del gioco. Premendo su un punto del grafico si accetta la sfida. </para>
+			<note>
+				<para
+>Per un uso avanzato, &knights; fornisce accesso diretto alla console del server. Seleziona la scheda <guilabel
+>Console</guilabel
+>, per usarla. </para>
+			</note>
+		</sect1>
+		
+		<sect1 id="playing-the-game">
+			<title
+>Giocare la partita</title>
+			<para
+>I pezzi vengono spostati facendovi sopra clic e trascinandoli nella casella desiderata. Il pezzo può essere spostato solo se è tuo, se è il tuo turno e se la mossa non mette il tuo re in diretto pericolo. </para>
+			<para
+>&knights; segue le regole standard degli scacchi, non è dunque possibile eseguire una mossa illegale. </para>
+		</sect1>
+	</chapter>
+	
+	<chapter id="rules_and_tips">
+		<title
+>Regole del gioco, strategie e suggerimenti</title
+> <!-- do not change this! -->
+	<!--This section has to do with game rules. Please give a detailed description of those using lists or paragraphs.-->
+	<sect1 id="standard-rules">
+		<title
+>Regole standard</title>
+		<para
+>Il gruppo principale delle regole per gli scacchi è disciplinato dalla Federazione Internazionale Scacchi (World Chess Federation) - FIDE. Altri gruppi nazionali e locali possono apportare piccole varianti alle regole. In genere, le differenze maggiori tra regole riguardano il tempo per le mosse o i tipi di pareggi (partite patte) consentiti: il gioco di base e i movimenti dei pezzi sono gli stessi. &knights; supporta gli scacchi standard e possiede flessibilità nella gestione del tempo.</para>
+		<para
+>Esistono molte varianti agli scacchi standard. Una fonte ha trovato più di duemila varianti del gioco. Le varianti principali includono Fischer Random, Bughouse, Crazyhouse e Suicide. Le varianti regole diverse riguardo alla cattura dei pezzi, le mosse, la fine del gioco e il ritorno dei pezzi in gioco. &knights; non supporta le varianti di gioco.</para>
+		<para
+>Le regole complete degli scacchi standard sono consultabili in:</para>
+		<itemizedlist>
+			<listitem
+><para
+>World Chess Federation-FIDE (<ulink url="http://www.fide.com"
+>fide.com</ulink
+>)</para
+></listitem>
+			<listitem
+><para
+>United States Chess Federation-USCF (<ulink url="http://main.uschess.org"
+>main.uschess.org</ulink
+>)</para
+></listitem>
+		</itemizedlist>
+		<para
+>Regole e informazioni di tipo generale sugli scacchi sono consultabili in: <itemizedlist
+> <listitem
+><para
+><ulink url="http://en.wikipedia.org/wiki/Rules_of_chess"
+>Wikipedia</ulink
+></para
+></listitem>
+		</itemizedlist>
+		</para>
+	</sect1>
+
+	<sect1 id="board">
+		<title
+>Scacchiera</title>
+		<sect2 id="board-layout">
+			<title
+>Aspetto della scacchiera</title>
+			<para
+>Una scacchiera consiste di 64 quadrati uguali disposti in otto righe e otto colonne. I quadrati (case) sono disposti a due colori alternati, bianco e nero. Le scacchiere possono essere costruite con vari materiali, dunque il materiale di colore più chiaro viene considerato il bianco, mentre quello di colore più scuro è considerato il nero.</para>
+			<para
+>Le parti della scacchiera hanno nomi speciali: <itemizedlist>
+				<listitem
+><para
+>Traversa - le otto file orizzontali della scacchiera sono chiamate traverse.</para
+></listitem>
+				<listitem
+><para
+>Fila - le otto colonne verticali della scacchiera sono chiamate file.</para
+></listitem>
+				<listitem
+><para
+>Diagonale - la linea dritta di case dello stesso colore che passano da un angolo estremo all'altro del tavoliere viene chiamata diagonale.</para
+></listitem>
+				<listitem
+><para
+>Centro - le quattro case che si trovano in mezzo al tavoliere vengono chiamate il centro.</para
+></listitem>
+			</itemizedlist>
+			</para>
+			<para
+>Ogni singola casa possiede un nome, in modo che possa essere mantenuta la registrazione delle mosse della partita. Esistono vari sistemi di attribuzione dei nomi, ma il sistema più popolare, nonché ufficiale, è la <quote
+>notazione algebrica</quote
+>. In questo sistema, ogni casa viene denominata in base alla riga e alla colonna in cui si trova. Le traverse (righe) sono numerate da 1 a 8, iniziando la numerazione dal lato bianco del tavoliere fino al lato nero. Le file (colonne) sono contrassegnate con lettere minuscole da «a» a «h», spostandosi da sinistra a destra dalla prospettiva del giocatore bianco. La casa è denominata con la lettera seguita dal numero. Dunque la casa nella estremità inferiore sinistra è nota come «a1». La struttura di denominazione si evince nel seguente schema:</para>
+			<mediaobject
+><imageobject
+><imagedata fileref="Knights-board.png"/></imageobject
+></mediaobject>
+		</sect2>
+		<sect2 id="board-setup">
+			<title
+>Configurazione iniziale</title>
+			<para
+>La scacchiera viene ruotata in modo che una casa bianca della prima riga si trovi sul lato destro del giocatore.</para>
+			<para
+>I pezzi sono posizionati sull'area bianca e nera del tavoliere nella medesima disposizione. Nella prima riga di entrambe le estremità, e spostandosi verso l'interno, si posiziona la torre, il cavallo e l'alfiere. Nelle due case rimanenti si sistema prima la donna, nella casa del suo stesso colore, poi il re, nella restante casa. Una volta terminato, i pezzi uguali devono guardarsi l'un l'altro. Nella seconda riga si posiziona una fila di pedoni. La scacchiera completata assomiglierà allo schema sottostante.</para>
+			<mediaobject
+><imageobject
+><imagedata fileref="Knights-board-setup.png"/></imageobject
+></mediaobject>
+		</sect2>
+	</sect1>
+
+	<sect1 id="piece-movement">
+		<title
+>Movimento dei pezzi</title>
+		<sect2 id="all-movement">
+			<title
+>Muovere e catturare</title>
+			<para
+>Gli scacchi hanno sei tipi di pezzi: Pedone, Torre, Cavallo, Alfiere, Donna e Re. Ogni pezzo ha un modo unico di spostarsi. Vi sono alcune somiglianze tra le mosse dei vari pezzi. Tutti i pezzi, tranne il cavallo, si spostano in linea retta, in orizzontale, verticale o diagonale. Essi non possono spostarsi fino alla fine della scacchiera e ritornare dall'altra parte. Il bordo della scacchiera è un limite che non può essere attraversato. Tutti i pezzi, ad eccezione del cavallo, non possono saltare oltre gli altri pezzi: tutte le case, tra la casa in cui il pezzo inizia la mossa e quella in cui la termina, devono essere vuote. La mossa non può avere termine su una casa correntemente occupata da un pezzo dello stesso colore.</para>
+			
+			<para
+>Se la casa dove un pezzo termina la sua mossa contiene un pezzo avversario, quest'ultimo viene <quote
+>catturato</quote
+> ed eliminato dal gioco. Tutti i pezzi possono essere catturati, tranne il re. Il gioco termina alla mossa prima che il re venga catturato - <quote
+><link linkend="checkmate"
+>scacco matto</link
+></quote
+>. La cattura richiede sempre che il pezzo attaccante finisca nella casa del pezzo avversario durante l'esecuzione di una mossa normale. L'unica eccezione si verifica per la cattura di un pedone <link linkend="en_passant-movement"
+>en passant</link
+>. Non si è obbligati a catturare un pezzo, se si ha l'opportunità di farlo: la cattura è facoltativa. L'unico momento in cui la cattura è obbligatoria è quando il re è sotto scatto e la cattura del pezzo è l'unico modo per sventare l'attacco.</para>
+			
+			<para
+>Nella figura sotto, la torre bianca può spostarsi a destra, sinistra, in alto o in basso (in verticale od orizzontale), per linea retta. Può spostarsi in basso e alla destra per un numero qualsiasi di case fino al limite della scacchiera. Queste case hanno sopra una x verde. Può spostarsi per un massimo di due case alla sinistra. Il resto della scacchiera è bloccato da un pezzo dello stesso colore, in questo caso un cavallo bianco. La torre non può saltare il cavallo per raggiungere la fine della scacchiera. Può spostarsi in alto di una sola casa prima di essere bloccata dal pedone nero. Può catturare il pedone spostandosi su di due case e posizionandosi in quella occupata dal pedone, poiché esso è un pezzo avversario (pezzo di diverso colore). Questa casa presenta una croce rossa. Non può saltare oltre il pedone per raggiungere la fine della scacchiera. La torre, dunque, può spostarsi su dieci case differenti.</para>
+
+			<mediaobject
+><imageobject
+><imagedata fileref="Knights-move-limits.png"/></imageobject
+></mediaobject>
+			
+			<para
+>A inizio partita, il bianco muove per primo. I giocatori, poi, si alternano. Per ciascun turno si deve muovere, non è consentito passare la mano.</para>
+		</sect2>
+		<sect2 id="pawn-movement">
+			<title
+>Pedone</title>
+			<para
+>I pedoni sono i pezzi più numerosi e meno potenti presenti sulla scacchiera. Eseguono movimenti inusuali. Generalmente, il pedone si sposta solo in avanti, una casa per volta. La prima mossa, però, presenta un'eccezione: esso può muovere di due case. Il pedone non può saltare oltre gli altri pezzi; qualsiasi pezzo che si trovi direttamente davanti al suo cammino blocca il suo avanzamento nella scacchiera. Il pedone è l'unico pezzo che non può tornare indietro. È pure l'unico pezzo che non può catturare nello stesso modo in cui si muove. Il pedone cattura il pezzo avversario spostandosi in diagonale di una casa, non può catturare muovendosi dritto.</para>
+			
+			<para
+>Nella figura in basso, il pedone inferiore è ancora nella sua casa originale, dunque può spostarsi di una o due case in avanti (indicate dalla X verde). Può catturare spostandosi a destra o a sinistra in diagonale, ma solo se quella casa è occupata da un pezzo avversario (indicato dalla X rossa). Al contrario, non può spostarsi diagonalmente. Il pedone superiore si è già spostato dalla sua casa originale. Può solo spostarsi di una casa in avanti. Allo stesso modo, può catturare spostandosi a sinistra o a destra in diagonale, se la casa è occupata da un pezzo avversario.</para>
+			<mediaobject
+><imageobject
+><imagedata fileref="Knights-move-pawn.png"/></imageobject
+></mediaobject>
+			
+			<para
+>Il pedone viene coinvolto anche in due mosse speciali. La prima è la <link linkend="en_passant-movement"
+>cattura en passant</link
+>, in cui un pedone viene catturato durante la sua mossa iniziale a due case. La seconda è la <link linkend="pawn-promotion-movement"
+>promozione del pedone</link
+>, in cui un pedone viene promosso e si trasforma in un altro pezzo, quando raggiunge l'altra sponda della scacchiera.</para>
+		</sect2>
+		<sect2 id="bishop-movement">
+			<title
+>Alfiere</title>
+			<para
+>L'Alfiere si muove sulla scacchiera diagonalmente per linea retta. Può spostarsi di quante case si desidera, fino a quando raggiunge la fine della scacchiera o un altro pezzo. Non può saltare oltre altri pezzi. L'alfiere cattura nello stesso percorso delle sue mosse, occupando la casa del pezzo avversario. A causa del modo in cui si sposta, l'alfiere rimane sempre nelle case dello stesso colore da cui è partito. Ciascun giocatore possiede due alfieri, uno nelle case nere e uno in quelle bianche. Ci si riferisce spesso ad essi come alfiere <quote
+>scuro</quote
+> e alfiere <quote
+>chiaro</quote
+>. Gli alfieri possono essere chiamati anche in base al lato da cui iniziano: alfiere del re e della donna.</para
+>  
+			<mediaobject
+><imageobject
+><imagedata fileref="Knights-move-bishop.png"/></imageobject
+></mediaobject>
+		</sect2>
+		<sect2 id="rook-movement">
+			<title
+>Torre</title>
+			<para
+>La Torre si sposta in linea retta sia in orizzontale, sia in verticale, per un numero qualsiasi di case libere, fino a che non raggiunge il limite della scacchiera o viene bloccato da un altro pezzo. Non può saltare oltre gli altri pezzi. La torre cattura sullo stesso percorso in cui si muove, occupando la casa in cui staziona il pezzo avversario. La torre può posizionarsi in qualsiasi casa della scacchiera, è dunque uno dei pezzi più potenti.</para>
+			<mediaobject
+><imageobject
+><imagedata fileref="Knights-move-rook.png"/></imageobject
+></mediaobject>
+			<para
+>La torre partecipa anche a una mossa speciale, l'<link linkend="castling-movement"
+>arrocco</link
+>, in cui una torre e il re vengono raggruppati in una posizione di difesa.</para>
+		</sect2>
+		<sect2 id="knight-movement">
+			<title
+>Cavallo</title>
+			<para
+>Il Cavallo è il pezzo più speciale della scacchiera, e possiede una flessibilità che lo rende molto speciale. Il cavallo è l'unico pezzo che può saltare gli altri pezzi. si sposta di due case in orizzontale o verticale e poi di una, ad angolo retto. La mossa ha la forma di una <quote
+>L</quote
+>. Il cavallo si posiziona sempre in una casa dal colore opposto a quello della casa di partenza. Può saltare oltre i pezzi di diverso colore per arrivare alla casa di destinazione, ma essi non vengono catturati al suo passaggio. Il cavallo cattura quando si posiziona sulla casa del pezzo avversario. Non può posizionarsi in una casa occupata da un pezzo dello stesso colore. Poiché il movimento del cavallo non avviene in linea retta, esso può attaccare la donna, un alfiere o una torre senza essere a sua volta attaccato.</para>
+			<mediaobject
+><imageobject
+><imagedata fileref="Knights-move-knight.png"/></imageobject
+></mediaobject>
+		</sect2>
+		<sect2 id="queen-movement">
+			<title
+>Donna</title>
+			<para
+>La Donna viene considerata il pezzo più potente nella scacchiera. Può muoversi di un numero qualsiasi di case in verticale, orizzontale o diagonale. Si sposta combinando le mosse della torre e dell'alfiere. A meno che non stia catturando, la donna si deve spostare in una casa libera e non può saltare oltre i pezzi. La donna cattura nella stessa linea in cui si muove, posizionandosi nella casa del pezzo avversario.</para>
+			<mediaobject
+><imageobject
+><imagedata fileref="Knights-move-queen.png"/></imageobject
+></mediaobject>
+		</sect2>
+		<sect2 id="king-movement">
+			<title
+>Re</title>
+			<para
+>Il Re è il pezzo più importante degli scacchi. Se il re viene intrappolato e la sua cattura diviene inevitabile, la partita termina e il giocatore perde. Il re ha scarsa mobilità ed è pure considerato uno dei pezzi più deboli del gioco. Può spostarsi in qualsiasi casa adiacente, ossia di una casa in una direzione qualsiasi: orizzontale, verticale o diagonale. Non può spostarsi su una casa occupata da un pezzo dello stesso colore. Il re cattura un altro pezzo nella sua stessa linea di movimento, occupando la casa del pezzo avversario. Esiste un limite aggiuntivo ai suoi spostamenti. Il re non può spostarsi su una casa che lo porrebbe sotto attacco da un pezzo avversario (detto in <quote
+>scacco</quote
+>). Il risultato di questa limitazione è che due re non possono mai stare uno affianco all'altro, poiché lo spostamento vicino al re avversario metterebbe il re in movimento sotto scacco. Il re può anche essere forzato a spostarsi o a catturare, se esso si trova sotto attacco (<quote
+>scacco</quote
+>) e l'unico modo per fermare l'attacco è il suo spostamento.</para>
+			<mediaobject
+><imageobject
+><imagedata fileref="Knights-move-king.png"/></imageobject
+></mediaobject>
+		</sect2>
+	</sect1>
+
+	<sect1 id="special-movement">
+		<title
+>Mosse speciali</title>
+		<sect2 id="en_passant-movement">
+			<title
+>En Passant</title>
+			<para
+>Quando fu aggiunta la regola che permette a un pedone di spostarsi di due case alla prima mossa, un pedone poteva evitare potenzialmente la cattura da parte di un pedone avversario, andando nella casa successiva a quella sotto attacco. La cattura en passant (termine francese che significa <quote
+>al passaggio</quote
+>) fu aggiunta per prevenire tale azione. La cattura viene effettuata come se il pedone si sia spostato avanti solo di una casa. Esistono particolari condizioni per la cattura en passant: <itemizedlist>
+				<listitem
+><para
+>Un pedone deve spostarsi di due case dalla sua posizione iniziale in un'unica mossa.</para
+></listitem>
+				<listitem
+><para
+>Un pedone avversario deve stare attaccando la casa su cui il primo pedone si è spostato.</para
+></listitem>
+				<listitem
+><para
+>Il primo pedone può essere catturato come se si sia spostato solo di una casa.</para
+></listitem>
+				<listitem
+><para
+>La cattura può essere eseguita alla mossa successiva dell'avversario. Se la cattura non viene eseguita, il primo pedone è salvo dalla cattura en passant per il resto della partita.</para
+></listitem>
+			</itemizedlist>
+			</para>
+			<para
+>Nello schema sotto, il pedone bianco non si è spostato dalla sua posizione iniziale. La sua prima mossa può essere una o due case in avanti. La prima casa è sotto attacco dal pedone nero (il pedone attacca in diagonale), come indicato dalla X rossa. Il pedone bianco si sposta in avanti di due case, evitando l'attacco. Alla mossa successiva, il pedone nero si sposta nella casa in cui il pedone bianco si sarebbe spostato se si fosse potuto muovere di una singola casa alla sua prima mossa. Il pedone nero attacca con successo il pedone bianco e lo cattura <quote
+>en passant</quote
+>. Il pedone bianco viene rimosso dal gioco.</para>
+			<mediaobject
+><imageobject
+><imagedata fileref="Knights-enpassant.png"/></imageobject
+></mediaobject>
+		</sect2>
+		<sect2 id="castling-movement">
+			<title
+>Arrocco</title>
+			<para
+>L'arrocco utilizza il re e una torre ed è il solo momento della partita in cui può essere spostato più di un pezzo durante un singolo turno. Nell'arrocco un re viene spostato di due case verso la torre e quest'ultima viene quindi spostata nella casa situata dall'altro lato del re.</para>
+			
+			<para
+>L'arrocco presenta alcune rigide regole: <itemizedlist>
+				<listitem
+><para
+>Il re e la torre non devono essersi mai spostati durante la partita.</para
+></listitem>
+				<listitem
+><para
+>Non devono esserci pezzi tra il re e la torre.</para
+></listitem>
+				<listitem
+><para
+>Il re non è in scacco.</para
+></listitem>
+				<listitem
+><para
+>Il re non deve attraversare una casa attaccata da pezzi avversari.</para
+></listitem>
+				<listitem
+><para
+>Il re non deve terminare la mossa in una casa attaccata dai pezzi avversari (la mossa dell'arrocco non può terminare con il re in scacco).</para
+></listitem>
+			</itemizedlist>
+			</para>
+			
+			<para
+>Esistono due forme di arrocco. Una viene chiamata <quote
+>sull'Ala di Re</quote
+>. È conosciuto anche col nome di <quote
+>arrocco breve</quote
+>, poiché viene eseguito verso il lato corto della scacchiera e la torre deve muoversi solo di due case verso il lato opposto del re. Viene schematizzato qui sotto:</para>
+			<mediaobject
+><imageobject
+><imagedata fileref="Knights-castle-kingside.png"/></imageobject
+></mediaobject>
+			
+			<para
+>La seconda forma di arrocco è chiamata <quote
+>sull'Ala di Donna</quote
+>, dove il re si sposta verso la casa liberata dalla donna. È anche conosciuto come <quote
+>arrocco lungo</quote
+>, poiché viene eseguito verso il lato lungo nella scacchiera e la torre deve spostarsi di tre case verso il lato opposto del re. È schematizzato come segue:</para>
+			<mediaobject
+><imageobject
+><imagedata fileref="Knights-castle-queenside.png"/></imageobject
+></mediaobject>
+			
+			<note
+><title
+>Nota:</title>
+			<para
+>In &knights;, per arroccare devi spostare di due case verso la torre. &knights; completerà l'arrocco. Non spostare la torre, dato che &knights; presumerà che desideri solo spostare la torre e non arroccare. </para>
+			</note>
+			
+		</sect2>
+		<sect2 id="pawn-promotion-movement">
+			<title
+>Promozione del pedone</title>
+			<para
+>Quando un pedone ha raggiunto l'altra sponda della scacchiera non può avanzare ulteriormente, dato che deve sempre muoversi in avanti e non indietro. Il pedone viene dunque trasformato (<quote
+>promosso</quote
+>) in donna, torre, alfiere o cavallo. Questa promozione fa parte della mossa. In genere il pezzo scelto è la donna. Gli altri pezzi vengono a volte scelti quando il loro movimento aiuta lo scacco matto, spesso chiamato <quote
+>sottopromozione</quote
+>. Il pedone può essere trasformato in un pezzo anche se quel genere di pezzo è ancora nella scacchiera. Puoi dunque avere in gioco due donne o tre torri, alfieri o cavalli nello stesso momento.</para>
+		</sect2>
+	</sect1>
+	
+	<sect1 id="game-end">
+		<title
+>Termine del gioco</title>
+		<sect2 id="checkmate">
+			<title
+>Scacco matto</title>
+			<para
+>Quando il re è sotto scacco e viene minacciato di cattura da parte di un pezzo avversario, il re viene dichiarato <quote
+>sotto scacco</quote
+>. Un re deve togliersi immediatamente dallo scacco. Esistono tre possibili vie di uscita dallo scacco. <itemizedlist>
+				<listitem
+><para
+>Catturare il pezzo attaccante.</para
+></listitem>
+				<listitem
+><para
+>Spostare il re lontano dall'attacco e in una casa sicura in cui non risulti essere sotto scacco da parte di un pezzo avversario.</para
+></listitem>
+				<listitem
+><para
+>Bloccare l'attacco posizionando un pezzo tra l'attaccante e il re (non possibile per l'attacco da parte di un cavallo o un pedone).</para
+></listitem>
+			</itemizedlist>
+			</para>
+			
+			<para
+>Se il re non può sfuggire allo scacco, la posizione viene chiamata <quote
+>scacco matto</quote
+> e la partita finisce. Il giocatore cui è stato dichiarato scacco matto perde la partita. Il non viene mai realmente catturato e rimosso dalla scacchiera.</para>
+		</sect2>
+		<sect2 id="resign">
+			<title
+>Rinuncia</title>
+			<para
+>In qualsiasi momento della partita, un giocatore può rinunciare (uscire). La partita finisce e il giocatore avversario vince la partita.</para>
+		</sect2>
+		<sect2 id="draw">
+			<title
+>Patta</title>
+			<para
+>Una <quote
+>patta</quote
+> è un pareggio tra i giocatori. Esistono diversi casi in cui può verificarsi una patta. <itemizedlist>
+				<listitem
+><para
+>Stallo (vedi sotto)</para
+></listitem>
+				<listitem
+><para
+>Ripetizione di posizione - Se la stessa identica mossa viene ripetuta per almeno tre volte (non necessariamente consecutivamente). Essa richiede che le mosse possibili di tutti i pezzi di entrambi i giocatori siano le stesse. Se la possibilità di un pedone di essere catturato en passant o la possibilità di arroccare è cambiata, la posizione non è la stessa - anche se i pezzi si trovano nelle stesse posizioni.</para
+></listitem>
+				<listitem
+><para
+>Regola delle 50 mosse - Se non è stato catturato alcun pezzo o nessun pedone è stato mosso da entrambi i giocatori nelle ultime cinquanta mosse.</para
+></listitem>
+				<listitem
+><para
+>Posizione morta - Se si verifica una posizione in cui nessun giocatore ha la possibilità di dichiarare scacco matto in base a una serie di mosse legale. In genere questo succede a causa della scarsezza di pezzi lasciati per effettuare lo scacco matto, o anche per altre posizioni. Le combinazioni con pezzi insufficienti per eseguire lo scacco matto sono: <itemizedlist>
+					<listitem
+><para
+>re contro re</para
+></listitem>
+					<listitem
+><para
+>re e alfiere contro re</para
+></listitem>
+					<listitem
+><para
+>re e cavallo contro re</para
+></listitem>
+					<listitem
+><para
+>re e alfiere contro re e alfiere con entrambi gli alfieri sullo stesso colore</para
+></listitem>
+				</itemizedlist>
+    </para
+></listitem>
+				<listitem
+><para
+>Tempo scaduto - Se il tempo a disposizione di un giocatore scade e i suoi avversari non hanno pezzi per dare scacco matto (vedi sotto).</para
+></listitem>
+				<listitem
+><para
+>Patta d'accordo - Se entrambi i giocatori concordano sul pareggio.</para
+></listitem>
+			</itemizedlist>
+			</para>
+		</sect2>
+		<sect2 id="stalemate">
+			<title
+>Stallo</title>
+			<para
+>Se un giocatore non dispone più di mosse legali (qualsiasi mossa possibile metterebbe sotto scacco il suo re) ma il re non è al momento in scacco, la partita finisce in <quote
+>stallo</quote
+>. Lo stallo rende patta la partita.</para>
+		</sect2>
+		<sect2 id="time-end">
+			<title
+>Tempo</title>
+			<para
+>Se il tempo di un giocatore termina prima che abbiano completato il numero di mosse richieste: <itemizedlist
+> <listitem
+><para
+>il giocatore perde la partita se l'avversario dispone di pezzi sufficienti per lo scacco matto.</para
+></listitem
+> <listitem
+><para
+>La partita viene dichiarata patta se l'avversario non dispone di pezzi sufficienti per lo scacco matto.</para
+></listitem
+> </itemizedlist
+> I pezzi sufficienti per lo scacco matto sono considerati qualsiasi gruppo di pezzi, eccezion fatta per il solo re, il re e l'alfiere o il re e il cavallo.</para>
+		</sect2>
+	</sect1>
+	
+	<sect1 id="time-controls">
+		<title
+>Gioco a tempo</title>
+		<para
+>Molti giochi di scacchi utilizzano il tempo per aumentare la velocità di gioco o per terminarlo in tempi ragionevoli. Esistono due forme principali di gioco a tempo.</para>
+		
+		<para
+>Il primo tipo è quello mosse-per-tempo. In questo tipo, un giocatore deve completare un numero specificato di mosse entro un tempo prefissato.</para>
+		
+		<para
+>Il secondo tipo è detto <quote
+>morte improvvisa</quote
+>. In questo tipo, esiste un tempo prefissato per completare la partita, a prescindere dal numero di mosse effettuate.</para>
+		
+		<para
+>All'interno del tempo potrebbero esserci dei ritardi per compensare il tempo perso nell'esecuzione fisica di una mossa. Nel <quote
+>ritardo di Bronstein</quote
+>, l'orologio non si avvia all'inizio della mossa del giocatore, fino a che il ritardo non è terminato. Se la mossa viene completata prima che il ritardo finisca, il tempo non viene sottratto dall'orologio del giocatore. Nel <quote
+>ritardo di Fischer</quote
+> il ritardo viene aggiunto al tempo restante del giocatore prima della mossa. Se la mossa è eseguita prima che il ritardo finisca, il tempo restante viene mantenuto dal giocatore e va ad aumentare il tempo dell'orologio. Analogamente, può essere aggiunto un tempo fisso all'orologio del giocatore dopo che è stata completata una mossa. Quando il tempo viene aggiunto all'orologio, la quantità di tempo viene considerata come <quote
+>incremento di tempo</quote
+>.</para>
+		
+		<para
+>Il tempo può variare molto in base alla partita, il tipo di partita e i promotori. Inoltre, durante una partita possono essere combinati diversi tipi di tempo, con aggiunta del tempo inutilizzato al tempo successivo. Per tutti gli eventi principali della Federazione Internazionale di Scacchi (FIDE), il tempo è di 90 minute per le prime 40 mosse, seguito da 30 minuti di partita rapida, con 30 secondi aggiuntivi per mossa che inizia con la prima mossa. Il tempo predefinito su FICS (Free Internet Chess Server) sono due minuti per partita (rapida), più dodici secondi di incremento per ciascuna mossa. Molte riunioni importanti utilizzano come tempo 90 minuti di partita rapida. Il tempo della US Chess Federation Blitz è di cinque minuti per partita senza ritardi/incrementi.</para>
+	</sect1
+>	
+	</chapter>
+	
+	<chapter id="markers">
+		<title
+>Indicatori</title>
+		<para
+>Gli indicatori sono gli evidenziatori delle case sulla scacchiera. Possono essere utilizzati per mostrare le mosse legali per il tuo pezzo, per la mossa precedente dell'avversario o per un re in scacco. Il loro colore e e forma dipendono dal tema in uso. Possono essere attivati o disattivati nella sezione delle impostazioni generali del menu di configurazione. </para>
+		<para
+>Se fai clic su un tuo pezzo quando è il tuo turno, verrà mostrato un indicatore su ciascuna casa in cui il pezzo può essere spostato. La figura mostra le mosse legali per la donna bianca. </para>
+		<mediaobject
+><imageobject
+><imagedata fileref="Knights-moving-queen.png"/></imageobject
+></mediaobject>
+		<para
+>Se il tuo avversario ha eseguito una mossa, quest'ultima viene indicata da indicatori. Un indicatore mostra la posizione iniziale del pezzo e un secondo evidenzia quella nuova. </para>
+		<mediaobject
+><imageobject
+><imagedata fileref="Knights-lastmove.png"/></imageobject
+></mediaobject>
+		<para
+>Se l'ultima mossa dell'avversario mette il tuo re sotto attacco (<quote
+>scacco</quote
+>), esso viene evidenziato, come pure i pezzi attaccanti. </para>
+		<mediaobject
+><imageobject
+><imagedata fileref="Knights-danger.png"/></imageobject
+></mediaobject>
+		<note>
+			<title
+>Nota:</title>
+			<para
+>Alcuni temi non supportano tutti i tipi di indicatori. </para>
+		</note>
+	</chapter>
+
+	<chapter id="configuration">
+		<title
+>Configurazione del gioco</title
+><!-- do not change this! -->
+		<para
+>La finestra di configurazione di &knights; permette la modifica delle opzioni visive e la selezione dei temi di &knights;. </para>
+		<para
+>Una volta soddisfatto delle modifiche, puoi applicarle premendo i pulsanti <guibutton
+>Applica</guibutton
+> od <guibutton
+>Ok</guibutton
+>, collocati nella parte bassa della finestra. Facendo clic su <guibutton
+>Ok</guibutton
+> chiuderai pure la finestra di configurazione. </para>
+		<para
+>Tuttavia, se non sei soddisfatto delle modifiche, basta premere <guibutton
+>Annulla</guibutton
+> per scartarle e chiudere la finestra di configurazione. Devi premere su <guibutton
+>Annulla</guibutton
+> prima di premere su <guibutton
+>Applica</guibutton
+> od <guibutton
+>Ok</guibutton
+>. </para>
+
+		<sect1 id="configuration-general">
+			<title
+>Generale</title>
+			<para
+>La sezione <guimenu
+>Generale</guimenu
+> contiene opzioni sull'aspetto generale di &knights;. Le animazioni dei pezzi e della scacchiera possono essere abilitate o modificate. La sezione delle animazioni è visibile a seconda del software di sistema e solo se sono disponibili le animazioni. Possono essere abilitati o disabilitati tutti i tre tipi di <link linkend="markers"
+>indicatori</link
+>. I bordi intorno alla scacchiera possono essere attivati con o senza la notazione scacchistica algebrica, tramite un menu a discesa. </para>
+			<note>
+				<title
+>Nota:</title>
+				<para
+>Alcuni temi non supportano gli indicatori, i bordi e, o in alternativa, le notazioni. In questo caso, la configurazione non avrà effetto su di essi, ma sarà ricordata nel caso di un cambio successivo del tema. </para>
+			</note>
+		</sect1>
+
+		<sect1 id="configuration-themes">
+			<title
+>Temi</title>
+			<para
+>La sezione <guimenu
+>Tema</guimenu
+> permette la selezione di un tema. Il tema fornisce le immagini per la scacchiera, i pezzi, gli indicatori e altri elementi. Per selezionare un nuovo tema, scegli il nome del tema dall'elenco. Dalla stessa pagina puoi anche scaricare nuovi temi facendo clic su <guibutton
+>Ottieni nuovi temi</guibutton
+>. I temi sono memorizzati in kde-look.org sotto &knights;. </para>
+			<note>
+				<title
+>Nota:</title>
+				<para
+>Per comodità ti sarà mostrata un'anteprima del tema a destra dell'elenco, non appena selezioni il nome di quello che ti ispira. </para>
+			</note>
+		</sect1>
+	</chapter>
+
+	<chapter id="credits-and-licenses">
+		<title
+>Riconoscimenti e licenze</title>
+
+
+		<para
+>&knights;</para>
+		<itemizedlist>
+   <listitem>
+				<para
+>Miha Čančula <email
+>miha.cancula@gmail.com</email
+> - Autore originale </para>
+   </listitem>
+		</itemizedlist>
+		<para
+>Copyright della documentazione 2010, Miha Čančula <email
+>miha.cancula@gmail.com</email
+> </para>
+		
+		<para
+>Traduzione italiana di Valter Mura <email
+>valtermura@gmail.com</email
+></para
+> 
+&underFDL; &underGPL; </chapter>
+
+	<appendix id="installation">
+		<title
+>Installazione</title>
+
+		&install.intro.documentation;
+
+		&install.compile.documentation;
+
+	</appendix>
+
+
+</book>

@@ -1,0 +1,49 @@
+P1_
+Q_
+bach la ai?
+Tra loi
+A: La xuan bach hehe
+B: La Pig
+A_
+A
+P1_
+Q_
+bach la ai?
+Tra loi
+A: La xuan bach hehe
+B: La Pig
+A_
+A
+P1_
+Q_
+bach la ai?
+Tra loi
+A: La xuan bach hehe
+B: La Pig
+A_
+A
+P2_
+Q_
+2bach la ai?
+2Tra loi
+2A: La xuan bach hehe
+2B: La Pig
+A_
+A
+P2_
+Q_
+bach la ai?
+Tra loi
+A: La xuan bach hehe
+B: La Pig
+A_
+A
+P2_
+Q_
+2bach la ai?
+2Tra loi
+2A: La xuan bach hehe
+2B: La Pig
+A_
+A
+

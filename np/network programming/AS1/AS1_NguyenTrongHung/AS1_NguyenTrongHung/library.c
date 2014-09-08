@@ -1,0 +1,523 @@
+#include "library.h"
+
+int ChuoiSo(char recv_data[])
+{
+int socong=0;
+int i,j=0,heso=1;
+int len= strlen(recv_data);
+for(i=0;i<len;i++){
+	if(i>0)
+		heso=heso*10;
+	if(recv_data[i]== '0')
+		socong=socong+0*heso;
+	if(recv_data[i]== '1')
+		socong=socong+1*heso;
+	if(recv_data[i]== '2')
+		socong=socong+2*heso;
+	if(recv_data[i]== '3')
+		socong=socong+3*heso;
+	if(recv_data[i]== '4')
+		socong=socong+4*heso;
+	if(recv_data[i]== '5')
+		socong=socong+5*heso;
+	if(recv_data[i]== '6')
+		socong=socong+6*heso;
+	if(recv_data[i]== '7')
+		socong=socong+7*heso;
+	if(recv_data[i]== '8')
+		socong=socong+8*heso;
+	if(recv_data[i]== '9')
+		socong=socong+9*heso;
+		
+	}
+	return socong;
+}
+// Chuyen tu so nguyen ve chuoi ki tu so
+void SoChuoi(char kitu[],int i)
+{
+	int j=0,k,z;
+	int socong[10];
+	if(i<0)
+		i=abs(i);
+	do{
+			socong[j]=i%10;
+			i=i/10;
+			j++;
+	}while( i != 0 );
+	for(k=0;k<j;k++){
+	if(socong[k] == 1)
+		kitu[k]= '1';
+	if(socong[k] == 0)
+		kitu[k]= '0';
+	if(socong[k] == 2)
+		kitu[k]= '2';
+	if(socong[k] == 3)
+		kitu[k]= '3';
+	if(socong[k] == 4)
+		kitu[k]= '4';
+	if(socong[k] == 5)
+		kitu[k]= '5';
+	if(socong[k] == 6)
+		kitu[k]= '6';
+	if(socong[k] == 7)
+		kitu[k]= '7';
+	if(socong[k] == 8)
+		kitu[k]= '8';
+	if(socong[k] == 9)
+		kitu[k]= '9';
+	}
+	kitu[j]='\0';
+	j++;	
+}
+void doichuoi(char user1[],char user2[]){
+	char kt[1024];
+	int i=strlen(user1);
+	int k,m=0;
+	for(k=i-1;k>=0;k--){
+		kt[m]=user1[k];
+		m++;
+	}
+	strcpy(user2,kt);
+}
+
+void printMap(Player *P1,Player *P2,int *info)
+{
+    //in score P1
+    printf("Score of %s : %d\n",P1->ten,info[12]);
+
+    //in so do tro choi
+    printf("         1     2     3     4     5\n");
+    printf(" _________________________________________\n");
+    printf("|     |     |     |     |     |     |     |\n");
+    printf("|     | %2d  | %2d  | %2d  | %2d  | %2d  |     |\n",info[1],info[2],info[3],info[4],info[5]);
+    printf("|     |_____|_____|_____|_____|_____|     |\n");
+    printf("|     |                             |     |\n");
+    printf("| %2d  |                             | %2d  |\n",info[0],info[6]);
+    printf("|     |_____ _____ _____ _____ _____|     |\n");
+    printf("|     |     |     |     |     |     |     |\n");
+    printf("|     | %2d  | %2d  | %2d  | %2d  | %2d  |     |\n",info[11],info[10],info[9],info[8],info[7]);
+    printf("|_____|_____|_____|_____|_____|_____|_____|\n");
+    printf("         11     10     9     8     7\n");
+    //in score P2
+    printf("\nScore of %s : %d\n",P2->ten,info[13]);
+}
+
+void fprintMap(Player *P1,Player *P2,int *info, FILE *fp)
+{
+    //in score P1
+    fprintf(fp,"Score of %s : %d\n",P1->ten,info[12]);
+
+    //in so do tro choi
+    fprintf(fp,"         1     2     3     4     5\n");
+    fprintf(fp," _________________________________________\n");
+    fprintf(fp,"|     |     |     |     |     |     |     |\n");
+    fprintf(fp,"|     | %2d  | %2d  | %2d  | %2d  | %2d  |     |\n",info[1],info[2],info[3],info[4],info[5]);
+    fprintf(fp,"|     |_____|_____|_____|_____|_____|     |\n");
+    fprintf(fp,"|     |                             |     |\n");
+    fprintf(fp,"| %2d  |                             | %2d  |\n",info[0],info[6]);
+    fprintf(fp,"|     |_____ _____ _____ _____ _____|     |\n");
+    fprintf(fp,"|     |     |     |     |     |     |     |\n");
+    fprintf(fp,"|     | %2d  | %2d  | %2d  | %2d  | %2d  |     |\n",info[11],info[10],info[9],info[8],info[7]);
+    fprintf(fp,"|_____|_____|_____|_____|_____|_____|_____|\n");
+    fprintf(fp,"         11     10     9     8     7\n");
+    //in score P2
+    fprintf(fp,"\nScore of %s : %d\n",P2->ten,info[13]);
+}
+
+Player choice(Player *P,int *info)
+{
+    Player tmp;
+    //khoi tao step.position = 0
+    tmp.position = 0;
+    char c;
+    int sign = 0;
+    // printMap(info);
+    do{
+      printf("Luot di cua %s\n",P->ten);
+      printf("Choice position :");
+      scanf("%d",&P->position);
+      if(info[P->position]==0)
+        {
+            printf("You have choosen empty cell, please again\n");
+            sign = 1;
+        }
+      else
+	sign = 0;
+    }while(sign);
+    printf("You go left (L) or right (R) : ");
+    scanf("%c%*c",&c);
+    P->way= c;
+    tmp.position=P->position;
+    tmp.way=P->way;
+    return tmp;
+    
+}
+
+int play(int *info,Player tmp)
+{
+    int number,position,i;
+    position = tmp.position;
+    number = info[position];
+    Player subStep;
+
+    //di theo huong ben trai
+    if(tmp.way == 'l')
+    {
+        info[position] = 0;
+        for(i=number; i>0; i--)
+        {
+            position = (position+1)%12;
+            info[position]++;
+        }
+        //kiem tra xem phia truoc co o rong ko
+        position = (position+1)%12;
+        if(info[position]==0)
+        {
+            // co trong
+            number = info[(position+1)%12];
+            info[(position+1)%12] = 0;
+            subStep.position = (position+1)%12;
+            subStep.way = 'l';
+            // tra ve gia tri cua o tiep theo
+            return number + checkContinue(info,subStep) ;
+        }
+        else
+        {
+            subStep.position = position;
+            subStep.way = 'l';
+            return play(info, subStep);
+        }
+    }
+    else
+    {
+        info[position] = 0;
+        for(i=number; i>0; i--)
+        {
+            position = (position-1)%12;
+            if(position<0)
+                position += 12;
+            info[position]++;
+        }
+        //kiem tra xem phia truoc co o rong ko
+        position = (position-1)%12;
+        if(position<0)
+                position += 12;
+        if(info[position]==0)
+        {
+            position = (position-1)%12;
+            if(position<0)
+                    position += 12;
+            number = info[position];
+            info[position] = 0;
+            subStep.position = position;
+            subStep.way = 'r';
+            // tra ve gia tri cua o tiep theo
+            return number + checkContinue(info,subStep) ;
+        }
+        else
+        {
+            Player subStep2;
+            subStep2.position = position;
+            subStep2.way = 'r';
+            return play(info, subStep2);
+        }
+    }
+}
+
+int checkContinue(int *info, Player tmp)
+{
+    Player subStep;
+    int number,position;
+
+    if(tmp.way == 'l')
+    {
+        if(info[(tmp.position+1)%12]==0)
+        {
+            subStep.position = (tmp.position+2)%12;
+            subStep.way = 'l';
+            number = info[(tmp.position+2)%12];
+            info[(tmp.position+2)%12] = 0;
+            //thoat neu o tiep theo cua tiep theo van la 0
+            if(number == 0)
+                return 0;
+            return number + checkContinue(info, subStep);
+        }
+        else
+            return 0;
+    }
+    else
+    {
+      position = (tmp.position-1)%12;
+        if(position<0)
+            position += 12;
+
+        if(info[position]==0)
+        {
+            position = (position-1)%12;
+            if(position<0)
+                position += 12;
+
+            subStep.position = position;
+            subStep.way = 'r';
+            number = info[position];
+            info[position] = 0;
+            //thoat neu o tiep theo cua tiep theo van la 0
+            if(number == 0)
+                return 0;
+            return number + checkContinue(info, subStep);
+	      }
+        else
+            return 0;
+    }
+}
+
+/*void log(FILE *fp, Player tmp, int *info)
+{
+    fprintf(fp,"\n-------------------------------------------------------\n");
+    if(tmp.position>0 && tmp.position<6)
+    {
+        fprintf(fp,"Boss play: position %d ",tmp.position);
+        if(tmp.way == 'l')
+            fprintf(fp,", way Right\n");
+        else
+            fprintf(fp,", way Left\n");
+    }
+    else
+    {
+        fprintf(fp,"You play: position %d ",tmp.position);
+        if(tmp.way == 'l')
+            fprintf(fp,", way left\n");
+        else
+            fprintf(fp,", way Right\n");
+    }
+    fprintMap(info, fp);
+    }*/
+
+void checkExit(int *info, FILE *fp)
+{
+	if(info[0] == 0 && info[6] == 0)
+	{
+		printf("game exit\n");
+		fprintf(fp,"--------------Game exit-----------\n");
+		quitGame(info, fp);
+	}
+}
+
+int check_Gameover(int * info)
+{
+  if(info[0]==0&&info[6]==0){
+    printf("Tro choi ket thuc\n");
+    return 0;
+  }
+  else if(info[1]==0&&info[2]==0&&info[3]==0&&info[4]==0&&info[5]==0){
+	printf("Tro choi ket thuc\n");
+	return 0;
+      }
+    
+  else if(info[7]==0&&info[8]==0&&info[9]==0&&info[10]==0&&info[11]==0){
+	printf("Tro choi ket thuc\n");
+	return 0;
+      }
+  else return 1;
+}
+
+void quitGame(int *info, FILE *fp)
+{
+	int i;
+	for(i=1; i<6; i++)
+	{
+		info[12] += info[i];
+		info[i] = 0;
+	}
+	for(i=7; i<12; i++)
+	{
+		info[13] += info[i];
+		info[i] = 0;
+	}
+	fprintf(fp,"Score of P1 %d\n",info[12]);
+	fprintf(fp,"Score of P2 %d\n",info[13]);
+	if(info[12]>info[13])
+	  fprintf(fp,"P1 thang\n");
+	else if(info[12]<13)
+	  printf(fp,"P2 thang\n");
+	else printf(fp,"2 nguoi choi hoa\n");
+	fclose(fp);
+}
+void HD_sudung()	
+{
+	printf("\n*********************************************************************\n");
+	printf(" __________________Game_O_An_Quan_BY AS1-GROUP 2_______________________\n");	
+	printf("Ban nhap vao o can di chuyen(1->5, 7->11)\n Va nhap chieu di chuyen(L: left, R:right)\n");
+	printf("***********************************************************************\n");	
+
+}
+void NhapThongtinPlayer(Player *p1,Player *p2, char name1[],char name2[],int state)
+{
+	p1->Ma=1;	//ma nguoi choi 1 la 1	
+	p2->Ma=2;	//ma nguoi choi 2 la 2
+	if(state == 1){
+		strcpy(p1->ten,name2); //Nhap ten nguoi choi 1
+		strcpy(p2->ten,name1);
+	}
+	else {
+	strcpy(p1->ten,name1); //Nhap ten nguoi choi 1
+	strcpy(p2->ten,name2);
+	}
+}
+void InPlayer(Player p1, Player p2){
+printf("\n_______________________In thong tin 2 player___________________\n");
+printf("Player 1 : %s\t %d\t %d\t %s\n", p1.ten, p1.Ma,p1.position,p1.way);
+printf("Player 2 : %s\t %d\t %d\t %s\n", p2.ten, p2.Ma,p2.position,p2.way);
+}
+void game(int state,int sockfd,char name1[], char name2[]){
+  int score,position;
+  char c,way;
+  int info[]={10,5,5,5,5,5,10,5,5,5,5,5,0,0};
+  Player P1,P2,P_now,tmp;
+  char win[1024]="WIN";
+  char end[1024]="END";
+  char tt[1024] = "TT";
+  char dulieu[1024];
+  char so1[10],so2[1];
+  char send_data[1024],recv_data[1024],recvdata[1024];
+  int i=0,j=0,k;
+  int ktthoat=0;
+  int ktlap= 1;
+  int byte;			//Thong tin 2 nguoi choi, p_now luu thong tin cu nguoi choi hien tai
+  		//Tao ma tran con tro 9 dong 9 cot, vi co 1 dong 1 cot lam chi muc;
+  HD_sudung();			
+  NhapThongtinPlayer(&P1,&P2,name1,name2,state);
+  printMap(&P1,&P2,info);
+  int kt=1;	//kt dung de thay doi luot nguoi choi, 1 --> luot P1, 2--> P2
+  char ktContinue;	//hoi y nguoi choi co muon choi tiep ko, y hoac Y la choi tiep, n hoac N la nghi choi!!! :(
+  int ktwin=0;
+  FILE *fp;
+  fp = fopen("log.txt","w");		//ktwin la kiem tra chien thang , 0 --->tiep tuc, 1 dung cuoc choi, vi co nguoi thang roi
+  
+  
+  do	//chay game
+    {
+      if(state == 1)
+	{
+	  // InPlayer(P1,P2);
+	  printf("Ban la nguoi bat dau cuoc choi:\n");
+	  P_now= choice(&P1,info);
+	  //score=play(info,P_now);
+	  if(P_now.position == 0)
+	    {
+	      quitGame(info, fp);
+	      break;
+	    }
+	 // printf("^_^");
+	  score = play(info,P_now);
+	  info[12] += score;
+	  SoChuoi(so1,P_now.position);
+	  printMap(&P1,&P2,info);
+	  so2[0]=P_now.way;
+	  //	  so2[1]=NULL;
+	  //SoChuoi(so2,P_now.jch);
+	  strcpy(send_data,so1);
+	  strcat(send_data,":");
+	  strcat(send_data,so2);
+	  send(sockfd,send_data,1024,0);
+	  if(ktwin == 1){
+	    send(sockfd,win,1024,0);// Thong tin chien thang
+	    //ktwin=1;					
+	  }
+	  else send(sockfd,tt,1024,0);
+	  P_now=P2;
+	  printf("Cho doi............:\n");			
+	  byte= recv(sockfd,recv_data,1024,0);
+	  recv_data[byte]='\0';
+	  i=0;
+	  while(recv_data[i] != ':'){
+	    so1[i]=recv_data[i];
+	    i++;
+	  }
+	  i++;
+	  j=0;
+	  while(i<strlen(recv_data)){
+	    so2[j]=recv_data[i];
+	    i++;
+	    j++;
+	  }
+	  P_now.position=ChuoiSo(so1);P_now.way=so2[0];
+	  score=play(info,P_now);
+	  info[13]+=score;
+	  printMap(&P1,&P2,info);
+	  byte= recv(sockfd,recvdata,1024,0);
+	  recvdata[byte]='\0';
+	  if(strcmp(recvdata,"WIN") == 0){
+	    printf("\nRat tiec ban da thua cuoc.\n");
+	    ktwin=1;
+	  }
+	  else if(strcmp(recvdata,"END")== 0){
+	    printf("\n Doi thu cua ban da yeu cau ket thuc cuoc choi\n");
+	    ktthoat = 1;
+	  }
+	 
+	}
+      else
+	{
+	  //printMap(&P1,&P2,info);
+	  P_now=P1;
+	  printf("Hay doi doi thu di co nhe:\n");			
+	  byte= recv(sockfd,recv_data,1024,0);
+	  recv_data[byte]='\0';
+	  i=0;
+	  while(recv_data[i] != ':'){
+	    so1[i]=recv_data[i];
+	    i++;
+	  }
+	  i++;
+	  j=0;
+	  while(i<strlen(recv_data)){
+	    so2[j]=recv_data[i];
+	    i++;
+	    j++;
+	  }
+	  P_now.position=ChuoiSo(so1);P_now.way=so2[0];
+	  score=play(info,P_now);
+	  info[12]+=score;
+	  printMap(&P1,&P2,info);
+	  byte= recv(sockfd,recvdata,1024,0);
+	  recvdata[byte]='\0';
+	  if(strcmp(recvdata,"WIN") == 0){
+	    printf("\nRat tiec ban da thua cuoc.\n");
+	    ktwin=1;
+	  }
+	  else if(strcmp(recvdata,"END")== 0){
+	    printf("\n Doi thu cua ban da yeu cau ket thuc cuoc choi\n");
+	    ktthoat =1;
+	  }
+	  //	  InPlayer(P1,P2);
+       	  P_now= choice(&P2,info);
+	  if(P_now.position == 0)
+	    {
+	      quitGame(info, fp);
+	      break;
+	    }
+	//  printf("^_^");
+	  score = play(info,P_now);
+	  info[13] += score;
+	  printMap(&P1,&P2,info);
+	  SoChuoi(so1,P_now.position);
+	  so2[0]=P_now.way;
+	  //	  so2[1]=NULL;
+	  strcpy(send_data,so1);
+	  strcat(send_data,":");
+	  strcat(send_data,so2);
+	  send(sockfd,send_data,1024,0);
+	  if(ktwin == 1)
+	    send(sockfd,win,1024,0);// Thong tin chien thang
+	  else 
+	    send(sockfd,tt,1024,0);
+	  
+	  }
+	 // printf("ktwin= %d \t ktthoat= %d",ktwin,ktthoat);}
+      //fflush(stdout);
+    }while(ktwin != 1 && ktthoat == 0);
+   fclose(fp);
+}
+
+

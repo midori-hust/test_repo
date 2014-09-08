@@ -1,0 +1,12 @@
+<?xml version="1.0" standalone="no"?> <!--*- mode: xml -*-->
+<!DOCTYPE glade-project SYSTEM "http://glade.gnome.org/glade-project-2.0.dtd">
+
+<glade-project>
+  <name>chesslan</name>
+  <program_name>chesslan</program_name>
+  <language>C++</language>
+  <gnome_support>FALSE</gnome_support>
+  <main_source_file>interface.cc</main_source_file>
+  <handler_source_file>callbacks.cc</handler_source_file>
+  <support_source_file>support.cc</support_source_file>
+</glade-project>

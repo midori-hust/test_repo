@@ -1,0 +1,43 @@
+/*
+$Revision$
+*/
+
+
+#ifndef _PAWN_HH
+#  define _PAWN_HH
+
+//#include <libgnomecanvasmm/pixbuf.h>
+//#include <libgnomecanvasmm/group.h>
+//#include <string>
+
+#include "pieces.hh"
+
+class pawn:public pieces
+{
+      public:
+	pawn (Gnome::Canvas::Group & root, char &name, double row,
+	      double col);
+	  virtual ~ pawn ();
+	/* pieces specific move 
+	 * routine:
+	 * check for valid moves,
+	 * calls pieces::move() to
+	 * update history stack plus
+	 * doing the actual move.
+	 */
+	bool pmove (char &name, double row, double col);
+
+	//bool on_key_press(GdkEventKey *event, Gnome::Canvas::Canvas* canvas);
+
+      protected:
+	char *m_name;		// lower case for black, uppercase for white
+	// follow by a number: 
+	// White King is: K1
+	// White Pawn 4: P4
+	// Black rook 2: r2
+	  Glib::RefPtr < Gdk::Pixbuf > m_white_image;
+	  Glib::RefPtr < Gdk::Pixbuf > m_black_image;
+
+	//Glib::RefPtr<Gdk::Pixbuf> m_image;
+};
+#endif

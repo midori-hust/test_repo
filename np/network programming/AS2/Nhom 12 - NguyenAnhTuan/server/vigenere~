@@ -1,0 +1,9 @@
+#include<stdio.h>
+
+char *compress(char s[])
+{
+
+}
+char *decompress(char s[])
+{
+}

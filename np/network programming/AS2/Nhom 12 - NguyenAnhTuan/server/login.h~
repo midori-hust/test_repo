@@ -1,0 +1,46 @@
+#include<stdio.h>
+typedef struct user_
+{
+  char name[1024];
+  char pwd[1024];
+  struct user_ *next;
+}user;
+typedef struct userlist_
+{
+  struct user_*header;
+}userlist;
+typedef struct indexarray_
+{
+  struct user_*header;
+}indexarray;
+void initds(userlist* ds)
+{
+  ds->header=NULL;
+}
+void initarr(indexarray arr[])
+{
+  int i;
+  for(i=0;i<=52;i++)
+    {
+      arr[i].header=NULL;
+    }
+}
+int emptyds(userlist ds)
+{
+  return (ds.header==NULL);
+}
+int emptyindex(indexarray arr[],int i)
+{
+  return (arr[i].header==NULL);
+}
+int changeindex(char a[])
+{
+  if(a[0]>='A'&&a[0]<='Z')
+    {
+      return a[0]-'A';
+    }
+  else
+    {
+      return a[0]-'a'+26;
+    }
+}

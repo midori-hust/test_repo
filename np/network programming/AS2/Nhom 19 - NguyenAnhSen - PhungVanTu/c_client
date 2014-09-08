@@ -1,0 +1,1 @@
+gcc -Wall -g -o client client.c defineMessage.c message.c clientCore.c core.c command.c socketaction.c libterm.c

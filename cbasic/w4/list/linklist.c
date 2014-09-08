@@ -1,0 +1,137 @@
+#include <stdio.h>
+#include <assert.h>
+
+#include "linklist.h"
+
+//Tao moi 1 phan tu moi
+Node newNode(elementType data)
+{
+  Node new;
+  new = (Node)malloc(sizeof(struct node));
+  new->element = data;
+  new->next = NULL;
+  new->prev = NULL;
+  return new;
+}
+
+//Chen 1 phan tu vao dau danh sach
+void insertBefore(Node current, 
+		  Node new_item)
+{
+  assert(new_item != NULL);
+  assert(current != NULL);
+
+  if(current == root)
+    {
+      new_item->next = root;
+      new_item->prev = NULL;
+      root->prev = new_item;
+      root = new_item;
+    }
+  else
+    {
+      new_item->next = current;
+      new_item->prev = current->prev;
+      current->prev->next = new_item;
+      current->prev = new_item;
+    }
+   
+}
+
+//Chen 1 phan tu vao sau phan tu tro boi current trong danh sach
+void insertAfter(Node current,
+		 Node new_item)
+{
+  assert (current != NULL);
+  assert (new_item != NULL);
+
+  if(current == sentinel)
+    {
+      new_item->prev = sentinel;
+      new_item->next = NULL;
+      sentinel->next = new_item;
+      sentinel = new_item;
+    }
+  else
+    {
+      new_item->next = current->next;
+      new_item->prev = current;
+      current->next->prev = new_item;
+      current->next = new_item;
+    }
+}
+
+//Hien thi danh sach ra man hinh
+void displayList()
+{
+  Node current;
+  for(current = root; current != NULL; current = current->next)
+    {
+      //Hien thi cur->element ra man hinh
+      //(Cai nay phai biet duoc kieu cua element thi moi printf duoc)
+      printf("%d\n", current->element);
+    }
+}
+
+//Chen vao truoc root (chen vao dau tien)
+void append(Node new_item)
+{
+  assert (new_item != NULL);
+
+  if (root == NULL)
+    root = new_item;
+  else
+    {
+      insertBefore(root, new_item);
+      root = new_item;
+    }
+}
+
+//Chen vao sau sentinel (nhet vao cuoi cung)
+void prepend(Node new_item)
+{
+  assert (new_item != NULL);
+  if (root == NULL)
+    root = new_item;
+  else
+    {
+      insertAfter(sentinel, new_item);
+      sentinel = new_item;
+    }
+}
+
+//Tim kiem phan tu
+Node search(elementType element)
+{
+  Node current;
+  for (current = root; current!= NULL; current = current->next)
+    {
+      if (current->element == element)
+	break;
+    }
+  return current;
+}
+
+//Xoa phan tu duoc tro boi current
+void deleteNode(Node current)
+{
+
+  if(root == current)
+    {
+      root = root->next;
+      root->prev = NULL;
+      free(current);
+    }
+  else if (current == sentinel)
+    {
+      sentinel = sentinel->prev;
+      sentinel->next = NULL;
+      free(current);
+    }
+  else
+    {
+      current->prev->next = current->next;
+      current->next->prev = current->prev;
+      free(current);  
+    }
+}

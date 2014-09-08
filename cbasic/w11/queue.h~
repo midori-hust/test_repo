@@ -1,0 +1,18 @@
+#ifndef __QUEUE_H__
+#define __QUEUE_H__
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+#define MAXLENGTH 100
+
+
+struct queue_
+{
+  int elements[MAXLENGTH];
+  int Front, Rear;
+};
+
+typedef struct queue_ Queue;
+

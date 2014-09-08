@@ -1,0 +1,7 @@
+NgocAnh		as
+TuanAnh		as
+XuanCuong	is2
+NgocCuong	is1
+TruongGiang	is1
+NgocSon		is3
+ABCDEF		is

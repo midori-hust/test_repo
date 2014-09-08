@@ -1,0 +1,184 @@
+/****************************************************************************
+** Meta object code from reading C++ file 'knightsview.h'
+**
+** Created: Thu Sep 26 16:52:37 2013
+**      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#include "../../src/knightsview.h"
+#if !defined(Q_MOC_OUTPUT_REVISION)
+#error "The header file 'knightsview.h' doesn't include <QObject>."
+#elif Q_MOC_OUTPUT_REVISION != 63
+#error "This file was generated using the moc from 4.8.4. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+QT_BEGIN_MOC_NAMESPACE
+static const uint qt_meta_data_Knights__KnightsView[] = {
+
+ // content:
+       6,       // revision
+       0,       // classname
+       0,    0, // classinfo
+      17,   14, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       7,       // signalCount
+
+ // signals: signature, parameters, type, tag, flags
+      27,   22,   21,   21, 0x05,
+      58,   22,   21,   21, 0x05,
+      87,   21,   21,   21, 0x05,
+      97,   21,   21,   21, 0x05,
+     124,   21,   21,   21, 0x05,
+     154,   21,   21,   21, 0x05,
+     170,   21,   21,   21, 0x05,
+
+ // slots: signature, parameters, type, tag, flags
+     186,   21,   21,   21, 0x08,
+     204,   21,   21,   21, 0x08,
+     225,  218,   21,   21, 0x08,
+     245,   21,   21,   21, 0x08,
+     277,  268,   21,   21, 0x0a,
+     306,   21,   21,   21, 0x0a,
+     326,  319,   21,   21, 0x0a,
+     348,  342,   21,   21, 0x0a,
+     368,  365,   21,   21, 0x0a,
+     385,   21,   21,   21, 0x0a,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_Knights__KnightsView[] = {
+    "Knights::KnightsView\0\0text\0"
+    "signalChangeStatusbar(QString)\0"
+    "signalChangeCaption(QString)\0gameNew()\0"
+    "activePlayerChanged(Color)\0"
+    "displayedPlayerChanged(Color)\0"
+    "popupAccepted()\0popupRejected()\0"
+    "settingsChanged()\0resizeScene()\0center\0"
+    "centerView(QPointF)\0showAllOffersToggled()\0"
+    "provider\0setupBoard(KgThemeProvider*)\0"
+    "clearBoard()\0winner\0gameOver(Color)\0"
+    "offer\0showPopup(Offer)\0id\0popupHidden(int)\0"
+    "updateOffers()\0"
+};
+
+void Knights::KnightsView::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        Q_ASSERT(staticMetaObject.cast(_o));
+        KnightsView *_t = static_cast<KnightsView *>(_o);
+        switch (_id) {
+        case 0: _t->signalChangeStatusbar((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 1: _t->signalChangeCaption((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 2: _t->gameNew(); break;
+        case 3: _t->activePlayerChanged((*reinterpret_cast< Color(*)>(_a[1]))); break;
+        case 4: _t->displayedPlayerChanged((*reinterpret_cast< Color(*)>(_a[1]))); break;
+        case 5: _t->popupAccepted(); break;
+        case 6: _t->popupRejected(); break;
+        case 7: _t->settingsChanged(); break;
+        case 8: _t->resizeScene(); break;
+        case 9: _t->centerView((*reinterpret_cast< const QPointF(*)>(_a[1]))); break;
+        case 10: _t->showAllOffersToggled(); break;
+        case 11: _t->setupBoard((*reinterpret_cast< KgThemeProvider*(*)>(_a[1]))); break;
+        case 12: _t->clearBoard(); break;
+        case 13: _t->gameOver((*reinterpret_cast< Color(*)>(_a[1]))); break;
+        case 14: _t->showPopup((*reinterpret_cast< const Offer(*)>(_a[1]))); break;
+        case 15: _t->popupHidden((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 16: _t->updateOffers(); break;
+        default: ;
+        }
+    }
+}
+
+const QMetaObjectExtraData Knights::KnightsView::staticMetaObjectExtraData = {
+    0,  qt_static_metacall 
+};
+
+const QMetaObject Knights::KnightsView::staticMetaObject = {
+    { &QWidget::staticMetaObject, qt_meta_stringdata_Knights__KnightsView,
+      qt_meta_data_Knights__KnightsView, &staticMetaObjectExtraData }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &Knights::KnightsView::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *Knights::KnightsView::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *Knights::KnightsView::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_Knights__KnightsView))
+        return static_cast<void*>(const_cast< KnightsView*>(this));
+    return QWidget::qt_metacast(_clname);
+}
+
+int Knights::KnightsView::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QWidget::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 17)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 17;
+    }
+    return _id;
+}
+
+// SIGNAL 0
+void Knights::KnightsView::signalChangeStatusbar(const QString & _t1)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 0, _a);
+}
+
+// SIGNAL 1
+void Knights::KnightsView::signalChangeCaption(const QString & _t1)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 1, _a);
+}
+
+// SIGNAL 2
+void Knights::KnightsView::gameNew()
+{
+    QMetaObject::activate(this, &staticMetaObject, 2, 0);
+}
+
+// SIGNAL 3
+void Knights::KnightsView::activePlayerChanged(Color _t1)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 3, _a);
+}
+
+// SIGNAL 4
+void Knights::KnightsView::displayedPlayerChanged(Color _t1)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 4, _a);
+}
+
+// SIGNAL 5
+void Knights::KnightsView::popupAccepted()
+{
+    QMetaObject::activate(this, &staticMetaObject, 5, 0);
+}
+
+// SIGNAL 6
+void Knights::KnightsView::popupRejected()
+{
+    QMetaObject::activate(this, &staticMetaObject, 6, 0);
+}
+QT_END_MOC_NAMESPACE

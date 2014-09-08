@@ -1,0 +1,53 @@
+/* Cau 23: Doc noi dung cua tep "sinhvien.dat" trong cau 20 va luu */
+/* vao 1 stack cai dat bang mang. Sau do doc lan luot cac phan tu */
+/* cua stack va luu vao file "sinhvien2.dat". Nhu vay thong tin  */
+/* sinh vien trong file sinhvien.dat se duoc in theo thu tu nguoc  */
+/* lai trong file sinhvien2.dat */
+
+
+#include "stack.c"
+
+//StudentInfo stack[MAXLENGTH];
+//int top = 0;
+
+int main()
+{
+  StudentInfo *buffer;
+  StudentInfo temp;
+  
+  FILE *f1;
+  char filename1[MAXLENGTH] = "student.dat";
+  
+  if ((f1 = fopen(filename1, "r+b")) == NULL)
+    {
+      printf("Khong mo duoc file %s.\n", filename1);
+      return 1;
+    }
+
+  FILE *f2;
+  char filename2[MAXLENGTH] = "student2.dat";
+  
+  if ((f2 = fopen(filename2, "r+b")) == NULL)
+    {
+      printf("Khong mo duoc file %s.\n", filename2);
+      return 1;
+    }
+
+  initialize();
+  while(fread(buffer, 1, sizeof(StudentInfo), f1) != EOF)
+    {
+      printf("\nTen sinh vien: %s\nMSSV: %d\nDiem: %f\n", buffer->name, buffer->id, buffer->mark);
+      push(buffer);
+    }
+
+  while(empty(stack) != 0)
+    {
+      *buffer = pop();
+      fwrite(buffer, 1, sizeof(StudentInfo), f2);
+    }
+
+
+  fclose(f1);
+  fclose(f2);
+  return 0;
+}

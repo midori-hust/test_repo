@@ -1,0 +1,701 @@
+/* -*- Mode: C; indent-tabs-mode: t; c-basic-offset: 4; tab-width: 4 -*- */
+/*
+ * main.c
+ * Copyright (C) anhlht 2010 <anhlht@>
+ * 
+ * gtk-BasicEvent is free software: you can redistribute it and/or modify it
+ * under the terms of the GNU General Public License as published by the
+ * Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * gtk-BasicEvent is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License along
+ * with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <unistd.h>
+#include <string.h>
+#include <stdio.h>
+#include <config.h>
+#include <gtk/gtk.h>
+#include <string.h>
+//############################### THU VIEN ##########################
+#include  <time.h>
+#include  <signal.h>
+#include "stdClient.h"
+#include "callbacks.h"
+#include "Global.h"
+//*************************************************************** 
+//  GLOABAL  
+GtkWidget *ok_button,*cancle_button;
+int flagButton=0;
+GtkWidget  *window;
+GtkWidget  *buttonOK;
+GtkWidget  *windowPlay;
+GtkWidget  *username_entry;
+GtkWidget  *password_entry;
+GtkWidget  *alert_label;
+GtkWidget  *question,*anser;
+GtkWidget  *user_EN,*pass_EN,*re_EN;
+const char *text_username;
+GtkWidget  *timeC,*labelTim;
+GtkWidget  *alertBut,*helpBut,*label;
+int timeTh;
+int iCountQ=0;
+int iCountNo=0;
+static int count = 0;
+const char *username= "a";
+const char *password= "a";
+GtkWidget  *labelTime[10];
+
+void* CancleUser();
+void usertWindow();
+//***********************************************
+ void closeApp ( GtkWidget *window, gpointer data)
+{
+       gtk_main_quit();
+	   return ;
+}
+//***********************************************
+void waits ( int seconds )
+{
+  clock_t endwait;
+  endwait = clock () + seconds * CLOCKS_PER_SEC ;
+  while (clock() < endwait) {}
+}
+// #################### SIGNAL DENY ANSER #######
+void sigHandleSigalrm(int signo)
+{
+  return;
+}
+//############################# get Signal ######
+int getSignal()
+{
+  struct sigaction sa;
+  const char * str= (char*)malloc(sizeof(char)*100);
+  sa.sa_handler = sigHandleSigalrm;
+  sigemptyset(&sa.sa_mask);
+  sa.sa_flags = 0;
+  sigaction(SIGALRM, &sa, NULL);
+  alarm(15);
+  if (flagButton==1)
+    {
+      alarm(0); // Huy bo alarm
+	}
+	if(flagButton==0)
+	return 0;
+	else
+	return 1;
+}
+// ######################### SET CLOCK ###########
+gboolean setclock(gpointer label)
+{
+  char str[10];
+  sprintf(str,"%d",timeTh);
+  char *markup;	
+  //gtk_label_set_text(labelTim,str);
+  markup = g_markup_printf_escaped ("<big>%s</big>",str);
+  gtk_label_set_markup (GTK_LABEL (labelTim), markup);
+  return 1;
+}
+void* clockTimeout()
+{
+   pthread_t pt;
+   timeTh=15;
+   while(timeTh>=0)
+    {
+      sleep(1);
+      printf("%d\n",timeTh);
+      g_timeout_add (5, setclock,NULL);
+       timeTh--;
+		 if(timeTh==0)break;
+		 if(flagButton==1) {
+         pthread_exit(NULL);
+        	break;
+			return;
+		}			
+    } 
+  // Neu ma chua click gui dap an thi coi nhu bi huy bo 	
+  if(flagButton==0)
+	 {
+
+		 gtk_widget_set_sensitive (buttonOK,FALSE);
+         /* if(iCountNo==0)
+		 { send(fd,"NO",2,0);
+           iCountNo++;
+		 }*/	 
+		 // pthread_exit(NULL);
+          char * str=(char*)malloc(sizeof(char)*100);
+          char * markup=(char*)malloc(sizeof(char)*100);
+		  strcpy(str,"Ban bi roi khoi cuoc choi ");
+	      markup = g_markup_printf_escaped ("<span style=\"italic\" color=\"red\" >%s</span>", str);
+          gtk_label_set_markup (GTK_LABEL (question), markup);
+		  gtk_widget_set_sensitive (buttonOK,TRUE);
+		  gtk_button_set_label (buttonOK," Confirm ");
+	 }	
+   pthread_exit(NULL);
+}
+
+//####################################################################
+void Resecure(GtkWidget *button,gpointer pass)
+{
+         gtk_widget_set_sensitive (buttonOK,TRUE);
+         //send(fd,"OK|a|1",9,0);
+}
+void next(GtkWidget *button,gpointer pass)
+{
+         gtk_widget_set_sensitive (buttonOK,TRUE);
+         //send(fd,"OK|a|1",9,0);
+}
+//############################# SEND ANSER ###########################
+ void SendAnser(GtkWidget *button,gpointer pass)
+ {
+         char buf[MAXSIZE];
+         int byteReceiv;
+	     const char *text_anser= gtk_entry_get_text(GTK_ENTRY((GtkWidget*)anser));
+         // gtk_timeout_add (5,setUpdateLabel,labelTime); 
+	     text_anser=strcat(text_anser,"|");
+	     text_anser=strcat(text_anser,text_username);
+         printf(" %s ",text_anser);
+	     // Dua ve trang thai da click Button 
+	     flagButton=1;
+	     gtk_widget_set_sensitive (buttonOK,FALSE);
+	     // Gui cau hoi va tat luong thoi gian do
+         send(fd,text_anser,strlen(text_anser),0);
+	     //pthread_exit(NULL)
+		 // Thuc hien nhan lai cau hoi tiep theo 
+         byteReceiv=recv(fd,buf,MAXSIZE,0);
+         buf[byteReceiv]='\0';
+	     char *markup;
+	     char *str=(char*)malloc(sizeof(char)*100);
+         strcpy(str,buf);
+	     markup = g_markup_printf_escaped ("<span style=\"italic\" color=\"red\" >%s</span>", str);
+    //************ GTK LAbel
+    /* Khi nhan cau hoi thi cho dong ho chay va  */
+	 if(byteReceiv!=-1)
+	  {   
+		  flagButton=0;
+		  gtk_label_set_markup (GTK_LABEL (question), markup);
+          gtk_entry_set_text (GTK_ENTRY((GtkWidget*)anser),"");
+		  gtk_widget_set_sensitive (buttonOK,TRUE);
+	      g_free (markup);
+
+		  // Tao luong cho thoi gian chay nguoc
+	       pthread_t pt,pt1;
+           pthread_attr_t attr;
+           pthread_attr_init(&attr);
+           pthread_create(&pt,&attr,clockTimeout,NULL);
+           pthread_attr_destroy(&attr);
+	 //*****************
+	  } 
+	 if(strcmp(buf,"QUIT")==0)
+	 {
+
+		  strcpy(str,"Ban bi roi khoi cuoc choi ");
+	      markup = g_markup_printf_escaped ("<span style=\"italic\" color=\"red\" >%s</span>", str);
+          gtk_label_set_markup (GTK_LABEL (question), markup);
+          gtk_entry_set_text (GTK_ENTRY((GtkWidget*)anser),"");
+		  gtk_widget_set_sensitive (buttonOK,FALSE);
+		  CancleUser();
+		  gtk_widget_set_sensitive (alertBut,TRUE);
+	 }
+	 else if(strcmp(buf,"WIN")==0)
+	 {
+          strcpy(str,"Ban La Nguoi Thang Cuoc ");
+	      markup = g_markup_printf_escaped ("<span style=\"italic\" color=\"red\" >%s</span>", str);
+          gtk_label_set_markup (GTK_LABEL (question), markup);
+          gtk_entry_set_text (GTK_ENTRY((GtkWidget*)anser),"");
+		  gtk_widget_set_sensitive (buttonOK,FALSE);
+		  WinUser();
+		  gtk_widget_set_sensitive (alertBut,TRUE);
+
+	 }
+	  /*int n;
+      printf ("Starting countdown...\n");
+      for (n=15; n>0; n--)
+     {
+        printf ("%d\n",n);
+        wait (1);
+     }
+      printf ("FIRE!!!\n");
+	 send(fd,"EMCHIU",6,0);
+     */
+}     
+ //############################# ANSER ###############################
+void ResetAnser(GtkWidget *button,gpointer pass)
+{
+   gtk_entry_set_text (GTK_ENTRY((GtkWidget*)anser),"");
+}
+void Cancle(GtkWidget *button,gpointer pass)
+ {   
+	// gtk_entry_set_text(GTK_ENTRY((GtkEntry*)anser),""); 
+     char *buf=(char*)malloc(sizeof(char)*100);
+	 char *str=(char*)malloc(sizeof(char)*100);
+	 char *markup=(char*)malloc(sizeof(char)*100); 
+     int byteReceiv;
+	 send(fd,"NO",2,0);
+	  byteReceiv=recv(fd,buf,MAXSIZE,0);
+      buf[byteReceiv]='\0';
+	  if(strcmp(buf,"QUIT")==0)
+	  {
+
+		  strcpy(str,"Ban bi roi khoi cuoc choi ");
+	      markup = g_markup_printf_escaped ("<span style=\"italic\" color=\"red\" >%s</span>", str);
+          gtk_label_set_markup (GTK_LABEL (question), markup);
+          gtk_entry_set_text (GTK_ENTRY((GtkWidget*)anser),"");
+		  gtk_widget_set_sensitive (buttonOK,FALSE);
+	 }	 
+
+ }
+char *itoa(int n, char *s, int b) {
+	static char digits[] = "0123456789abcdefghijklmnopqrstuvwxyz";
+	int i=0, sign;
+    
+	if ((sign = n) < 0)
+		n = -n;
+   if(n>=0&&n<10)
+	{ s[0]=digits[n%b];
+      s[1]='\0';
+	}
+		else if(n>=10&&n<=99)
+	  {
+        s[0]=digits[n/b];
+		
+		s[1]=digits[n%b];
+        s[2]='\0';
+	  }
+	if (sign < 0)
+		s[i++] = '-';
+	return s;
+}
+char * ConvertInttoChar(int t)
+{ 
+    char *s=(char*)malloc(sizeof(char)*10);
+	s=itoa(t,s,10);
+		return s;
+}
+gboolean update_clock(gpointer label)
+{
+        /* the GtkLabel is passed in as user data */
+        time_t simple_time;
+        struct tm *time_info;         
+        gchar *str = g_new(gchar, 25);  /* allocate 25 characters for time */
+       
+        /* get simple time and convert it into a tm structure */
+        time (&simple_time);
+        time_info = localtime(&simple_time);
+       
+        /* %X = Preferred time of day representation for current locale. */
+        strftime(str, 25, "%S", time_info);     
+       
+        /* update the label */
+        gtk_label_set_text(GTK_LABEL(label), str);
+       
+        g_free(str);    /* free memory*/
+
+        return TRUE;
+}
+//######################### WIN USER ################################
+void WinUser( )
+{
+      GtkWidget *window1;
+	  GtkWidget *labelName,*image;
+	  GtkWidget *vbox;
+	  GtkWidget *hbox,*hbox1;
+	  
+      window1 = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+      gtk_window_set_title(GTK_WINDOW(window1),"  EXIT ");
+      gtk_window_set_position(GTK_WINDOW(window1), GTK_WIN_POS_CENTER);
+      gtk_window_set_default_size(GTK_WINDOW(window1), 300, 200);
+      
+      char *markup;
+      markup = g_markup_printf_escaped ("<span style=\"italic\" color=\"green\">%s</span>"," Ban la nguoi thang cuoc .\n Click OK de di tiep ");
+      labelName=gtk_label_new (NULL);
+	  gtk_label_set_markup (GTK_LABEL (labelName), markup);
+
+	  alertBut=gtk_button_new_with_label("    OK   ");
+	  g_signal_connect (GTK_OBJECT (alertBut), "clicked",
+                    GTK_SIGNAL_FUNC(next),NULL);
+      image=gtk_image_new_from_file("/home/anhlht/gtk-rungchuongvang1/src/11.jpeg"); 
+     
+	  hbox = gtk_hbox_new ( TRUE, 2 );
+	  hbox1 = gtk_hbox_new ( TRUE,2);
+	  vbox= gtk_vbox_new ( FALSE, 10);
+
+	  gtk_box_pack_start(GTK_BOX(hbox),labelName, FALSE, FALSE, 5);
+	  gtk_box_pack_start(GTK_BOX(hbox1),alertBut, FALSE, FALSE, 5);
+	  //gtk_box_pack_start(GTK_BOX(hbox1),helpBut, FALSE, FALSE, 5);
+	  gtk_box_pack_start(GTK_BOX(vbox),image, FALSE, FALSE, 5);
+      gtk_box_pack_start(GTK_BOX(vbox),hbox, FALSE, FALSE, 5);
+	  gtk_box_pack_start(GTK_BOX(vbox),hbox1, FALSE, FALSE, 5);
+      gtk_container_add(GTK_CONTAINER(window1), vbox);
+      gtk_widget_show_all(window1);
+      gtk_main ();
+	
+}
+ //#####################  ALERT LABEL ################################
+void* CancleUser( )
+{
+      GtkWidget *window1;
+	  GtkWidget *labelName,*image;
+	  GtkWidget *vbox;
+	  GtkWidget *hbox,*hbox1;
+	  
+      window1 = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+      gtk_window_set_title(GTK_WINDOW(window1),"  EXIT ");
+      gtk_window_set_position(GTK_WINDOW(window1), GTK_WIN_POS_CENTER);
+      gtk_window_set_default_size(GTK_WINDOW(window1), 300, 200);
+      
+      char *markup;
+      markup = g_markup_printf_escaped ("<span style=\"italic\" color=\"green\">%s</span>"," Ban bi roi khoi cuoc choi .\n Click OK de xac nhan ");
+      labelName=gtk_label_new (NULL);
+	  gtk_label_set_markup (GTK_LABEL (labelName), markup);
+
+	  alertBut=gtk_button_new_with_label("    OK   ");
+	  g_signal_connect (GTK_OBJECT (alertBut), "clicked",
+                    GTK_SIGNAL_FUNC(Cancle),NULL);
+      gtk_widget_set_sensitive (alertBut,FALSE);
+	  helpBut=gtk_button_new_with_label (" Rescure ");
+        g_signal_connect (GTK_OBJECT (helpBut), "clicked",
+                    GTK_SIGNAL_FUNC(Resecure),NULL);
+	
+	  image=gtk_image_new_from_file("/home/anhlht/gtk-rungchuongvang1/src/10.jpeg"); 
+     
+	  hbox = gtk_hbox_new ( TRUE, 2 );
+	  hbox1 = gtk_hbox_new ( TRUE,2);
+	  vbox= gtk_vbox_new ( FALSE, 10);
+
+	  gtk_box_pack_start(GTK_BOX(hbox),labelName, FALSE, FALSE, 5);
+	  gtk_box_pack_start(GTK_BOX(hbox1),alertBut, FALSE, FALSE, 5);
+	  gtk_box_pack_start(GTK_BOX(hbox1),helpBut, FALSE, FALSE, 5);
+	  gtk_box_pack_start(GTK_BOX(vbox),image, FALSE, FALSE, 5);
+      gtk_box_pack_start(GTK_BOX(vbox),hbox, FALSE, FALSE, 5);
+	  gtk_box_pack_start(GTK_BOX(vbox),hbox1, FALSE, FALSE, 5);
+      gtk_container_add(GTK_CONTAINER(window1), vbox);
+      gtk_widget_show_all(window1);
+      gtk_main ();
+	
+}
+ //#################### KHOI TAO LAI WINDOWN USER ####################
+void usertWindow()
+{
+           GtkWidget *image;
+           GtkWidget *hbox1,*hbox2,*hbox3,*vbox1,*vbox2,*vbox3;
+           GtkWidget *labelStatus;
+           GtkWidget *buttonReset;
+	       
+           int i=0;
+           char *nameUser=(char*)malloc(sizeof(char)*100);
+	       char *s=(char*)malloc(sizeof(char)*30);
+	       char *result;
+	       result=strtok(nameUser,"|");
+	       while(result!=NULL)
+	       {
+               strcpy(s,result);
+			   result=strtok(NULL,"|");
+			   break;
+		   }
+           
+       	   nameUser= gtk_entry_get_text(GTK_ENTRY((GtkWidget*)username_entry));
+           int j;
+            
+           buttonOK= gtk_button_new_with_label("   ANSER   ");
+           //********** signal Button OK 
+            g_signal_connect (GTK_OBJECT (buttonOK), "clicked",
+                    GTK_SIGNAL_FUNC(SendAnser),labelStatus);
+           //********** signal Button ReSet         
+           buttonReset= gtk_button_new_with_label("   RESET   "); 
+           g_signal_connect (GTK_OBJECT (buttonReset), "clicked",
+                    GTK_SIGNAL_FUNC(ResetAnser),labelStatus);
+            
+           window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+           //********** Gtk_Window *******************
+	       gtk_window_set_title(GTK_WINDOW(window),nameUser);
+           gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
+           gtk_window_set_default_size(GTK_WINDOW(window), 400, 400);
+           //********** Gtk_Image ********************
+           image=gtk_image_new_from_file("/home/anhlht/gtk-rungchuongvang1/src/5.jpeg");
+	       char *markup;
+	       char *str=(char*)malloc(sizeof(char)*100);
+	       strcpy(str," GO YES De Bat Dau ");
+           markup = g_markup_printf_escaped ("<span style=\"italic\" color=\"red\" >%s</span>", str);
+           
+	       labelStatus=gtk_text_new(NULL,NULL);
+           question=gtk_label_new(" GO YES DE BAT DAU : ");
+           gtk_label_set_markup (GTK_LABEL (question), markup);
+           g_free (markup);
+ 
+           timeC=gtk_label_new(" ");
+	       g_timeout_add (500, update_clock, (gpointer)timeC);
+
+	       labelTim=gtk_label_new(" ");
+         
+	       anser=gtk_entry_new();
+	       gtk_entry_set_width_chars(GTK_ENTRY(anser),30);
+           hbox1 = gtk_hbox_new ( TRUE, 2 );
+           hbox2 = gtk_hbox_new ( TRUE, 2 );
+           hbox3 = gtk_hbox_new ( TRUE, 2 );
+           vbox1= gtk_vbox_new ( FALSE, 10);
+           vbox2= gtk_vbox_new ( FALSE, 10);
+	
+           gtk_box_pack_start(GTK_BOX(hbox1), question, TRUE, FALSE, 25);
+          //gtk_box_pack_start(GTK_BOX(hbox1),labelStatus, TRUE, FALSE, 0);
+           gtk_box_pack_start(GTK_BOX(hbox2), anser, TRUE, FALSE, 5);
+	       gtk_box_pack_start(GTK_BOX(hbox2), labelTim, TRUE, FALSE, 5);
+           gtk_box_pack_start(GTK_BOX(hbox3), buttonOK, FALSE, FALSE, 5);
+	     //  gtk_box_pack_start(GTK_BOX(hbox3), timeC, FALSE, FALSE, 5);
+           gtk_box_pack_start(GTK_BOX(hbox3),buttonReset,FALSE,FALSE,5);
+           gtk_box_pack_start(GTK_BOX(vbox2), hbox1, FALSE, FALSE, 5);
+           gtk_box_pack_start(GTK_BOX(vbox2), hbox2, FALSE, FALSE, 5);
+           gtk_box_pack_start(GTK_BOX(vbox2), hbox3, FALSE, FALSE, 5);
+           gtk_box_pack_start(GTK_BOX(vbox1), image, FALSE, FALSE, 5);
+           gtk_box_pack_start(GTK_BOX(vbox1), vbox2, FALSE, FALSE, 5);
+           gtk_container_add(GTK_CONTAINER(window), vbox1);
+           gtk_widget_show_all(window);
+           gtk_main ();
+}
+
+//############################# CONFIGURE CLIENT TO SEND SERVER ############
+void connectServer()
+{
+  // get info from host
+    if((he = gethostbyname("127.0.0.2") )== NULL){
+    printf("gethostbyname() error!\n");
+    exit(-1);
+  }
+  // init info for server
+  server.sin_family = AF_INET;
+  server.sin_port = htons(5000);
+  server.sin_addr = *((struct in_addr*)he->h_addr);
+  bzero(&(server.sin_zero),8); 
+  // create socket connect to server
+  if((fd = socket(AF_INET, SOCK_STREAM, 0)) == -1){
+    printf("socket() error!");
+    exit(-1);
+  }
+  // connect Socket
+  if( connect(fd,(struct sockaddr*)&server , sizeof(struct sockaddr)) == -1 ) {
+      printf("error connect");
+  // Set Label La Error de ket noi 
+    gtk_label_set_text(GTK_ENTRY((GtkLabel*)alert_label)," ERROR TO CONNECT SERVER .......... "); 
+     }
+ }
+ //############################  BUTTON CLICK OK ##########################
+void button_click (GtkWidget *button, gpointer pass)
+{
+   const char *password_text = gtk_entry_get_text(GTK_ENTRY((GtkWidget *) pass));
+   const char *username_text= gtk_entry_get_text(GTK_ENTRY((GtkWidget*)username_entry));
+   text_username=gtk_entry_get_text(GTK_ENTRY((GtkWidget*)username_entry));	
+   char sendMessage[MAXBUFSIZE];
+   char buf[MAXBUFSIZE];
+   int byteReceiv;
+   username_text=strcat(username_text,"|");
+   username_text=strcat(username_text,password_text);
+   printf(" %s ",username_text);
+  // Send For Server the usename and password  
+     send(fd,username_text,strlen(username_text),0);
+     byteReceiv = recv(fd,buf,MAXSIZE,0);
+	 buf[byteReceiv] = '\0';
+	 
+    if (strcmp(buf, "OK") == 0 )
+        {
+            printf(" Them Mot Cua So Choi !\n");
+            gtk_label_set_text(GTK_ENTRY((GtkLabel*)alert_label)," Vao de rung chuong thoi ! "); 
+            gtk_main_quit();
+            //send(fd,"ENTER",5,0);
+            g_signal_connect ( GTK_OBJECT (window), "destroy",
+                   GTK_SIGNAL_FUNC ( closeApp), NULL);
+            gtk_widget_set_sensitive (ok_button,FALSE);
+			gtk_widget_set_sensitive (cancle_button,FALSE);
+			usertWindow();
+			//close(fd);
+           /* Dong socket fd*/
+        }
+     else
+       { 
+           printf(" Lam cua so bat nhap lai !\n");
+           gtk_label_set_text(GTK_ENTRY((GtkLabel*)alert_label),"Nhap Lai Vi Sai Password  hoac Username"); 
+           gtk_entry_set_text(GTK_ENTRY((GtkEntry*)username_entry),"");
+           gtk_entry_set_text(GTK_ENTRY((GtkEntry*)password_entry),"");
+
+	   }
+}
+//############################# CANCLE BUTTON #######################
+ void button_cancle(GtkWidget *button,gpointer pass)
+ {
+           gtk_entry_set_text(GTK_ENTRY((GtkEntry*)username_entry),"");
+           gtk_entry_set_text(GTK_ENTRY((GtkEntry*)password_entry),"");
+ }
+//######################## GIAO DIEN LOGIN ###########################
+void loginProperty()
+{
+     
+     GtkWidget  *username_label, *password_label;
+     GtkWidget *hbox0,*hbox1, *hbox2,*hbox3,*hbox4;
+     GtkWidget *vbox;
+     GtkWidget *image;
+
+     window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+     gtk_window_set_title(GTK_WINDOW(window), "Login Rung Chuong Vao");
+
+    gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
+    gtk_window_set_default_size(GTK_WINDOW(window), 200, 200);
+    g_signal_connect ( GTK_OBJECT (window), "destroy",
+                   GTK_SIGNAL_FUNC ( closeApp), NULL);
+
+    image=gtk_image_new_from_file("/home/anhlht/gtk-rungchuongvang1/src/5.jpeg");
+
+    username_label = gtk_label_new("Username:");
+    password_label = gtk_label_new("Password:");
+    
+    alert_label=gtk_label_new(NULL);
+	gtk_label_set_markup (GTK_LABEL (alert_label), "<big> LOGIN RUNG CHUONG </big>");
+	username_entry = gtk_entry_new();
+    password_entry = gtk_entry_new();
+    gtk_entry_set_visibility(GTK_ENTRY (password_entry), FALSE);
+
+    ok_button = gtk_button_new_with_label("     Sign in    ");
+    
+    //************  Xu ly su kien OK 
+    g_signal_connect (GTK_OBJECT (ok_button), "clicked",
+                    GTK_SIGNAL_FUNC(button_click), password_entry);
+    cancle_button=gtk_button_new_with_label("     Cancle    ");
+    //***********  Xu ly su kien Cancel
+    g_signal_connect(GTK_OBJECT(cancle_button),"clicked",
+                    GTK_SIGNAL_FUNC(button_cancle),password_entry);
+   hbox0 = gtk_hbox_new ( TRUE, 5) ;
+   hbox1 = gtk_hbox_new ( TRUE, 5 );
+   hbox2 = gtk_hbox_new ( TRUE, 5 );
+   hbox3 = gtk_hbox_new ( TRUE, 5 );
+   hbox4 = gtk_hbox_new ( TRUE, 5);
+   vbox = gtk_vbox_new ( FALSE, 10);
+
+   gtk_box_pack_start(GTK_BOX(hbox0),image,TRUE,FALSE,10);
+   gtk_box_pack_start(GTK_BOX(hbox1), username_label, TRUE, FALSE, 5);
+   gtk_box_pack_start(GTK_BOX(hbox1), username_entry, TRUE, FALSE, 5);
+   gtk_box_pack_start(GTK_BOX(hbox2), password_label, TRUE, FALSE, 5);
+   gtk_box_pack_start(GTK_BOX(hbox2), password_entry, TRUE, FALSE, 5);
+   gtk_box_pack_start(GTK_BOX(hbox3), alert_label, TRUE, FALSE, 5);
+   gtk_box_pack_start(GTK_BOX(hbox4), ok_button, TRUE, FALSE, 5);
+   gtk_box_pack_start(GTK_BOX(hbox4), cancle_button, TRUE, FALSE, 5);
+   gtk_box_pack_start(GTK_BOX(vbox),hbox0,FALSE,FALSE,10);
+   gtk_box_pack_start(GTK_BOX(vbox), hbox1, FALSE, FALSE, 5);
+   gtk_box_pack_start(GTK_BOX(vbox), hbox2, FALSE, FALSE, 5);
+   gtk_box_pack_start(GTK_BOX(vbox), hbox3, FALSE, FALSE, 5);
+    gtk_box_pack_start(GTK_BOX(vbox),hbox4, FALSE, FALSE, 5);
+   gtk_box_pack_start(GTK_BOX(vbox), cancle_button, FALSE, FALSE, 5);
+   gtk_container_add(GTK_CONTAINER(window), vbox);
+   gtk_widget_show_all(window);
+   gtk_main ();
+	
+}
+void goRing(GtkWidget *button,gpointer pass)
+ {
+       loginProperty();
+ }
+void  RegisAccount(GtkWidget *button,gpointer pass)
+ {
+   const char *pass_text = gtk_entry_get_text(GTK_ENTRY((GtkWidget *) pass_EN));
+   const char *user_text= gtk_entry_get_text(GTK_ENTRY((GtkWidget*)user_EN));
+   const char *repass_text= gtk_entry_get_text(GTK_ENTRY((GtkWidget*)re_EN));
+   char *s=(char*)malloc(sizeof(char)*100);
+   strcpy(s,"0");
+   s=strcat(s,"/");	 
+   if(strcmp(pass_text,repass_text)!=0)
+	 {
+      gtk_label_set_markup (GTK_LABEL (label), "<big> MAT KHAU BI SAI ROI </big>");
+	 }
+	 else
+	 {
+         s=strcat(s,user_text);
+         s=strcat(s,"|"); 
+		 s=strcat(s,pass_text);
+
+		 send(fd,s,strlen(s),0);
+	 }	 
+  	
+ }
+//######################## GIAO DIEN KHOI TAO CHUONG TRINH ###########
+void beginWindow()
+{
+     GtkWidget  *goButton,*regisButton;
+     GtkWidget  *hbox0,*hbox1;
+	 GtkWidget  *hbox2,*hbox3,*hbox4;
+	 GtkWidget  *user_lbl,*pass_lbl,*re_lbl;
+     GtkWidget  *vbox;
+
+	 window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+     gtk_window_set_title(GTK_WINDOW(window), "Rung Chuong Vang!GoGo");
+	 gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
+     gtk_window_set_default_size(GTK_WINDOW(window), 200, 200);
+     g_signal_connect ( GTK_OBJECT (window), "destroy",
+                   GTK_SIGNAL_FUNC ( closeApp), NULL);
+     label=gtk_label_new(NULL);
+	 gtk_label_set_markup (GTK_LABEL (label), "<big> BAN DA CO TAI KHOAN CHUA ? </big>");
+
+	 user_lbl=gtk_label_new("UserName");
+	 pass_lbl=gtk_label_new ("PassWord");
+	 re_lbl=gtk_label_new("RePassWord");
+
+	 user_EN=gtk_entry_new();
+	 pass_EN=gtk_entry_new();
+	 gtk_entry_set_visibility(GTK_ENTRY (pass_EN), FALSE);
+	 re_EN=gtk_entry_new();
+	 gtk_entry_set_visibility(GTK_ENTRY (re_EN), FALSE);
+	 goButton = gtk_button_new_with_label("     Go Ring    ");
+    
+    //************  Xu ly su kien OK 
+    g_signal_connect (GTK_OBJECT (goButton), "clicked",
+                    GTK_SIGNAL_FUNC(goRing), password_entry);
+    //***********  Xu ly su kien Cancel
+    regisButton=gtk_button_new_with_label("     Register    ");
+    g_signal_connect(GTK_OBJECT(regisButton),"clicked",
+                    GTK_SIGNAL_FUNC(RegisAccount),password_entry);
+   hbox0 = gtk_hbox_new ( TRUE, 5) ;
+   hbox1 = gtk_hbox_new ( TRUE, 5 );
+   hbox2 = gtk_hbox_new ( TRUE, 5 );
+   hbox3 = gtk_hbox_new ( TRUE, 5 );
+   hbox4 = gtk_hbox_new ( TRUE, 5 );	 
+   vbox = gtk_vbox_new ( FALSE, 10);
+
+   gtk_box_pack_start(GTK_BOX(hbox0),label,TRUE,FALSE,10);
+   gtk_box_pack_start(GTK_BOX(hbox1), goButton, TRUE, FALSE, 5);
+   gtk_box_pack_start(GTK_BOX(hbox1), regisButton, TRUE, FALSE, 5);
+   gtk_box_pack_start(GTK_BOX(hbox2), user_lbl, TRUE, FALSE, 5);
+   gtk_box_pack_start(GTK_BOX(hbox2), user_EN, TRUE, FALSE, 5);
+   gtk_box_pack_start(GTK_BOX(hbox3), pass_lbl, TRUE, FALSE, 5);
+   gtk_box_pack_start(GTK_BOX(hbox3), pass_EN, TRUE, FALSE, 5);
+   gtk_box_pack_start(GTK_BOX(hbox4), re_lbl, TRUE, FALSE, 5);	
+   gtk_box_pack_start(GTK_BOX(hbox4), re_EN, TRUE, FALSE, 5);
+   gtk_box_pack_start(GTK_BOX(vbox),hbox0,FALSE,FALSE,10);
+   gtk_box_pack_start(GTK_BOX(vbox), hbox1, FALSE, FALSE, 5);
+   gtk_box_pack_start(GTK_BOX(vbox), hbox2, FALSE, FALSE, 5);
+   gtk_box_pack_start(GTK_BOX(vbox), hbox3, FALSE, FALSE, 5);
+   gtk_box_pack_start(GTK_BOX(vbox), hbox4, FALSE, FALSE, 5);	
+   gtk_container_add(GTK_CONTAINER(window), vbox);
+   gtk_widget_show_all(window);
+   gtk_main ();
+}
+
+//##################### CHUONG TRINH HAM MAIN #########################
+int main (int argc, char *argv[])
+{
+ 
+    //*******************Khoi tao form Login
+       gtk_init(&argc, &argv);
+    //*******************Connect Server
+	  connectServer();	
+    //*******************Giao Dien Login
+      beginWindow();
+	 //loginProperty();	
+
+	return 0;
+}
+//######################       END MAIN    #############################
+

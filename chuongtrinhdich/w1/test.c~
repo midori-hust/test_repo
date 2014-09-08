@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+#define max 10000
+#define maxlength 100
+#define maxlengthword 50
+
+ 
+
+
+
+int instopwords(char* input) 
+ { 
+   char buff[maxlength]; 
+   int compare_result; 
+   int j=0;
+   int i;
+   printf("0");
+   FILE *f; 
+   char filename3[] = "stopw.txt"; 
+   printf("0");
+   if((f = fopen(filename3,"r")) == NULL) 
+     { 
+       printf("Can not open %s!\n", filename3); 
+       return 0; 
+     } 
+   printf("0");  
+   for(j=0; j<strlen(input); j++) input[i] = tolower(input[i]);
+   printf("%s", input);
+   while (1) 
+     { 
+       fscanf(f, "%s", buff); 
+       compare_result = strcmp(buff, input); 
+       if(compare_result != 0)  
+ 	{ 
+ 	  continue; 
+ 	} 
+       else 
+ 	{ 
+ 	  return 1; 
+ 	  break; 
+ 	} 
+       if(feof(f)) 
+ 	{ 
+ 	  break; 
+ 	  return 0; 
+ 	} 
+     } 
+   fclose(f);
+ } 

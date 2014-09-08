@@ -1,0 +1,69 @@
+2013-10-10  gettextize  <bug-gnu-gettext@gnu.org>
+
+	* m4/gettext.m4: Upgrade to gettext-0.18.1.
+	* m4/iconv.m4: Upgrade to gettext-0.18.1.
+	* m4/lib-ld.m4: New file, from gettext-0.18.1.
+	* m4/lib-link.m4: New file, from gettext-0.18.1.
+	* m4/lib-prefix.m4: New file, from gettext-0.18.1.
+	* m4/nls.m4: New file, from gettext-0.18.1.
+	* m4/po.m4: New file, from gettext-0.18.1.
+	* m4/progtest.m4: Upgrade to gettext-0.18.1.
+	* Makefile.am (ACLOCAL_AMFLAGS): New variable.
+	(EXTRA_DIST): Add config.rpath.
+	* configure.in (AM_GNU_GETTEXT_VERSION): Bump to 0.18.1.
+
+2005-07-24 13:11  lems1
+
+	* ABOUT-NLS, AUTHORS, Makefile.in, NEWS, README, TODO, acconfig.h,
+	  acinclude.m4, config.guess, aclocal.m4, autogen.sh,
+	  chesslan.glade, chesslan.gladep, chesslan.prj, config.sub,
+	  Makefile.am, config.h.in, configure.in, ltmain.sh, setup-gettext,
+	  stamp-h.in, m4/codeset.m4, m4/gettext.m4, m4/glibc21.m4,
+	  m4/iconv.m4, m4/isc-posix.m4, m4/lcmessage.m4, m4/progtest.m4,
+	  pixmaps/B.png, pixmaps/K.png, pixmaps/N.png, pixmaps/P.png,
+	  pixmaps/Q.png, pixmaps/R.png, pixmaps/b.png, pixmaps/k.png,
+	  pixmaps/n.png, pixmaps/p.png, pixmaps/q.png, pixmaps/r.png,
+	  po/ChangeLog, po/POTFILES.in, src/.cvsignore, src/board.cc,
+	  src/board.hh, src/chesslan.cc, src/chesslan1.cc,
+	  src/chesslan1.hh, src/chesslan1_glade.cc, src/chesslan1_glade.hh,
+	  src/error.hh, src/frame1.cc, src/frame1.hh, src/frame1_glade.cc,
+	  src/frame1_glade.hh, src/main.cc, src/makros.hh, src/menubar1.cc,
+	  src/menubar1.hh, src/menubar1_glade.cc, src/menubar1_glade.hh,
+	  src/network.cc, src/network.hh, src/notebook1.cc,
+	  src/notebook1.hh, src/notebook1_glade.cc, src/notebook1_glade.hh,
+	  src/pawn.cc, src/pawn.hh, src/pieces.cc, src/pieces.hh,
+	  src/statusbar1.cc, src/statusbar1.hh, src/statusbar1_glade.cc,
+	  src/statusbar1_glade.hh, src/toolbar1.cc, src/toolbar1.hh,
+	  src/toolbar1_glade.cc, src/toolbar1_glade.hh, src/treeview1.cc,
+	  src/treeview1.hh, src/treeview1_glade.cc, src/treeview1_glade.hh:
+	  Initial revision
+
+2005-07-24 13:11  lems1
+
+	* ABOUT-NLS, AUTHORS, Makefile.in, NEWS, README, TODO, acconfig.h,
+	  acinclude.m4, config.guess, aclocal.m4, autogen.sh,
+	  chesslan.glade, chesslan.gladep, chesslan.prj, config.sub,
+	  Makefile.am, config.h.in, configure.in, ltmain.sh, setup-gettext,
+	  stamp-h.in, m4/codeset.m4, m4/gettext.m4, m4/glibc21.m4,
+	  m4/iconv.m4, m4/isc-posix.m4, m4/lcmessage.m4, m4/progtest.m4,
+	  pixmaps/B.png, pixmaps/K.png, pixmaps/N.png, pixmaps/P.png,
+	  pixmaps/Q.png, pixmaps/R.png, pixmaps/b.png, pixmaps/k.png,
+	  pixmaps/n.png, pixmaps/p.png, pixmaps/q.png, pixmaps/r.png,
+	  po/ChangeLog, po/POTFILES.in, src/.cvsignore, src/board.cc,
+	  src/board.hh, src/chesslan.cc, src/chesslan1.cc,
+	  src/chesslan1.hh, src/chesslan1_glade.cc, src/chesslan1_glade.hh,
+	  src/error.hh, src/frame1.cc, src/frame1.hh, src/frame1_glade.cc,
+	  src/frame1_glade.hh, src/main.cc, src/makros.hh, src/menubar1.cc,
+	  src/menubar1.hh, src/menubar1_glade.cc, src/menubar1_glade.hh,
+	  src/network.cc, src/network.hh, src/notebook1.cc,
+	  src/notebook1.hh, src/notebook1_glade.cc, src/notebook1_glade.hh,
+	  src/pawn.cc, src/pawn.hh, src/pieces.cc, src/pieces.hh,
+	  src/statusbar1.cc, src/statusbar1.hh, src/statusbar1_glade.cc,
+	  src/statusbar1_glade.hh, src/toolbar1.cc, src/toolbar1.hh,
+	  src/toolbar1_glade.cc, src/toolbar1_glade.hh, src/treeview1.cc,
+	  src/treeview1.hh, src/treeview1_glade.cc, src/treeview1_glade.hh:
+	  initial SourceForge import
+
+
+2006/10/14 15:24:36 EDT
+	update files from .glade file

@@ -1,0 +1,338 @@
+/****************************************************************************
+** Meta object code from reading C++ file 'kspeechinterface.h'
+**
+** Created: Thu Sep 26 16:52:39 2013
+**      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#include "kspeechinterface.h"
+#if !defined(Q_MOC_OUTPUT_REVISION)
+#error "The header file 'kspeechinterface.h' doesn't include <QObject>."
+#elif Q_MOC_OUTPUT_REVISION != 63
+#error "This file was generated using the moc from 4.8.4. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+QT_BEGIN_MOC_NAMESPACE
+static const uint qt_meta_data_OrgKdeKSpeechInterface[] = {
+
+ // content:
+       6,       // revision
+       0,       // classname
+       0,    0, // classinfo
+      58,   14, // methods
+       2,  304, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       4,       // signalCount
+
+ // signals: signature, parameters, type, tag, flags
+      43,   24,   23,   23, 0x05,
+      76,   23,   23,   23, 0x05,
+      91,   23,   23,   23, 0x05,
+     141,  106,   23,   23, 0x05,
+
+ // slots: signature, parameters, type, tag, flags
+     200,   23,  173,   23, 0x0a,
+     242,   23,  218,   23, 0x0a,
+     277,   23,   23,  267, 0x0a,
+     300,  286,   23,  267, 0x0a,
+     352,   23,  329,   23, 0x0a,
+     370,   23,  173,   23, 0x0a,
+     386,   23,  218,   23, 0x0a,
+     400,   23,  329,   23, 0x0a,
+     425,  416,  329,   23, 0x0a,
+     479,  472,  442,   23, 0x0a,
+     526,  416,  495,   23, 0x0a,
+     564,  545,  173,   23, 0x0a,
+     588,  472,  329,   23, 0x0a,
+     605,  472,  329,   23, 0x0a,
+     634,  627,  329,   23, 0x0a,
+     666,  627,  329,   23, 0x0a,
+     698,   23,  495,   23, 0x0a,
+     715,  627,  495,   23, 0x0a,
+     740,   23,  173,   23, 0x0a,
+     761,   23,  218,   23, 0x0a,
+     783,   23,  218,   23, 0x0a,
+     801,   23,   23,  267, 0x0a,
+     820,  813,  495,   23, 0x0a,
+     847,  472,   23,  267, 0x0a,
+     874,  865,  329,   23, 0x0a,
+     899,   23,  495,   23, 0x0a,
+     915,   23,   23,  267, 0x0a,
+     923,   23,   23,  267, 0x0a,
+     932,   23,   23,  267, 0x0a,
+     948,  472,   23,  267, 0x0a,
+     963,   23,   23,  267, 0x0a,
+     985,  972,  329,   23, 0x0a,
+    1002,   23,  329,   23, 0x0a,
+    1035, 1017,  329,   23, 0x0a,
+    1060,   23,  173,   23, 0x0a,
+    1096, 1080,   23,  267, 0x0a,
+    1147, 1124,   23,  267, 0x0a,
+    1195, 1179,   23,  267, 0x0a,
+    1233, 1219,   23,  267, 0x0a,
+    1271, 1259,   23,  267, 0x0a,
+    1311, 1292,   23,  267, 0x0a,
+    1358, 1342,   23,  267, 0x0a,
+    1392, 1383,   23,  267, 0x0a,
+    1413,  813,   23,  267, 0x0a,
+    1444, 1438,   23,  267, 0x0a,
+    1476, 1458,   23,  267, 0x0a,
+    1512, 1506,   23,  267, 0x0a,
+    1545, 1526,   23,  267, 0x0a,
+    1586, 1576,   23,  267, 0x0a,
+    1611, 1604,   23,  267, 0x0a,
+    1626,   23,   23,  267, 0x0a,
+    1646,   23,  173,   23, 0x0a,
+    1667,   23,   23,  267, 0x0a,
+    1674,  627,  173,   23, 0x0a,
+
+ // properties: name, type, flags
+    1705, 1700, 0x01095001,
+    1724, 1716, 0x0a095001,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_OrgKdeKSpeechInterface[] = {
+    "OrgKdeKSpeechInterface\0\0appId,jobNum,state\0"
+    "jobStateChanged(QString,int,int)\0"
+    "kttsdExiting()\0kttsdStarted()\0"
+    "appId,jobNum,markerType,markerData\0"
+    "marker(QString,int,int,QString)\0"
+    "QDBusPendingReply<QString>\0applicationName()\0"
+    "QDBusPendingReply<bool>\0"
+    "autoConfigureTalkersOn()\0Q_NOREPLY\0"
+    "cancel()\0jobNum,talker\0"
+    "changeJobTalker(int,QString)\0"
+    "QDBusPendingReply<int>\0defaultPriority()\0"
+    "defaultTalker()\0filteringOn()\0"
+    "getCurrentJob()\0priority\0getJobCount(int)\0"
+    "QDBusPendingReply<QByteArray>\0jobNum\0"
+    "getJobInfo(int)\0QDBusPendingReply<QStringList>\0"
+    "getJobNumbers(int)\0jobNum,sentenceNum\0"
+    "getJobSentence(int,int)\0getJobState(int)\0"
+    "getSentenceCount(int)\0talker\0"
+    "getTalkerCapabilities1(QString)\0"
+    "getTalkerCapabilities2(QString)\0"
+    "getTalkerCodes()\0getTalkerVoices(QString)\0"
+    "htmlFilterXsltFile()\0isApplicationPaused()\0"
+    "isSystemManager()\0kttsdExit()\0module\0"
+    "languagesByModule(QString)\0moveJobLater(int)\0"
+    "jobNum,n\0moveRelSentence(int,int)\0"
+    "outputModules()\0pause()\0reinit()\0"
+    "removeAllJobs()\0removeJob(int)\0resume()\0"
+    "text,options\0say(QString,int)\0"
+    "sayClipboard()\0filename,encoding\0"
+    "sayFile(QString,QString)\0sentenceDelimiter()\0"
+    "applicationName\0setApplicationName(QString)\0"
+    "autoConfigureTalkersOn\0"
+    "setAutoConfigureTalkersOn(bool)\0"
+    "defaultPriority\0setDefaultPriority(int)\0"
+    "defaultTalker\0setDefaultTalker(QString)\0"
+    "filteringOn\0setFilteringOn(bool)\0"
+    "htmlFilterXsltFile\0setHtmlFilterXsltFile(QString)\0"
+    "isSystemManager\0setIsSystemManager(bool)\0"
+    "language\0setLanguage(QString)\0"
+    "setOutputModule(QString)\0pitch\0"
+    "setPitch(int)\0sentenceDelimiter\0"
+    "setSentenceDelimiter(QString)\0speed\0"
+    "setSpeed(int)\0ssmlFilterXsltFile\0"
+    "setSsmlFilterXsltFile(QString)\0voiceType\0"
+    "setVoiceType(int)\0volume\0setVolume(int)\0"
+    "showManagerDialog()\0ssmlFilterXsltFile()\0"
+    "stop()\0talkerToTalkerId(QString)\0bool\0"
+    "isSpeaking\0QString\0version\0"
+};
+
+void OrgKdeKSpeechInterface::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        Q_ASSERT(staticMetaObject.cast(_o));
+        OrgKdeKSpeechInterface *_t = static_cast<OrgKdeKSpeechInterface *>(_o);
+        switch (_id) {
+        case 0: _t->jobStateChanged((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3]))); break;
+        case 1: _t->kttsdExiting(); break;
+        case 2: _t->kttsdStarted(); break;
+        case 3: _t->marker((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])),(*reinterpret_cast< int(*)>(_a[3])),(*reinterpret_cast< const QString(*)>(_a[4]))); break;
+        case 4: { QDBusPendingReply<QString> _r = _t->applicationName();
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<QString>*>(_a[0]) = _r; }  break;
+        case 5: { QDBusPendingReply<bool> _r = _t->autoConfigureTalkersOn();
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<bool>*>(_a[0]) = _r; }  break;
+        case 6: _t->cancel(); break;
+        case 7: _t->changeJobTalker((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2]))); break;
+        case 8: { QDBusPendingReply<int> _r = _t->defaultPriority();
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<int>*>(_a[0]) = _r; }  break;
+        case 9: { QDBusPendingReply<QString> _r = _t->defaultTalker();
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<QString>*>(_a[0]) = _r; }  break;
+        case 10: { QDBusPendingReply<bool> _r = _t->filteringOn();
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<bool>*>(_a[0]) = _r; }  break;
+        case 11: { QDBusPendingReply<int> _r = _t->getCurrentJob();
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<int>*>(_a[0]) = _r; }  break;
+        case 12: { QDBusPendingReply<int> _r = _t->getJobCount((*reinterpret_cast< int(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<int>*>(_a[0]) = _r; }  break;
+        case 13: { QDBusPendingReply<QByteArray> _r = _t->getJobInfo((*reinterpret_cast< int(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<QByteArray>*>(_a[0]) = _r; }  break;
+        case 14: { QDBusPendingReply<QStringList> _r = _t->getJobNumbers((*reinterpret_cast< int(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<QStringList>*>(_a[0]) = _r; }  break;
+        case 15: { QDBusPendingReply<QString> _r = _t->getJobSentence((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])));
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<QString>*>(_a[0]) = _r; }  break;
+        case 16: { QDBusPendingReply<int> _r = _t->getJobState((*reinterpret_cast< int(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<int>*>(_a[0]) = _r; }  break;
+        case 17: { QDBusPendingReply<int> _r = _t->getSentenceCount((*reinterpret_cast< int(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<int>*>(_a[0]) = _r; }  break;
+        case 18: { QDBusPendingReply<int> _r = _t->getTalkerCapabilities1((*reinterpret_cast< const QString(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<int>*>(_a[0]) = _r; }  break;
+        case 19: { QDBusPendingReply<int> _r = _t->getTalkerCapabilities2((*reinterpret_cast< const QString(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<int>*>(_a[0]) = _r; }  break;
+        case 20: { QDBusPendingReply<QStringList> _r = _t->getTalkerCodes();
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<QStringList>*>(_a[0]) = _r; }  break;
+        case 21: { QDBusPendingReply<QStringList> _r = _t->getTalkerVoices((*reinterpret_cast< const QString(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<QStringList>*>(_a[0]) = _r; }  break;
+        case 22: { QDBusPendingReply<QString> _r = _t->htmlFilterXsltFile();
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<QString>*>(_a[0]) = _r; }  break;
+        case 23: { QDBusPendingReply<bool> _r = _t->isApplicationPaused();
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<bool>*>(_a[0]) = _r; }  break;
+        case 24: { QDBusPendingReply<bool> _r = _t->isSystemManager();
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<bool>*>(_a[0]) = _r; }  break;
+        case 25: _t->kttsdExit(); break;
+        case 26: { QDBusPendingReply<QStringList> _r = _t->languagesByModule((*reinterpret_cast< const QString(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<QStringList>*>(_a[0]) = _r; }  break;
+        case 27: _t->moveJobLater((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 28: { QDBusPendingReply<int> _r = _t->moveRelSentence((*reinterpret_cast< int(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])));
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<int>*>(_a[0]) = _r; }  break;
+        case 29: { QDBusPendingReply<QStringList> _r = _t->outputModules();
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<QStringList>*>(_a[0]) = _r; }  break;
+        case 30: _t->pause(); break;
+        case 31: _t->reinit(); break;
+        case 32: _t->removeAllJobs(); break;
+        case 33: _t->removeJob((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 34: _t->resume(); break;
+        case 35: { QDBusPendingReply<int> _r = _t->say((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< int(*)>(_a[2])));
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<int>*>(_a[0]) = _r; }  break;
+        case 36: { QDBusPendingReply<int> _r = _t->sayClipboard();
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<int>*>(_a[0]) = _r; }  break;
+        case 37: { QDBusPendingReply<int> _r = _t->sayFile((*reinterpret_cast< const QString(*)>(_a[1])),(*reinterpret_cast< const QString(*)>(_a[2])));
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<int>*>(_a[0]) = _r; }  break;
+        case 38: { QDBusPendingReply<QString> _r = _t->sentenceDelimiter();
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<QString>*>(_a[0]) = _r; }  break;
+        case 39: _t->setApplicationName((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 40: _t->setAutoConfigureTalkersOn((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 41: _t->setDefaultPriority((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 42: _t->setDefaultTalker((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 43: _t->setFilteringOn((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 44: _t->setHtmlFilterXsltFile((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 45: _t->setIsSystemManager((*reinterpret_cast< bool(*)>(_a[1]))); break;
+        case 46: _t->setLanguage((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 47: _t->setOutputModule((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 48: _t->setPitch((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 49: _t->setSentenceDelimiter((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 50: _t->setSpeed((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 51: _t->setSsmlFilterXsltFile((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 52: _t->setVoiceType((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 53: _t->setVolume((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 54: _t->showManagerDialog(); break;
+        case 55: { QDBusPendingReply<QString> _r = _t->ssmlFilterXsltFile();
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<QString>*>(_a[0]) = _r; }  break;
+        case 56: _t->stop(); break;
+        case 57: { QDBusPendingReply<QString> _r = _t->talkerToTalkerId((*reinterpret_cast< const QString(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QDBusPendingReply<QString>*>(_a[0]) = _r; }  break;
+        default: ;
+        }
+    }
+}
+
+const QMetaObjectExtraData OrgKdeKSpeechInterface::staticMetaObjectExtraData = {
+    0,  qt_static_metacall 
+};
+
+const QMetaObject OrgKdeKSpeechInterface::staticMetaObject = {
+    { &QDBusAbstractInterface::staticMetaObject, qt_meta_stringdata_OrgKdeKSpeechInterface,
+      qt_meta_data_OrgKdeKSpeechInterface, &staticMetaObjectExtraData }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &OrgKdeKSpeechInterface::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *OrgKdeKSpeechInterface::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *OrgKdeKSpeechInterface::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_OrgKdeKSpeechInterface))
+        return static_cast<void*>(const_cast< OrgKdeKSpeechInterface*>(this));
+    return QDBusAbstractInterface::qt_metacast(_clname);
+}
+
+int OrgKdeKSpeechInterface::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QDBusAbstractInterface::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 58)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 58;
+    }
+#ifndef QT_NO_PROPERTIES
+      else if (_c == QMetaObject::ReadProperty) {
+        void *_v = _a[0];
+        switch (_id) {
+        case 0: *reinterpret_cast< bool*>(_v) = isSpeaking(); break;
+        case 1: *reinterpret_cast< QString*>(_v) = version(); break;
+        }
+        _id -= 2;
+    } else if (_c == QMetaObject::WriteProperty) {
+        _id -= 2;
+    } else if (_c == QMetaObject::ResetProperty) {
+        _id -= 2;
+    } else if (_c == QMetaObject::QueryPropertyDesignable) {
+        _id -= 2;
+    } else if (_c == QMetaObject::QueryPropertyScriptable) {
+        _id -= 2;
+    } else if (_c == QMetaObject::QueryPropertyStored) {
+        _id -= 2;
+    } else if (_c == QMetaObject::QueryPropertyEditable) {
+        _id -= 2;
+    } else if (_c == QMetaObject::QueryPropertyUser) {
+        _id -= 2;
+    }
+#endif // QT_NO_PROPERTIES
+    return _id;
+}
+
+// SIGNAL 0
+void OrgKdeKSpeechInterface::jobStateChanged(const QString & _t1, int _t2, int _t3)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)) };
+    QMetaObject::activate(this, &staticMetaObject, 0, _a);
+}
+
+// SIGNAL 1
+void OrgKdeKSpeechInterface::kttsdExiting()
+{
+    QMetaObject::activate(this, &staticMetaObject, 1, 0);
+}
+
+// SIGNAL 2
+void OrgKdeKSpeechInterface::kttsdStarted()
+{
+    QMetaObject::activate(this, &staticMetaObject, 2, 0);
+}
+
+// SIGNAL 3
+void OrgKdeKSpeechInterface::marker(const QString & _t1, int _t2, int _t3, const QString & _t4)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)), const_cast<void*>(reinterpret_cast<const void*>(&_t2)), const_cast<void*>(reinterpret_cast<const void*>(&_t3)), const_cast<void*>(reinterpret_cast<const void*>(&_t4)) };
+    QMetaObject::activate(this, &staticMetaObject, 3, _a);
+}
+QT_END_MOC_NAMESPACE

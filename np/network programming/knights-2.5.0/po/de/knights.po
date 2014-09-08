@@ -1,0 +1,1347 @@
+# Panagiotis Papadopoulos <pano_90@gmx.net>, 2010, 2011.
+# Johannes Obermayr <johannesobermayr@gmx.de>, 2010.
+# Frederik Schwarzer <schwarzer@kde.org>, 2010, 2011.
+# Burkhard Lück <lueck@hube-lueck.de>, 2011, 2012.
+# Jonathan Kolberg <bulldog98@kubuntu-de.org>, 2011.
+msgid ""
+msgstr ""
+"Project-Id-Version: knights\n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-08-10 04:11+0200\n"
+"PO-Revision-Date: 2012-07-15 18:30+0200\n"
+"Last-Translator: Burkhard Lück <lueck@hube-lueck.de>\n"
+"Language-Team: German <kde-i18n-de@kde.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: proto/chatwidget.cpp:88
+msgid " says: "
+msgstr " sagt: "
+
+#: proto/chatwidget.cpp:125
+msgid "You: "
+msgstr "Sie: "
+
+#: proto/computerprotocol.cpp:56
+#, kde-format
+msgid ""
+"Program <code>%1</code> could not be started, please check that it is "
+"installed."
+msgstr ""
+"Das Programm <code>%1</code> kann nicht gestartet werden. Bitte stellen Sie "
+"sicher, dass es installiert ist."
+
+#: proto/computerprotocol.cpp:73
+#, kde-format
+msgid "Console for %1 (%2)"
+msgstr "Konsole für %1 (%2)"
+
+#: proto/ficsdialog.cpp:79
+msgid "Session started"
+msgstr "Sitzung gestartet"
+
+#: proto/ficsdialog.cpp:93
+msgid "Logging in..."
+msgstr "Anmeldevorgang läuft ..."
+
+#: proto/ficsdialog.cpp:124 proto/ficsdialog.cpp:133
+msgid "H:mm:ss"
+msgstr "H:mm:ss"
+
+#: proto/ficsdialog.cpp:151
+#, kde-format
+msgctxt "PlayerName (rating)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: proto/ficsdialog.cpp:230
+#, kde-format
+msgid "<font color='red'>Error: %1</font>"
+msgstr "<font color='red'>Fehler: %1</font>"
+
+#. i18n: file: proto/ficsdialog.ui:284
+#. i18n: ectx: property (text), widget (QPushButton, seekButton)
+#: proto/ficsprotocol.cpp:130 rc.cpp:161
+msgctxt "Start searching for opponents"
+msgid "Seek"
+msgstr "Suchen"
+
+#: proto/ficsprotocol.cpp:131
+msgctxt "Stop searching for opponents"
+msgid "Unseek"
+msgstr "Suche abbrechen"
+
+#. i18n: file: popup.ui:37
+#. i18n: ectx: property (text), widget (KPushButton, acceptButton)
+#: proto/ficsprotocol.cpp:132 proto/ficsprotocol.cpp:212 offerwidget.cpp:35
+#: rc.cpp:296
+msgid "Accept"
+msgstr "Annehmen"
+
+#: proto/ficsprotocol.cpp:133
+msgid "Help"
+msgstr "Hilfe"
+
+#: proto/ficsprotocol.cpp:153
+msgid "Server Console"
+msgstr "Server-Konsole"
+
+#: proto/ficsprotocol.cpp:166
+#, kde-format
+msgid "Chat with %1"
+msgstr "Mit %1 chatten"
+
+#: proto/ficsprotocol.cpp:199
+msgid "Login failed"
+msgstr "Anmeldung fehlgeschlagen"
+
+#: proto/ficsprotocol.cpp:205
+msgid "Chess server"
+msgstr "Schach-Server"
+
+#. i18n: file: popup.ui:44
+#. i18n: ectx: property (text), widget (KPushButton, declineButton)
+#: proto/ficsprotocol.cpp:208 offerwidget.cpp:38 rc.cpp:299
+msgid "Decline"
+msgstr "Ablehnen"
+
+#: proto/ficsprotocol.cpp:315
+msgid "Invalid Password"
+msgstr "Ungültiges Passwort"
+
+#: proto/protocol.cpp:79
+msgid "No Error"
+msgstr "Kein Fehler"
+
+#: proto/protocol.cpp:82
+msgid "User Canceled"
+msgstr "Abbruch durch den Benutzer"
+
+#: proto/protocol.cpp:85
+msgid "Network Error"
+msgstr "Netzwerkfehler"
+
+#: proto/protocol.cpp:88
+msgid "Unknown Error"
+msgstr "Unbekannter Fehler"
+
+#: proto/protocol.cpp:91
+msgid "Program Error"
+msgstr "Programmfehler"
+
+#: proto/seekgraph.cpp:42
+msgid "Time limit [minutes]"
+msgstr "Zeitbegrenzung [Minuten]"
+
+#: proto/seekgraph.cpp:43
+msgid "Opponent's rating"
+msgstr "Bewertung des Gegners"
+
+#: board.cpp:694
+msgid "Promote"
+msgstr "Umwandeln"
+
+#: board.cpp:695
+msgid "Promotion"
+msgstr "Umwandlung"
+
+#: enginesettings.cpp:78
+msgid "Invalid interface"
+msgstr "Ungültige Schnittstelle"
+
+#: enginesettings.cpp:81 enginesettings.cpp:140
+msgctxt "Protocol name"
+msgid "XBoard"
+msgstr "XBoard"
+
+#: enginesettings.cpp:84 enginesettings.cpp:140
+msgctxt "Protocol name"
+msgid "UCI"
+msgstr "UCI"
+
+#: gamedialog.cpp:271
+msgid " minute"
+msgid_plural " minutes"
+msgstr[0] " Minute"
+msgstr[1] " Minuten"
+
+#: gamedialog.cpp:272
+msgid " second"
+msgid_plural " seconds"
+msgstr[0] " Sekunde"
+msgstr[1] " Sekunden"
+
+#: gamedialog.cpp:273 gamemanager.cpp:923
+msgid " move"
+msgid_plural " moves"
+msgstr[0] " Zug"
+msgstr[1] " Züge"
+
+#: gamemanager.cpp:466
+msgctxt "The player of this color"
+msgid "White"
+msgstr "Weiß"
+
+#: gamemanager.cpp:467
+msgctxt "The player of this color"
+msgid "Black"
+msgstr "Schwarz"
+
+#: gamemanager.cpp:587
+#, kde-format
+msgid "%1 offers you a draw"
+msgstr "%1 schlägt Ihnen ein Remis vor"
+
+#: gamemanager.cpp:590
+#, kde-format
+msgid "%2 would like to take back a half move"
+msgid_plural "%2 would like to take back %1 half moves"
+msgstr[0] "%2 möchte einen Halbzug zurücknehmen"
+msgstr[1] "%2 möchte %1 Halbzüge zurücknehmen"
+
+#: gamemanager.cpp:593
+#, kde-format
+msgid "%1 would like to adjourn the game"
+msgstr "%1 möchte das Spiel vertagen"
+
+#: gamemanager.cpp:596
+#, kde-format
+msgid "%1 would like to abort the game"
+msgstr "%1 möchte das Spiel abbrechen"
+
+#: gamemanager.cpp:710
+#, kde-format
+msgctxt "string to be spoken when the opponent castles queenside"
+msgid "%1 castles queenside"
+msgstr "%1 führt eine Damenrochade durch"
+
+#: gamemanager.cpp:715
+#, kde-format
+msgctxt "string to be spoken when the opponent castles queenside"
+msgid "%1 castles kingside"
+msgstr "%1 führt eine Königsrochade durch"
+
+#: gamemanager.cpp:721
+#, kde-format
+msgctxt "string to be spoken when the opponent makes a normal  move"
+msgid "%1 to %2"
+msgstr "%1 nach %2"
+
+#: gamemanager.cpp:733
+msgctxt "Your king is under attack"
+msgid "Check"
+msgstr "Schach"
+
+#: gamemanager.cpp:737
+msgctxt "Your king is dead"
+msgid "Checkmate"
+msgstr "Schachmatt"
+
+#: knights.cpp:87
+msgid "Custom"
+msgstr "Benutzerdefiniert"
+
+#: knights.cpp:130
+msgid "Resign"
+msgstr "Aufgeben"
+
+#: knights.cpp:131
+msgid "Admit your inevitable defeat"
+msgstr "Bekennen Sie sich zu Ihrer unabwendbaren Niederlage"
+
+#: knights.cpp:136
+msgid "Undo"
+msgstr "Rückgängig"
+
+#: knights.cpp:137
+msgid "Take back your last move"
+msgstr "Ihren letzten Zug zurücknehmen"
+
+#: knights.cpp:143
+msgid "Redo"
+msgstr "Wiederherstellen"
+
+#: knights.cpp:144
+msgid "Repeat your last move"
+msgstr "Ihren letzten Zug wiederherstellen"
+
+#: knights.cpp:150
+msgid "Offer &Draw"
+msgstr "Remis vorschlagen"
+
+#: knights.cpp:151
+msgid "Offer a draw to your opponent"
+msgstr "Bieten Sie Ihrem Gegner ein Remis an"
+
+#: knights.cpp:156
+msgid "Adjourn"
+msgstr "Vertagen"
+
+#: knights.cpp:157
+msgid "Continue this game at a later time"
+msgstr "Dieses Spiel zu einem späteren Zeitpunkt fortsetzen"
+
+#: knights.cpp:162
+msgid "Abort"
+msgstr "Abbrechen"
+
+#: knights.cpp:163
+msgid "End the game immediately"
+msgstr "Das Spiel sofort beenden"
+
+#: knights.cpp:167
+msgid "Show Clock"
+msgstr "Uhr anzeigen"
+
+#: knights.cpp:173
+msgid "Show History"
+msgstr "Verlauf anzeigen"
+
+#: knights.cpp:180
+msgid "Show White Console"
+msgstr "Weiße Konsole anzeigen"
+
+#: knights.cpp:186
+msgid "Show Black Console"
+msgstr "Schwarze Konsole anzeigen"
+
+#: knights.cpp:192
+msgid "Show Chat"
+msgstr "Chat anzeigen"
+
+#: knights.cpp:214
+msgid "New Game"
+msgstr "Neues Spiel"
+
+#: knights.cpp:235 knights.cpp:646 knights.cpp:661
+msgid "*.pgn | Portable game notation"
+msgstr "*.pgn | Portable game notation"
+
+#: knights.cpp:259 knights.cpp:271
+msgid "This feature is not yet implemented in Knights"
+msgstr "Diese Funktion ist in Knights noch nicht eingebaut worden"
+
+#: knights.cpp:438
+msgid "Clock"
+msgstr "Uhr"
+
+#: knights.cpp:472
+msgid "Move History"
+msgstr "Spielverlauf"
+
+#: knights.cpp:500
+msgid "General"
+msgstr "Allgemein"
+
+#: knights.cpp:504
+msgid "Computer Engines"
+msgstr "Schach-Module"
+
+#: knights.cpp:509
+msgid "Accessibility"
+msgstr "Zugangshilfen"
+
+#: knights.cpp:512
+msgid "Theme"
+msgstr "Design"
+
+#: knights.cpp:598
+#, kde-format
+msgid "%1 vs. %2"
+msgstr "%1 gg. %2"
+
+#: knights.cpp:623
+msgid ""
+"This will end your game.\n"
+"Would you like to save the move history?"
+msgstr ""
+"Dies beendet die Partie.\n"
+"Möchten Sie den Spielverlauf speichern?"
+
+#: knightsview.cpp:129
+msgid "Game over"
+msgstr "Spiel beendet"
+
+#: knightsview.cpp:134
+msgid "The game ended in a draw"
+msgstr "Das Spiel endet Remis"
+
+#: knightsview.cpp:144
+msgctxt "White as in the player with white pieces"
+msgid "The game ended with a victory for <emphasis>White</emphasis>"
+msgstr "Das Spiel endet mit einem Sieg für <emphasis>Weiß</emphasis>"
+
+#: knightsview.cpp:149
+msgctxt "Black as in the player with black pieces"
+msgid "The game ended with a victory for <emphasis>Black</emphasis>"
+msgstr "Das Spiel endet mit einem Sieg für <emphasis>Schwarz</emphasis>"
+
+#: knightsview.cpp:157
+#, kde-format
+msgctxt "Player name, then <White as in the player with white pieces"
+msgid ""
+"The game ended with a victory for <emphasis>%1</emphasis>, playing White"
+msgstr ""
+"Das Spiel endete mit einem Sieg für <emphasis>%1</emphasis>, mit den weißen "
+"Figuren."
+
+#: knightsview.cpp:162
+#, kde-format
+msgctxt "Player name, then Black as in the player with black pieces"
+msgid ""
+"The game ended with a victory for <emphasis>%1</emphasis>, playing Black"
+msgstr ""
+"Das Spiel endete mit einem Sieg für <emphasis>%1</emphasis>, mit den "
+"schwarzen Figuren."
+
+#: knightsview.cpp:180
+msgid "Settings changed"
+msgstr "Die Einstellungen wurden geändert"
+
+#: main.cpp:30
+msgid "Chess board based on KDE Development Platform 4"
+msgstr "Schachspiel für KDE4"
+
+#. i18n: file: knightsview_base.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, KnightsView)
+#: main.cpp:36 rc.cpp:65
+msgid "Knights"
+msgstr "Knights"
+
+#: main.cpp:37
+msgid "(C) 2009-2011 Miha Čančula"
+msgstr "© 2009-2011 Miha Čančula"
+
+#: main.cpp:38
+msgid "Miha Čančula"
+msgstr "Miha Čančula"
+
+#: main.cpp:39
+msgid "Troy Corbin"
+msgstr "Troy Corbin"
+
+#: main.cpp:39
+msgid "Original Knights for KDE3 and theme author"
+msgstr "Ursprünglicher Autor von Knights für KDE 3 und Designersteller"
+
+#: main.cpp:40
+msgid "Dave Kaye"
+msgstr "Dave Kaye"
+
+#: main.cpp:40
+msgid "Help with new theme features and rendering without KGameRenderer"
+msgstr ""
+"Hilfe bei den neuen Design-Funktionen und Darstellung ohne „KGameRenderer“"
+
+#: main.cpp:41
+msgid "Thomas Kamps"
+msgstr "Thomas Kamps"
+
+#: main.cpp:41
+msgid "Clock displaying the remaining time"
+msgstr "Uhr zur Anzeige der verbleibenden Zeit"
+
+#: main.cpp:45
+msgid "Document to open"
+msgstr "Zu öffnendes Dokument"
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Panagiotis Papadopoulos"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "pano_90@gmx.net"
+
+#. i18n: file: clockwidget.ui:17
+#. i18n: ectx: property (title), widget (QGroupBox, groupB)
+#. i18n: file: gamedialog.ui:113
+#. i18n: ectx: property (text), widget (QRadioButton, colorBlack)
+#: rc.cpp:5 rc.cpp:29
+msgid "Black"
+msgstr "Schwarz"
+
+#. i18n: file: clockwidget.ui:44
+#. i18n: ectx: property (title), widget (QGroupBox, groupW)
+#. i18n: file: gamedialog.ui:100
+#. i18n: ectx: property (text), widget (QRadioButton, colorWhite)
+#: rc.cpp:8 rc.cpp:26
+msgid "White"
+msgstr "Weiß"
+
+#. i18n: file: gamedialog.ui:29
+#. i18n: ectx: property (title), widget (QGroupBox, player1Box)
+#: rc.cpp:11
+msgid "Player 1"
+msgstr "Spieler 1"
+
+#. i18n: file: gamedialog.ui:35
+#. i18n: ectx: property (text), widget (QRadioButton, player1Human)
+#: rc.cpp:14
+msgid "Human (You)"
+msgstr "Mensch (Sie)"
+
+#. i18n: file: gamedialog.ui:47
+#. i18n: ectx: property (text), widget (QRadioButton, player1Comp)
+#. i18n: file: gamedialog.ui:157
+#. i18n: ectx: property (text), widget (QRadioButton, player2Comp)
+#: rc.cpp:17 rc.cpp:41
+msgid "Computer engine:"
+msgstr "Schach-Modul:"
+
+#. i18n: file: gamedialog.ui:70
+#. i18n: ectx: property (text), widget (KPushButton, player1Engines)
+#. i18n: file: gamedialog.ui:167
+#. i18n: ectx: property (text), widget (QToolButton, player2Engines)
+#: rc.cpp:20 rc.cpp:44
+msgid "Configure Engines"
+msgstr "Schach-Module einrichten"
+
+#. i18n: file: gamedialog.ui:88
+#. i18n: ectx: property (title), widget (QGroupBox, colorGroup)
+#: rc.cpp:23
+msgid "Player 1's Color"
+msgstr "Farbe für Spieler 1"
+
+#. i18n: file: gamedialog.ui:126
+#. i18n: ectx: property (text), widget (QRadioButton, colorRandom)
+#: rc.cpp:32
+msgid "Choose randomly"
+msgstr "Zufällig auswählen"
+
+#. i18n: file: gamedialog.ui:139
+#. i18n: ectx: property (title), widget (QGroupBox, player2Box)
+#: rc.cpp:35
+msgid "Player 2"
+msgstr "Spieler 2"
+
+#. i18n: file: gamedialog.ui:145
+#. i18n: ectx: property (text), widget (QRadioButton, player2Human)
+#: rc.cpp:38
+msgid "Human"
+msgstr "Mensch"
+
+#. i18n: file: gamedialog.ui:191
+#. i18n: ectx: property (text), widget (QRadioButton, player2Fics)
+#: rc.cpp:47
+msgid "Chess server:"
+msgstr "Schach-Server:"
+
+#. i18n: file: gamedialog.ui:213
+#. i18n: ectx: property (title), widget (QGroupBox, timeGroup)
+#: rc.cpp:50
+msgid "Use Time Control"
+msgstr "Zeitbegrenzung verwenden"
+
+#. i18n: file: gamedialog.ui:228
+#. i18n: ectx: property (text), widget (QLabel, numberOfMovesLabel)
+#: rc.cpp:53
+msgid "Time control period"
+msgstr "Zeitbegrenzungsdauer"
+
+#. i18n: file: gamedialog.ui:244
+#. i18n: ectx: property (specialValueText), widget (KIntSpinBox, numberOfMoves)
+#: rc.cpp:56
+msgctxt "Time control mode"
+msgid "Timer Only"
+msgstr "Nur Zeitdauer"
+
+#. i18n: file: gamedialog.ui:257
+#. i18n: ectx: property (text), widget (QLabel, timeLimitLabel)
+#: rc.cpp:59
+msgid "Initial time limit"
+msgstr "Anfängliche Zeitbegrenzung"
+
+#. i18n: file: gamedialog.ui:280
+#. i18n: ectx: property (text), widget (QLabel, timeIncrementLabel)
+#: rc.cpp:62
+msgid "Increment per move"
+msgstr "Erhöhung pro Spielzug"
+
+#. i18n: file: promotiondialog.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, PromotionWidget)
+#: rc.cpp:68
+msgid "Pawn Promotion"
+msgstr "Bauer-Umwandlung"
+
+#. i18n: file: promotiondialog.ui:26
+#. i18n: ectx: property (text), widget (QLabel, labelPawn)
+#: rc.cpp:71
+msgid "Promote pawn to:"
+msgstr "Bauer umwandeln in:"
+
+#. i18n: file: promotiondialog.ui:36
+#. i18n: ectx: property (text), widget (QRadioButton, radioButtonQueen)
+#: rc.cpp:74
+msgid "Queen"
+msgstr "Dame"
+
+#. i18n: file: promotiondialog.ui:46
+#. i18n: ectx: property (text), widget (QRadioButton, radioButtonRook)
+#: rc.cpp:77
+msgid "Rook"
+msgstr "Turm"
+
+#. i18n: file: promotiondialog.ui:53
+#. i18n: ectx: property (text), widget (QRadioButton, radioButtonBishop)
+#: rc.cpp:80
+msgid "Bishop"
+msgstr "Läufer"
+
+#. i18n: file: promotiondialog.ui:60
+#. i18n: ectx: property (text), widget (QRadioButton, radioButtonKnight)
+#: rc.cpp:83
+msgid "Knight"
+msgstr "Springer"
+
+#. i18n: file: proto/chatwidget.ui:20
+#. i18n: ectx: property (text), widget (KPushButton, sendButton)
+#: rc.cpp:86
+msgid "Send"
+msgstr "Senden"
+
+#. i18n: file: proto/chatwidget.ui:51
+#. i18n: ectx: property (text), widget (QToolButton, toolButton)
+#: rc.cpp:89
+msgid "..."
+msgstr "..."
+
+#. i18n: file: proto/ficsdialog.ui:36
+#. i18n: ectx: attribute (title), widget (QWidget, accountTab)
+#: rc.cpp:92
+msgid "Account"
+msgstr "Zugang"
+
+#. i18n: file: proto/ficsdialog.ui:39
+#. i18n: ectx: attribute (toolTip), widget (QWidget, accountTab)
+#: rc.cpp:95
+msgid "Log in to the chess server"
+msgstr "Beim Schach-Server anmelden"
+
+#. i18n: file: proto/ficsdialog.ui:58
+#. i18n: ectx: property (text), widget (QLabel, usernameLabel)
+#: rc.cpp:98
+msgid "&Username"
+msgstr "&Benutzername"
+
+#. i18n: file: proto/ficsdialog.ui:78
+#. i18n: ectx: property (text), widget (QCheckBox, registeredCheckBox)
+#: rc.cpp:101
+msgid "This is a registered account"
+msgstr "Dies ist ein registrierter Zugang"
+
+#. i18n: file: proto/ficsdialog.ui:88
+#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
+#: rc.cpp:104
+msgid "&Password"
+msgstr "&Passwort"
+
+#. i18n: file: proto/ficsdialog.ui:111
+#. i18n: ectx: property (text), widget (QCheckBox, rememberCheckBox)
+#: rc.cpp:107
+msgid "Log me in automatically"
+msgstr "Automatisch anmelden"
+
+#. i18n: file: proto/ficsdialog.ui:118
+#. i18n: ectx: property (text), widget (KPushButton, logInButton)
+#: rc.cpp:110
+msgid "Log in"
+msgstr "Anmelden"
+
+#. i18n: file: proto/ficsdialog.ui:138
+#. i18n: ectx: property (text), widget (KPushButton, registerButton)
+#: rc.cpp:113
+msgid "Create an account"
+msgstr "Konto erstellen"
+
+#. i18n: file: proto/ficsdialog.ui:162
+#. i18n: ectx: attribute (title), widget (QWidget, joinTab)
+#: rc.cpp:116
+msgid "Seek List"
+msgstr "Suchliste"
+
+#. i18n: file: proto/ficsdialog.ui:165
+#. i18n: ectx: attribute (toolTip), widget (QWidget, joinTab)
+#: rc.cpp:119
+msgid "Current ads arranged in a list"
+msgstr "Aktuelle Anfragen als Liste"
+
+#. i18n: file: proto/ficsdialog.ui:202
+#. i18n: ectx: property (text), widget (QTableWidget, offerTable)
+#: rc.cpp:122
+msgid "Player"
+msgstr "Spieler"
+
+#. i18n: file: proto/ficsdialog.ui:207
+#. i18n: ectx: property (text), widget (QTableWidget, offerTable)
+#: rc.cpp:125
+msgid "Rating"
+msgstr "Bewertung"
+
+#. i18n: file: proto/ficsdialog.ui:212
+#. i18n: ectx: property (text), widget (QTableWidget, offerTable)
+#: rc.cpp:128
+msgid "Time"
+msgstr "Zeit"
+
+#. i18n: file: proto/ficsdialog.ui:217
+#. i18n: ectx: property (text), widget (QTableWidget, offerTable)
+#: rc.cpp:131
+msgid "Increment"
+msgstr "Erhöhen"
+
+#. i18n: file: proto/ficsdialog.ui:222
+#. i18n: ectx: property (text), widget (QTableWidget, offerTable)
+#: rc.cpp:134
+msgid "Rated"
+msgstr "Bewertet"
+
+#. i18n: file: proto/ficsdialog.ui:227
+#. i18n: ectx: property (text), widget (QTableWidget, offerTable)
+#: rc.cpp:137
+msgid "Variant"
+msgstr "Variante"
+
+#. i18n: file: proto/ficsdialog.ui:232
+#. i18n: ectx: property (text), widget (QTableWidget, offerTable)
+#: rc.cpp:140
+msgid "Your color"
+msgstr "Ihre Farbe"
+
+#. i18n: file: proto/ficsdialog.ui:241
+#. i18n: ectx: attribute (title), widget (QWidget, graphTab)
+#: rc.cpp:143
+msgid "Seek Graph"
+msgstr "Suchgrafik"
+
+#. i18n: file: proto/ficsdialog.ui:244
+#. i18n: ectx: attribute (toolTip), widget (QWidget, graphTab)
+#: rc.cpp:146
+msgid "Current ads arranged by rating and duration"
+msgstr "Aktuelle Anfragen als Grafik mit Bewertung und Zeitdauer"
+
+#. i18n: file: proto/ficsdialog.ui:261
+#. i18n: ectx: attribute (title), widget (QWidget, challengeTab)
+#: rc.cpp:149
+msgid "Challenges"
+msgstr "Herausforderungen"
+
+#. i18n: file: proto/ficsdialog.ui:264
+#. i18n: ectx: attribute (toolTip), widget (QWidget, challengeTab)
+#: rc.cpp:152
+msgid "Post an ad for other players"
+msgstr "Anfrage an andere Spieler senden"
+
+#. i18n: file: proto/ficsdialog.ui:270
+#. i18n: ectx: property (text), widget (QCheckBox, ratedCheckBox)
+#: rc.cpp:155
+msgid "Rated match"
+msgstr "Bewertete Partie"
+
+#. i18n: file: proto/ficsdialog.ui:277
+#. i18n: ectx: property (text), widget (QCheckBox, autoCheckBox)
+#: rc.cpp:158
+msgid "Automatically start the game"
+msgstr "Partie automatisch starten"
+
+#. i18n: file: proto/ficsdialog.ui:298
+#. i18n: ectx: attribute (title), widget (QWidget, consoleTab)
+#: rc.cpp:164
+msgid "Console"
+msgstr "Konsole"
+
+#. i18n: file: proto/ficsdialog.ui:301
+#. i18n: ectx: attribute (toolTip), widget (QWidget, consoleTab)
+#: rc.cpp:167
+msgid "Use custom commands"
+msgstr "Eigene Befehle verwenden"
+
+#. i18n: file: prefs_access.ui:17
+#. i18n: ectx: property (title), widget (QGroupBox, external_box)
+#: rc.cpp:170
+msgid "External Programs"
+msgstr "Externe Programme"
+
+#. i18n: file: prefs_access.ui:23
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_speakOpponentsMoves)
+#: rc.cpp:173
+msgid "Speak opponent's moves"
+msgstr "Züge des Gegners vorlesen"
+
+#. i18n: file: prefs_access.ui:30
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_allowExternalControl)
+#: rc.cpp:176
+msgid "Allow other programs to control Knights"
+msgstr "Anderen Programmen die Steuerung von Knights erlauben"
+
+#. i18n: file: knights.kcfg:9
+#. i18n: ectx: label, entry (Theme), group (KGameTheme)
+#: rc.cpp:179
+msgid "Theme file for the board"
+msgstr "Design-Datei für das Schachbrett"
+
+#. i18n: file: knights.kcfg:15
+#. i18n: ectx: label, entry (askDiscard), group (Notification Messages)
+#: rc.cpp:182
+msgid "whether to show a confirmation dialog before discarding game history"
+msgstr ""
+
+#. i18n: file: knights.kcfg:19
+#. i18n: ectx: label, entry (dontAskInternal), group (Notification Messages)
+#: rc.cpp:185
+msgid "internal variable controlling the confirm dialog"
+msgstr ""
+
+#. i18n: file: knights.kcfg:31
+#. i18n: ectx: label, entry (animationSpeed), group (Preferences)
+#: rc.cpp:188
+msgid "Moves animation speed"
+msgstr "Animationsgeschwindigkeit der Spielzüge"
+
+#. i18n: file: knights.kcfg:35
+#. i18n: ectx: label, entry (animateBoard), group (Preferences)
+#: rc.cpp:191
+msgid "whether the Board is animated during rotating and resizing"
+msgstr "Ob das Schachbrett beim Drehen und Ändern der Größe animiert ist."
+
+#. i18n: file: knights.kcfg:39
+#. i18n: ectx: label, entry (flipBoard), group (Preferences)
+#: rc.cpp:194
+msgid "whether to rotate the board when in local two-player mode"
+msgstr ""
+"Ob das Schachbrett beim Modus mit zwei lokalen Spielern gedreht werden soll"
+
+#. i18n: file: knights.kcfg:48
+#. i18n: ectx: label, entry (borderDisplayType), group (Preferences)
+#: rc.cpp:197
+msgid "chessboard border type"
+msgstr "Typ des Schachbrettrands"
+
+#. i18n: file: knights.kcfg:52
+#. i18n: ectx: label, entry (showDanger), group (Preferences)
+#: rc.cpp:200
+msgid "show check marker"
+msgstr "Markierung für Schach anzeigen"
+
+#. i18n: file: knights.kcfg:56
+#. i18n: ectx: label, entry (showMarker), group (Preferences)
+#: rc.cpp:203
+msgid "show legal moves marker"
+msgstr "Markierungen für gültige Spielzüge anzeigen"
+
+#. i18n: file: knights.kcfg:60
+#. i18n: ectx: label, entry (showMotion), group (Preferences)
+#: rc.cpp:206
+msgid "show opponents move marker"
+msgstr "Markierungen für Spielzüge des Gegners anzeigen"
+
+#. i18n: file: knights.kcfg:64
+#. i18n: ectx: label, entry (showClock), group (Preferences)
+#: rc.cpp:209
+msgid "show clocks when time control is in use"
+msgstr "Uhr anzeigen, wenn Zeitbegrenzung verwendet wird"
+
+#. i18n: file: knights.kcfg:68
+#. i18n: ectx: label, entry (showChat), group (Preferences)
+#: rc.cpp:212
+msgid "show chat window, if supported by the protocol"
+msgstr "Chat-Fenster anzeigen, wenn es vom Protokoll unterstützt wird"
+
+#. i18n: file: knights.kcfg:72
+#. i18n: ectx: label, entry (showConsole), group (Preferences)
+#: rc.cpp:215
+msgid "show the text console, if supported by the protocol"
+msgstr "Textkonsole anzeigen, wenn es vom Protokoll unterstützt wird"
+
+#. i18n: file: knights.kcfg:76
+#. i18n: ectx: label, entry (showHistory), group (Preferences)
+#: rc.cpp:218
+msgid "show move history"
+msgstr "Spielverlauf anzeigen"
+
+#. i18n: file: knights.kcfg:82
+#. i18n: ectx: label, entry (timeLimit), group (Time Control)
+#: rc.cpp:221
+msgid "initial time limit for both players"
+msgstr "Anfängliche Zeitbegrenzung für beide Spieler"
+
+#. i18n: file: knights.kcfg:86
+#. i18n: ectx: label, entry (timeIncrement), group (Time Control)
+#: rc.cpp:224
+msgid "time increment per move (for Incremental time control)"
+msgstr "Zeiterhöhung pro Zug (für zunehmende Zeitbegrenzung)"
+
+#. i18n: file: knights.kcfg:90
+#. i18n: ectx: label, entry (numberOfMoves), group (Time Control)
+#: rc.cpp:227
+msgid ""
+"the number of moves the player has to make in the specified time (for "
+"Conventional time control)"
+msgstr ""
+"Anzahl der Spielzüge, die ein Spieler in der festgelegten Zeit ausführen "
+"muss (für konventionelle Zeitbegrenzung)"
+
+#. i18n: file: knights.kcfg:94
+#. i18n: ectx: label, entry (timeEnabled), group (Time Control)
+#: rc.cpp:230
+msgid "whether time limits are enabled and displayed"
+msgstr "Ob Zeitbegrenzungen aktiviert sind und angezeigt werden"
+
+#. i18n: file: knights.kcfg:104
+#. i18n: ectx: label, entry (player1Protocol), group (Protocols)
+#. i18n: file: knights.kcfg:113
+#. i18n: ectx: label, entry (player2Protocol), group (Protocols)
+#: rc.cpp:233 rc.cpp:236
+msgid "protocol to be used for player 1"
+msgstr "Zu verwendendes Protokoll für Spieler 1"
+
+#. i18n: file: knights.kcfg:122
+#. i18n: ectx: label, entry (color), group (Protocols)
+#: rc.cpp:239
+msgid ""
+"the local human player's color in a game against a computer or over the "
+"Internet."
+msgstr ""
+"Die Farbe des lokalen Spielers in einem Spiel gegen den Rechner oder über "
+"das Internet."
+
+#. i18n: file: knights.kcfg:126
+#. i18n: ectx: label, entry (programs), group (Protocols)
+#: rc.cpp:242
+msgid "list of programs to run for playing against the computer"
+msgstr "Liste der Programme zum Spiel gegen den Rechner"
+
+#. i18n: file: knights.kcfg:130
+#. i18n: ectx: label, entry (player1Program), group (Protocols)
+#: rc.cpp:245
+msgid "the last selected program for player 1"
+msgstr "Das zuletzt verwendete Programm für Spieler 1"
+
+#. i18n: file: knights.kcfg:134
+#. i18n: ectx: label, entry (player2Program), group (Protocols)
+#: rc.cpp:248
+msgid "the last selected program for player 2"
+msgstr "Das zuletzt verwendete Programm für Spieler 2"
+
+#. i18n: file: knights.kcfg:138
+#. i18n: ectx: label, entry (computerSearchDepth), group (Protocols)
+#: rc.cpp:251
+msgid ""
+"the search depth of computer engines, when the difficulty is set to "
+"Configurable"
+msgstr ""
+"die Suchtiefe des Schach-Moduls, wird genutzt wenn der Schwierigkeitsgrad "
+"auf Benutzerdefiniert steht"
+
+#. i18n: file: knights.kcfg:142
+#. i18n: ectx: label, entry (computerMemorySize), group (Protocols)
+#: rc.cpp:254
+msgid ""
+"the memory size used by computer engines, when the difficulty is set to "
+"Configurable"
+msgstr ""
+"die Größe des Arbeitsspeichers, die von dem Schach-Modul genutzt wird, wenn "
+"die Schwierigkeit auf Benutzerdefiniert steht"
+
+#. i18n: file: knights.kcfg:146
+#. i18n: ectx: label, entry (servers), group (Protocols)
+#: rc.cpp:257
+msgid "list of servers for playing over the Internet"
+msgstr "Liste der Server zum Spielen im Internet"
+
+#. i18n: file: knights.kcfg:150
+#. i18n: ectx: label, entry (currentServer), group (Protocols)
+#: rc.cpp:260
+msgid "the last selected server"
+msgstr "Der zuletzt gewählte Server"
+
+#. i18n: file: knights.kcfg:154
+#. i18n: ectx: label, entry (ficsUsername), group (Protocols)
+#: rc.cpp:263
+msgid "username for the Free Internet Chess Server"
+msgstr "Benutzername für den „Free Internet Chess Server“"
+
+#. i18n: file: knights.kcfg:158
+#. i18n: ectx: label, entry (guest), group (Protocols)
+#: rc.cpp:266
+msgid "whether to log in as guest"
+msgstr "Ob die Anmeldung als Gast erfolgt"
+
+#. i18n: file: knights.kcfg:162
+#. i18n: ectx: label, entry (autoLogin), group (Protocols)
+#: rc.cpp:269
+msgid "whether to log in to chess server automatically"
+msgstr "Ob die Anmeldung beim beim Schach-Server automatisch erfolgt"
+
+#. i18n: file: knights.kcfg:166
+#. i18n: ectx: label, entry (computerDelay), group (Protocols)
+#: rc.cpp:272
+msgid "delay before a computer's move is reported, in milliseconds"
+msgstr ""
+"Verzögerung in Millisekunden, ehe der Spielzug des Rechners angezeigt wird"
+
+#. i18n: file: knights.kcfg:170
+#. i18n: ectx: label, entry (engineConfigurations), group (Protocols)
+#: rc.cpp:275
+msgid "stored configurations of engine-specific settings"
+msgstr "gespeicherte Einstellungen der Modul abhängigen Einstellungen"
+
+#. i18n: file: knights.kcfg:176
+#. i18n: ectx: label, entry (speakOpponentsMoves), group (Accessibility)
+#: rc.cpp:278
+msgid "whether opponents' moves are spoken by Jovie"
+msgstr "Ob die Spielzüge des Gegners durch Jovie vorgelesen werden"
+
+#. i18n: file: knights.kcfg:180
+#. i18n: ectx: label, entry (allowExternalControl), group (Accessibility)
+#: rc.cpp:281
+msgid "whether commands over D-Bus are accepted"
+msgstr "Ob D-Bus-Befehle akzeptiert werden"
+
+#. i18n: file: knightsui.rc:21
+#. i18n: ectx: Menu (move)
+#: rc.cpp:284
+msgid "Move"
+msgstr "Zug"
+
+#. i18n: file: knightsui.rc:37
+#. i18n: ectx: ToolBar (mainToolBar)
+#: rc.cpp:287
+msgid "Main Toolbar"
+msgstr "Haupt-Werkzeugleiste"
+
+#. i18n: file: knightsui.rc:44
+#. i18n: ectx: ToolBar (actionsToolbar)
+#: rc.cpp:290
+msgid "Game Actions Toolbar"
+msgstr "Spielaktionen-Werkzeugleiste"
+
+#. i18n: file: knightsui.rc:55
+#. i18n: ectx: ToolBar (dockToolBar)
+#: rc.cpp:293
+msgid "Dockable Windows Toolbar"
+msgstr "Schach-Modul-Werkzeugleiste"
+
+#. i18n: file: popup.ui:51
+#. i18n: ectx: property (text), widget (KPushButton, closeButton)
+#: rc.cpp:302
+msgid "Close"
+msgstr "Schließen"
+
+#. i18n: file: enginesettings.ui:19
+#. i18n: ectx: property (text), widget (KPushButton, addButton)
+#: rc.cpp:305
+msgid "Add"
+msgstr "Hinzufügen"
+
+#. i18n: file: enginesettings.ui:26
+#. i18n: ectx: property (text), widget (KPushButton, removeButton)
+#: rc.cpp:308
+msgid "Remove"
+msgstr "Entfernen"
+
+#. i18n: file: enginesettings.ui:61
+#. i18n: ectx: property (text), widget (QTableWidget, tableWidget)
+#: rc.cpp:311
+msgid "Name"
+msgstr "Name"
+
+#. i18n: file: enginesettings.ui:66
+#. i18n: ectx: property (text), widget (QTableWidget, tableWidget)
+#: rc.cpp:314
+msgid "Command"
+msgstr "Befehl"
+
+#. i18n: file: enginesettings.ui:71
+#. i18n: ectx: property (text), widget (QTableWidget, tableWidget)
+#: rc.cpp:317
+msgid "Protocol"
+msgstr "Protokoll"
+
+#. i18n: file: enginesettings.ui:76
+#. i18n: ectx: property (text), widget (QTableWidget, tableWidget)
+#: rc.cpp:320
+msgid "Installed"
+msgstr "Installiert"
+
+#. i18n: file: prefs_base.ui:17
+#. i18n: ectx: property (title), widget (QGroupBox, animationGroup)
+#: rc.cpp:323
+msgid "Animations"
+msgstr "Animationen"
+
+#. i18n: file: prefs_base.ui:23
+#. i18n: ectx: property (text), widget (QLabel, animationSpeedLabel)
+#: rc.cpp:326
+msgid "Animation &speed:"
+msgstr "Animation&sgeschwindigkeit:"
+
+#. i18n: file: prefs_base.ui:34
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_animationSpeed)
+#: rc.cpp:329
+msgid "Instant (no animation)"
+msgstr "Sofort (Keine Animation)"
+
+#. i18n: file: prefs_base.ui:39
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_animationSpeed)
+#: rc.cpp:332
+msgid "Fast"
+msgstr "Schnell"
+
+#. i18n: file: prefs_base.ui:44
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_animationSpeed)
+#: rc.cpp:335
+msgid "Normal"
+msgstr "Normal"
+
+#. i18n: file: prefs_base.ui:49
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_animationSpeed)
+#: rc.cpp:338
+msgid "Slow"
+msgstr "Langsam"
+
+#. i18n: file: prefs_base.ui:57
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_animateBoard)
+#: rc.cpp:341
+msgid "Animate the board as well"
+msgstr "Schachbrett ebenfalls animieren"
+
+#. i18n: file: prefs_base.ui:67
+#. i18n: ectx: property (title), widget (QGroupBox, appearanceGroup)
+#: rc.cpp:344
+msgid "Appearance"
+msgstr "Erscheinungsbild"
+
+#. i18n: file: prefs_base.ui:76
+#. i18n: ectx: property (text), widget (QLabel, showMarkersForLabel)
+#: rc.cpp:347
+msgid "Show &markers for:"
+msgstr "&Markierungen anzeigen für:"
+
+#. i18n: file: prefs_base.ui:86
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_showMarker)
+#: rc.cpp:350
+msgctxt "Option to show markers for"
+msgid "Legal moves"
+msgstr "Gültige Spielzüge"
+
+#. i18n: file: prefs_base.ui:99
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_showMotion)
+#: rc.cpp:353
+msgctxt "Option to show markers for"
+msgid "Opponent's move"
+msgstr "Spielzüge des Gegners"
+
+#. i18n: file: prefs_base.ui:109
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_showDanger)
+#: rc.cpp:356
+msgctxt "Option to show markers for"
+msgid "Check"
+msgstr "Schach"
+
+#. i18n: file: prefs_base.ui:119
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:359
+msgid "Border display:"
+msgstr "Schachbrettrand:"
+
+#. i18n: file: prefs_base.ui:127
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_borderDisplayType)
+#: rc.cpp:362
+msgid "No borders"
+msgstr "Kein Rand"
+
+#. i18n: file: prefs_base.ui:132
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_borderDisplayType)
+#: rc.cpp:365
+msgid "Only borders"
+msgstr "Nur Rand"
+
+#. i18n: file: prefs_base.ui:137
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_borderDisplayType)
+#: rc.cpp:368
+msgid "Borders and notation"
+msgstr "Rand und Beschriftung"
+
+#. i18n: file: prefs_base.ui:148
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:371
+msgid "Behavior"
+msgstr "Verhalten"
+
+#. i18n: file: prefs_base.ui:154
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_flipBoard)
+#: rc.cpp:374
+msgid "Flip the board in local matches between humans"
+msgstr "Schachbrett in lokalen Spielen zwischen Personen drehen"
+
+#. i18n: file: prefs_base.ui:161
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_askDiscard)
+#: rc.cpp:377
+msgid "Show confirmation dialog before closing"
+msgstr "Bestätigungsdialog vor dem Schließen anzeigen"
+
+#. i18n: file: customdifficultydialog.ui:20
+#. i18n: ectx: property (text), widget (QLabel, searchDepthLabel)
+#: rc.cpp:380
+msgid "Search &depth:"
+msgstr "Suchtiefe:"
+
+#. i18n: file: customdifficultydialog.ui:30
+#. i18n: ectx: property (specialValueText), widget (KIntSpinBox, searchDepthIntSpinBox)
+#: rc.cpp:383
+msgctxt "Let the engine determine the search depth"
+msgid "Engine default"
+msgstr "Vorgabe des Schach-Moduls"
+
+#. i18n: file: customdifficultydialog.ui:37
+#. i18n: ectx: property (text), widget (QLabel, memorySizeLabel)
+#: rc.cpp:386
+msgid "Memory &size:"
+msgstr "Größe des Arbeitsspeichers:"
+
+#. i18n: file: customdifficultydialog.ui:47
+#. i18n: ectx: property (suffix), widget (KIntSpinBox, memorySizeIntSpinBox)
+#: rc.cpp:389
+msgctxt "Megabytes"
+msgid " MB"
+msgstr " MB"
+
+#. i18n: file: historywidget.ui:25
+#. i18n: ectx: property (text), widget (QLabel, notationLabel)
+#: rc.cpp:392
+msgid "&Notation:"
+msgstr "&Notation:"
+
+#. i18n: file: historywidget.ui:36
+#. i18n: ectx: property (text), item, widget (KComboBox, notationComboBox)
+#: rc.cpp:395
+msgid "Short Algebraic"
+msgstr "Verkürzte algebraische Notation"
+
+#. i18n: file: historywidget.ui:41
+#. i18n: ectx: property (text), item, widget (KComboBox, notationComboBox)
+#: rc.cpp:398
+msgid "Long Algebraic"
+msgstr "Lange algebraische Notation"
+
+#. i18n: file: historywidget.ui:46
+#. i18n: ectx: property (text), item, widget (KComboBox, notationComboBox)
+#: rc.cpp:401
+msgid "Coordinate"
+msgstr "Koordinate"
+
+#. i18n: file: historywidget.ui:56
+#. i18n: ectx: property (text), widget (KPushButton, saveButton)
+#: rc.cpp:404
+msgid "&Save History"
+msgstr "Verlauf &speichern"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#, fuzzy
+
+
+
+
+
+
+
+# %1 = Farbe des Spielers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#, fuzzy
+
+
+
+
+#, fuzzy
+
+
+
+
+
+
+
+
+
+#, fuzzy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#, fuzzy
+
+
+
+
+#, fuzzy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#, fuzzy

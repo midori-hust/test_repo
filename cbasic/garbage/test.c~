@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+  int a, b, c, d;
+  a = 5;
+  b = a ++;
+  c = (a+6) - ++b;
+  d = a++ + ++b -c;
+  printf("\nA: %d\nB: %d\nC: %d\nD: %d\n");
+
+
+
+  return 0;
+}

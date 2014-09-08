@@ -1,0 +1,107 @@
+/* 1. Tao danh sach lien ket don luu tru danh ba dien thoai */
+/* 2. Viet ham chen vao dau danh sach thong tin cua mot nguoi moi */
+/* 3. Viet ham chen vao cuoi danh sach thong tin cua mot nguoi moi */
+/* 4. Viet ham duyet danh sach */
+/* 5. Viet ham cho phep nhap vao ten cua 1 nguoi, va loai bo nguoi nay khoi danh sach */
+/* 6. Kiem tra cac ham tren */
+
+
+
+#include<stdio.h>
+
+#define MAXLENGTH
+
+typedef struct Address
+{
+  char name[20];
+  int tel;
+  char email[30];
+} Address;
+
+typedef struct AddressList
+{
+  struct AddressList *next;
+  Address addr;
+} AddressList;
+
+AddressList *root;
+
+typedef int elementType;
+typedef struct node
+{
+  elementType element;
+  struct node* next;
+} node;
+node* root;
+node* cur;
+
+typedef char elementType;
+//Tao moi 1 phan tu moi
+node new(node* new, char name, int tel, char email)
+{
+  new = (node*)malloc(sizeof(node));
+  new->element = data;
+  new->next = NULL;
+  return new;
+}
+
+//Chen 1 phan tu vao dau danh sach
+void insertTop(node* root, node* new_item)
+{
+  if(root == NULL) root = new_item;
+  else
+    {
+      new_item->next = root;
+      root = new_item;
+    }
+}
+
+//Chen 1 phan tu vao sau phan tu tro boi cur torng danh sach
+void insert(node* root, node* cur, node* new_item)
+{
+  if(root == NULL) root = cur = new_item;
+  else
+    {
+      new_item->next = cur->next;
+      cur->next = new_item;
+      cur = new_item; //Hoac cur=cur->next;
+    }
+}
+
+//Hien thi danh sach ra man hinh
+void displayList(node* root)
+{
+  node* cur;
+  for(cur = root; cur != NULL; cur = cur->next)
+    {
+      //Hien thi cur->element ra man hinh
+      //(Cai nay phai biet duoc kieu cua element thi moi printf duoc)
+    }
+}
+
+
+//Xoa phan tu ngay sau phan tu cur trong danh sach
+void deleteNode(node* root, node* cur)
+{
+  node* prev;
+  if(root != NULL)
+    {
+      cur = root;
+      root = cur->next;
+      free(cur);
+    }
+  else
+    {
+      prev = cur;
+      cur = prev->next;
+      prev->next = cur->next;
+      free(cur);  
+    }
+}
+
+
+int main()
+{
+
+
+}

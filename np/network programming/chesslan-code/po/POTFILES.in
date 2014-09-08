@@ -1,0 +1,16 @@
+# List of source files containing translatable strings.
+./src/chesslan.cc
+./src/chesslan1_glade.cc
+./src/chesslan1.cc
+./src/menubar1_glade.cc
+./src/menubar1.cc
+./src/notebook1_glade.cc
+./src/notebook1.cc
+./src/frame1_glade.cc
+./src/frame1.cc
+./src/statusbar1_glade.cc
+./src/statusbar1.cc
+./src/treeview1_glade.cc
+./src/treeview1.cc
+./src/toolbar1_glade.cc
+./src/toolbar1.cc

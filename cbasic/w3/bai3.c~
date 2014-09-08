@@ -1,0 +1,58 @@
+/* Tao file demo.dat va ghi nhung noi dung sau */
+/* -Nhap tu ban phim xau ky tu str */
+/* -Nhap tu ban phim 2 so nguyen a, b */
+/* -Nhap tu ban phim ky tu ch */
+/* -Ghi ra file theo dinh dang */
+/*   +Dong 1: ghi a, roi den ch, roi den b */
+/*   +Dong 2: ghi xau str */
+/*   -Xau khi ket thuc chuong trinh, mo file demo.dat de xem ket qua */
+/*   -Sau do doc lai du lieu file vao lai cac bien a, b, ch, str.  */
+/* Hien thi cac bien nay ra man hinh. */
+
+#include <stdio.h>
+
+#define MAXLENGTH 100
+
+int main()
+{
+  int a, b;
+  char str[MAXLENGTH];
+  char ch;
+
+  /*  int a1, b1;
+  char ch1; 
+  char str1[MAXLENGTH];*/
+
+  FILE *f1;
+  char filename[] = "demo.dat";
+
+  if((f1 = fopen(filename, "w+")) == NULL)
+    {
+      printf("Khong mo duoc file %s!\n", filename);
+      return 1;
+    }
+
+  printf("Hay nhap vao xau ky tu: "); gets(str);
+  printf("Hay nhap vao 2 so nguyen:\nSo nguyen a: "); scanf("%d", &a);
+  printf("So nguyen b: "); scanf("%d", &b);
+  char ch1 = getchar(); //Clear cache
+  printf("Hay nhap vao 1 ky tu: "); ch = getchar();
+  fprintf(f1, "%d %c %d\n", a, ch, b);
+  fputs(str, f1);
+  fclose(f1);
+
+  /*  FILE *f2;
+  if((f2 = fopen(filename, "r+")) == NULL)
+    {
+      printf("Khong mo duoc file %s!\n", filename);
+      return 1;
+    }
+
+  fscanf(f2, "%d %c %d\n", &a1, &ch1, &b1);
+  fgets(str, f2);
+  printf("%d %c %d\n", a1, ch1, b1);
+  puts(str1);
+  
+  fclose(f2);*/
+  return 0;
+}

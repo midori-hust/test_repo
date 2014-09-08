@@ -1,0 +1,65 @@
+0:Trong so nhung tu duoi day, tu nao khong chi mot loai nhac cu:Dan ong:Duong cam:Dan tam thap luc:Ken dong:1
+0:Chung toc Mon-go-lo-it la cua nguoi co mau da gi:Da vang:Da trang:Da do:Da den:1
+0:Dau khong phai la ten cua 1 bien phap tu tu trong van hoc:Hoan du:Ngoa du:Dong vi:So sanh:3
+0:Dau la ten mot nhan hieu may dieu hoa:So nat:Sannaha:Samsung:Samurai:3
+1:Dong vat nao lon nhat trai dat hien nay:Ca map:Gau Bac Cuc:Ca voi xanh:Kien:3
+2:Mang Internet co bat dau tu nam nao:1734:1874:1935:1979:4
+3:Noi ra doi cua the van hoi Olympic?:Viet Nam:Lao:Hy Lap:Anh:3
+4:Dot ret cuoi cung vao thang 3 o mien Bac ten la gi:ret nang Han:ret nang Ban:ret cam cam:ret Han doi:2
+5:De dat de nuoc la kho su thi cua dan toc nao:Thai:Muong:H'mong:Bede:2
+6:Doi bong nao vo dich V-League nam 2005:Gach Dong Tam Long An:The Cong:Hoang Anh Gia Lai:Nghe An:1
+7:He so thap phan la phat minh cua nuoc nao:Trung Quoc:My:An Do:Viet Nam:3
+8:Tinh nao khong co bo bien chay qua:Hai Duong:Thai Binh:Nam Dinh:Hai Binh:1
+9:Vy tuyen 17 chay ngang qua dia phan tinh nao nuoc ta:Ha Tinh:Quang Binh:Quang Tri:Quang Nam:3
+10:Tren cac ban do the gioi co xua nguoi ta thuong ghi ten vi than nao:Than Zeus:than Hera:than Cratos:than Atlat:4
+11:Dai duong nao giap cac chau A, My, Dai Duong:Bac Bang Duong:Dai Tay Duong:An Do Duong:Thai Binh Duong:4
+12:Ai la nguoi duoc tang Huan Chuong Sao vang dau tien o nuoc ta:Ho Chi Minh:Ton Duc Thang:Vo Nguyen Giap:Nguyen Van Linh:2
+13:Hanh tinh nao be nhat trong he mat troi:Trai Dat:Sao Diem Vuong:Sao Hai Vuong:Sao Tho:2
+14:Nguoi chau A nao dat giai thuong dao dien xuat sac nhat trong Oscar 2005:Ly An(Dai Loan):Le Hoang(Viet Nam):James Cameron(My):John Pretit(Phap):1
+15:Ai la tac gia cua "Dai Viet su ky toan thu":Ngo Sy Lien:Phan Huy Chu:Le Van Huu:Lai Van Sam:1
+16:Dau khong phai ten trieu dai o Viet Nam:Nha Nguyen:Nha Tan:Nha Tran:Nha Dinh:2
+17:Ten mot mon vo:Tra dao:Dam dao:Hiep Khi Dao:Dao bao:3
+18:Dai duong nao hau nhu co rat it tau di lai:Bac Bang Duong:Thai Binh Duong:Dai Tay Duong:An Do Duong:1
+19:Anh la nuoc thuoc chau luc nao:Chau Phi:Chau Au:Chau A:Chau My:2
+20:Ban dao Dong Duong bao gom 3 nuoc la Viet Nam,... va ...:Lao,Thai Lan:Lao,Campuchia:Myanmar, Thai Lan:Singarpore,Lao:2
+21:Mat tran Viet Minh co ten goi day du la gi:VN Cach Mang dong chi hoi:VN cach menh dong minh hoi:VN doc lap dong minh hoi:VN giai phong quan:3
+22:Loai nao sau day la ten 1 loai qua:Tao thao:Chom chia:Chom chom:Ga choi:3
+23:La cay co chuc nang gi:Ho hap:Quang hop:Thoat hoi nuoc:Ca 3 y tren deu dung:4
+24:"Ruong ai thi nay dap bo.Duyen ai nay gap, dung cho uong cong" thuoc the loai gi:Tuc ngu:Ca dao:Thanh ngu:Danh ngon:2
+25:Loai bi nao duoc khoet de lam den long trong ngay le Halloween:Bi xanh:Bi ngo:Bi bach:Mut bi:2
+26:Nuoc Nga khien ban lien tuong den bai hat nao:calita:Cachiusa:Cachewta:Calenta:2
+27:Dem Truong Son nho Bac la sang tac cua nhac si nao:Phan Huynh Dieu:Tran Chung:Quoc Dung:Vo Trong Hoi:3
+28:Neu kim ngan chi so 3, kim dai chi so 6 thi la may gio:3 gio ruoi:3 gio:6 gio:6 gio 30 phut:1
+29:Cay xanh ho hap nho khi gi:Cacbonic:Nito:Metan:Oxi:4
+30:Co ong ma chang co ba/Co cua khong nha sinh dang 2 con:Mat troi:Chi Hang:Trai Dat:May:1
+31:Viet Nam tham gia ASEAN nam nao:1991:1993:1995:1997:3
+32:Nen van minh Babylon ngay nay thuoc dat nuoc nao:Arab Saudi:Iran:Iraq:Tho Nhi Ky:3
+33:Quoc hieu nuoc ta thoi Minh Mang la gi:Dai ngu:Dai Nam:Dai Co Viet:Dai Viet:2
+34:Ai la nguoi da ke tuc su nghiep cua nha ho Khuc o nuoc ta:Kieu Cong Tien:Duong Dinh Nghe:Ngo Quyen:Khuc Thua My:2
+35:Dang Cong San Viet Nam da hop Dai Hoi lan thu 7 vao nam:1981:1986:1991:1996:3
+36:Ho lon nhat o chau Phi la:Caxpi:Lagoda:Victoria:Ho Thuong:3
+37:Dao nao lon nhat :Cyprus:Sicily:Crete:Rhode:2
+38:Thu do cua Brazil la:Sao Paolo:Minas Gerais:Mata:Rio de Janeiro:4
+39:Trong chien dich Dien Bien Phu, binh chung nao duoc uu tien khai hoa dau tien:phao binh:khong quan:thuy binh:bo binh:1
+40:La co do sao vang lan dau tien xuat hien trong:Khoi nghia Bac Son:Khoi nghia Nam Ky:Binh bien Do Luong:Cach mang thang Tam:2
+41:Khi moi thanh lap DCS VN ngay nay co ten la:DCS VN:DCS Dong Duong:Dang Lao Dong VN:Dong Duong Cong San Dang:1
+42:Tong bi thu dau tien cua Dang Cong San Viet Nam:Nguyen Ai QUoc:Tran Phu:Truong Chinh:Le Hong Phong:2
+43:Lien Hiep QUoc duoc thanh lap vao nam nao:1945:1946:1947:1948:1
+44:Van Mieu duoc xay dung duoi trieu dai nao:Le:Ly:Nguyen:Tran:2
+45:Quoc hieu do Hung Vuong dat la:Au Lac:Van Lang:Dai Viet:Dai Co Viet:2
+46:Den tho cac vua Hung(Den Hung) thuoc tinh nao hien nay:Vinh Phuc:Ninh Binh:Phu Tho:Bac Ninh:3
+47:Hoang de cuoi cung cua nuoc ta la ai:Nguyen Hue:Bao Dai:Minh Mang:Duy Tan:2
+48:Ai la vi vua nu duy nhat trong lich su VN:THai Hau Duong Van Nga:Cung phi Y Lan:Ly Chieu Hoang:Ba Trieu:3
+49:Sa mac nao lon nhat the gioi:Sahara:Gobi:Victoria:Ba don Cat Lam:1
+50:Thu do cua Canada la:Quebec:Montreal:Ontario:Ottawa:4
+51:Que huong cua bia Heineken o dau:Ha Lan:Thuy Dien:Thuy Si:Ba Lan:1
+52:Ngon ngu chinh thuc cua Cuba la gi:TBN:Anh:Phap:Latinh:1
+53:Quoc gia nao lon nhat chau Phi:Nam Phi:Sudan:Ai Cap:Cameroon:2
+54:Christopher Columbus duoc sinh ra o nuoc nao:Anh:Italia:Phap:Duc:2
+55:Thu do cua nuoc My la:Washington DC:New York:Chicago:San Francisco:1
+56:Nuoc My co bao nhieu tieu bang:49:50:51:53:2
+57:Quoc gia nao co nhieu nguoi noi tieng Tay Ban Nha la :TBN:Argentina:Mexico:Chile:3
+58:Nam nao duoc goi la "Nam Chau Phi":1955:1957:1958:1960:4
+59:Campuchia tuyen bo doc lap vao nam nao:1949:1945:1953:1954:3
+60:Mandalay la co do cua dat nuoc chau A nao:Bhutan:Nepal:Sri Lanka:Myanmar:4
+

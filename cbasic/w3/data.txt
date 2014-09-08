@@ -1,0 +1,6 @@
+Pig	Con lon
+Chicken	Con bo
+Cat	Con ga
+Lavie	Con dien
+Hungry	Con khi
+Monkey	Con meo

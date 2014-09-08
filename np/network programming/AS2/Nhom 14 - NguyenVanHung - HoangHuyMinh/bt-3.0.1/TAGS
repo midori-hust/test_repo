@@ -1,0 +1,468 @@
+
+src-lib/bacfre.c,21
+void bacfre(33,1074
+
+src-lib/bacini.c,44
+int bacini(35,1108
+void initcntrl(59,1642
+
+src-lib/balbk1.c,21
+void balbk1(40,1289
+
+src-lib/balblk.c,21
+void balblk(30,1006
+
+src-lib/bclrlf.c,21
+void bclrlf(30,1013
+
+src-lib/bclrst.c,21
+void bclrst(30,1013
+
+src-lib/bcpybk.c,20
+int bcpybk(38,1243
+
+src-lib/bdbug.c,19
+int bdbug(40,1214
+
+src-lib/bdelk1.c,20
+int bdelk1(38,1166
+
+src-lib/bdelky.c,20
+int bdelky(34,1093
+
+src-lib/bdemte.c,21
+void bdemte(35,1163
+
+src-lib/bfndky.c,20
+int bfndky(42,1305
+
+src-lib/bgtfre.c,22
+BTint bgtfre(36,1073
+
+src-lib/bgtinf.c,44
+#define MASK 36,1141
+BTint bgtinf(38,1192
+
+src-lib/bgtslt.c,20
+int bgtslt(35,1097
+
+src-lib/binsky.c,20
+int binsky(36,1161
+
+src-lib/bjnblk.c,21
+void bjnblk(34,1114
+
+src-lib/bjoin.c,20
+void bjoin(39,1250
+
+src-lib/bleaf.c,19
+int bleaf(34,1091
+
+src-lib/bmkfre.c,21
+void bmkfre(33,1069
+
+src-lib/bmodky.c,20
+int bmodky(39,1242
+
+src-lib/bnewap.c,28
+BTA *bnewap(bnewap37,1180
+
+src-lib/bnxtbk.c,20
+int bnxtbk(38,1258
+
+src-lib/bnxtky.c,20
+int bnxtky(39,1232
+
+src-lib/bputky.c,20
+int bputky(39,1234
+
+src-lib/brdblk.c,20
+int brdblk(37,1179
+
+src-lib/bremky.c,21
+void bremky(35,1131
+
+src-lib/brepky.c,20
+int brepky(40,1268
+
+src-lib/bsemap.c,146
+static sigjmp_buf env_alrm;42,1215
+static struct flock lck 44,1244
+static void sigalrm_handler(48,1336
+int block(59,1513
+int bulock(114,3021
+
+src-lib/bsetbk.c,20
+int bsetbk(41,1277
+
+src-lib/bsetbs.c,21
+void bsetbs(37,1151
+
+src-lib/bsptbk.c,20
+int bsptbk(38,1142
+
+src-lib/bsrhbk.c,20
+int bsrhbk(51,1642
+
+src-lib/bstinf.c,20
+int bstinf(37,1177
+
+src-lib/bsuper.c,40
+int brdsup(35,1101
+int bwrsup(65,1819
+
+src-lib/btchgr.c,20
+int btchgr(40,1205
+
+src-lib/btcls.c,39
+int btcls(37,1131
+int btsync(71,1871
+
+src-lib/btcrt.c,26
+BTA *btcrt(btcrt46,1444
+
+src-lib/btcrtr.c,20
+int btcrtr(37,1175
+
+src-lib/btdata.c,572
+int btins(107,4080
+int btupd(180,5922
+int btsel(234,7336
+int btdel(284,8530
+int btseln(327,9520
+int btrecs(371,10617
+int bseldt(421,11896
+int bdeldt(470,13135
+int bupddt(501,14038
+BTint binsdt(584,16660
+int deldat(656,18775
+int insdat(703,20251
+int brecsz(730,21112
+BTint mkdblk(770,22271
+int rdsz(795,23014
+BTint rdint(804,23113
+void wrsz(815,23266
+void wrint(824,23367
+BTint offsetmask;833,23485
+int offsetwidth;835,23608
+void setaddrsize(843,23983
+void cnvdraddr(856,24363
+BTint mkdraddr(867,24731
+int getseginfo(878,25072
+int dataok(902,25680
+
+src-lib/btdelr.c,20
+int btdelr(37,1213
+
+src-lib/bterr.c,267
+static int qerror 43,1397
+static int qcode 44,1420
+static char qarg[qarg45,1442
+static int syserror;46,1470
+static char qname[qname48,1492
+char *msgblk[msgblk50,1520
+#define MSGBLKMAX 110,3882
+void btcerr(112,3944
+void bterr(165,5145
+int btgerr(190,5700
+
+src-lib/btinit.c,69
+BTA btat[btat32,1081
+BTA *btact btact35,1135
+int btinit(37,1155
+
+src-lib/btlock.c,42
+int btlock(48,1452
+int btunlock(77,1919
+
+src-lib/btopn.c,26
+BTA *btopn(btopn39,1250
+
+src-lib/btque.c,60
+void bqadd(30,1034
+int bqhead(45,1410
+int bqmove(61,1737
+
+src-lib/btstk.c,61
+BTint bpull(43,1178
+int bpush(56,1421
+void bstkin(68,1666
+
+src-lib/bupdky.c,20
+int bupdky(37,1165
+
+src-lib/butil.c,49
+static char buf[buf27,967
+char* itostr(29,989
+
+src-lib/bvalap.c,20
+int bvalap(33,1108
+
+src-lib/bwrblk.c,20
+int bwrblk(36,1171
+
+src-lib/bxdump.c,128
+#define BYTELN 34,1115
+#define TRUE 36,1134
+#define FALSE 37,1149
+static char *charset charset39,1166
+void bxdump(49,1338
+
+inc/bc.h,2524
+#define _btconst_24,904
+typedef long long BTint;28,1024
+#define BTINT_MAX 29,1049
+#define ZXFMT 30,1089
+#define ZINTFMT 31,1110
+#define Z20DFMT 32,1133
+typedef int BTint;34,1164
+#define BTINT_MAX 35,1183
+#define ZXFMT 36,1209
+#define Z20DFMT 37,1228
+#define ZINTFMT 38,1251
+#define DEBUG 46,1310
+#define TRUE 48,1327
+#define FALSE 49,1342
+#define ZBYTEW 54,1419
+#define ZBPW 58,1498
+#define ZBPW 60,1519
+#define ZKYLEN 65,1574
+#define ZMXBLK 69,1687
+#define ZBLKSZ 71,1767
+#define ZMXBLK 74,1845
+#define ZBLKSZ 76,1910
+#define ZMXKEY 80,1969
+#define ZPAD 82,2064
+#define ZTHRES 84,2167
+#define ZMXACT 86,2241
+#define ZSLEEP 88,2316
+#define ZRNAMESZ 91,2361
+#define ZMSGSZ 92,2381
+#define ZVERS 109,2984
+#define ZVERS 111,3008
+#define ZBTYPE 115,3083
+#define ZMISC 116,3100
+#define ZNXBLK 117,3117
+#define ZNKEYS 118,3134
+#define ZNBLKS 119,3151
+#define ZBTVER 120,3168
+#define ZINFSZ 123,3213
+#define ZROOT 126,3256
+#define ZINUSE 128,3298
+#define ZFREE 130,3340
+#define ZDATA 132,3381
+#define ZSUPER 134,3438
+#define ZNULL 136,3480
+#define ZDRSZ 151,3979
+#define ZDOVRH 152,3995
+#define ZDSGMN 155,4069
+#define QSRNR 176,4456
+#define QCLSIO 177,4475
+#define QCRTIO 178,4494
+#define QCPBLK 179,4513
+#define QWRBLK 181,4533
+#define QRDSUP 182,4552
+#define QWRSUP 183,4571
+#define QOPNIO 184,4590
+#define QRDBLK 186,4610
+#define QIXOPN 187,4629
+#define QSPLIT 188,4648
+#define QINFER 189,4667
+#define QNOMEM 191,4687
+#define QSTKUF 192,4706
+#define QSTKOF 193,4725
+#define QBLKFL 194,4744
+#define QLOCTB 196,4764
+#define QSPKEY 197,4783
+#define QWRMEM 198,4802
+#define QBALSE 199,4821
+#define QDELEX 201,4841
+#define QDELER 202,4860
+#define QDELRP 203,4879
+#define QDEMSE 204,4898
+#define QDEMSP 206,4918
+#define QJNSE 207,4937
+#define QNODEF 208,4956
+#define QDELCR 209,4975
+#define QBADIX 211,4995
+#define QNOBTF 212,5014
+#define QINERR 213,5033
+#define QBADOP 214,5052
+#define QNOACT 216,5072
+#define QBADAP 217,5091
+#define QBUSY 218,5110
+#define QNOTOP 219,5129
+#define QNOBLK 221,5149
+#define QNEGSZ 222,5168
+#define QNOTDA 223,5187
+#define QNOOPN 224,5206
+#define QDLOOP 226,5239
+#define QUNLCK 227,5258
+#define QLRUER 228,5277
+#define QDAERR 229,5296
+#define QDNEG 231,5316
+#define QDUP 232,5335
+#define QNOKEY 233,5354
+#define QNOWRT 234,5373
+#define QNOTFR 236,5393
+#define QBADVR 237,5412
+#define QDAOVR 238,5431
+#define QF2BIG 239,5450
+#define QBADAL 241,5470
+#define QDRANEG 242,5489
+#define QBLKSZERR 244,5509
+
+inc/bt.h,564
+#define _btheader_26,935
+struct bt_cntrl 34,1030
+typedef struct bt_cntrl CNTRL;41,1309
+struct bt_lru 45,1391
+struct bt_memrec 54,1480
+typedef struct bt_memrec MEMREC;64,1658
+struct bt_datblk 68,1733
+typedef struct bt_datblk DATBLK;73,1819
+struct bt_lf 78,1894
+struct bt_stats 87,2018
+typedef struct bt_stats STATS;99,2177
+#define STKMAX 103,2230
+struct bt_stk 105,2249
+struct bt_super 113,2365
+struct bt_cntxt 125,2578
+typedef struct bt_cntxt CNTXT;133,2720
+#define FIDSZ 135,2752
+struct bt_active 137,2770
+typedef struct bt_active BTA;148,3032
+
+src-main/bigt.c,208
+#define TRUE 66,2282
+#define FALSE 67,2297
+#define DATASIZE 69,2314
+#define ATOI 72,2369
+#define ATOI 74,2394
+jmp_buf env;77,2420
+void break_handler 79,2434
+void print_error(86,2517
+int main(96,2730
+
+src-main/bigtdel.c,182
+#define TRUE 56,1877
+#define FALSE 57,1892
+#define ATOI 60,1937
+#define ATOI 62,1962
+jmp_buf env;65,1988
+void break_handler 66,2001
+void print_error(73,2084
+int main(83,2301
+
+src-main/bt.c,1488
+struct bt_plist 40,1344
+struct bt_plist *phead phead46,1420
+struct bt_blist 49,1506
+struct bt_blist *bhead bhead57,1615
+BTA *btp btp59,1647
+#define EMPTY 61,1665
+#define DATABUFSZ 62,1682
+int suppress_error_msg 64,1704
+jmp_buf env;67,1773
+void break_handler 69,1787
+char *strsave(strsave75,1875
+int add(89,2125
+BTA *get(get106,2482
+int del(119,2719
+int add_data(143,3130
+struct bt_blist *get_data(get_data169,3734
+int del_data(182,3955
+#define BUFSZ 207,4456
+struct bt_blist *cpfm(cpfm210,4525
+void add_data_file(276,6226
+void free_buffers(289,6443
+int buffer_create(306,6764
+int buffer_delete(325,7185
+int buffer_list(336,7387
+int create_file(354,7703
+int open_file(369,7933
+int quit(384,8160
+void shutdown(390,8244
+int close_file(407,8564
+int find_key(432,9158
+int define_key(447,9458
+int show_debug(462,9729
+int next_key(467,9802
+int list_keys(484,10116
+int list_keys_only(497,10400
+int remove_key(510,10664
+int define_root(518,10769
+int change_root(530,11003
+int remove_root(542,11240
+int file_list(555,11510
+int use_file(567,11705
+int define_data(599,12473
+int find_data(621,13018
+int update_data(659,14039
+int remove_data(680,14543
+int size_data(685,14605
+int list_data(696,14813
+int next_data(713,15201
+int lock_file(727,15505
+int unlock_file(732,15559
+int update_value(737,15617
+int decode_addr(745,15758
+int unknown_command(761,16104
+CMDENTRY bt_cmds[bt_cmds767,16224
+void report_error(826,19635
+int main(843,19968
+
+src-main/btcmd.c,1053
+#define TRUE 67,2563
+#define FALSE 68,2578
+#define MAXBUFSZ 82,2783
+#define MAXDESCSZ 83,2804
+int echo 85,2827
+int stop_on_error 86,2845
+int issue_prompt 88,2873
+int svp;89,2898
+FILE* input 90,2907
+CMDBLK cblk;93,2984
+char svcmd[svcmd94,2997
+char cmd[cmd95,3021
+char arg[arg96,3043
+char qual[qual97,3065
+char all[all98,3088
+CMDENTRY local_cmds[local_cmds101,3162
+CMDENTRY* current_app_cmds;103,3244
+#define CMDFILEMAX 106,3332
+FILE* cmdinput[cmdinput108,3354
+int cmdtop 109,3382
+int pushcf(111,3399
+FILE* pullcf(122,3555
+char* strbrk(134,3790
+void display_help(149,4039
+int btcmd_noop(180,4989
+int btcmd_prompt(184,5034
+int btcmd_execute(190,5115
+int btcmd_close_execute(213,5660
+int btcmd_system(227,5932
+int btcmd_comment(233,5999
+int btcmd_help(238,6047
+int btcmd_echo(244,6128
+int btcmd_error(258,6379
+CMDENTRY local_cmds[local_cmds274,6745
+char* non_ws(289,7459
+int tty_input(297,7568
+void rl_history(312,7963
+int tokenise(322,8114
+void bad_args(353,9013
+void find_cmd(359,9115
+void btcmd(402,10398
+
+src-main/kcp.c,139
+#define SUPER 63,2285
+char *prog;prog68,2367
+void print_bterror(70,2380
+int main(80,2610
+int copyroot(154,4552
+void kalloc(193,5730
+
+inc/btree_int.h,0
+
+inc/btree.h,0

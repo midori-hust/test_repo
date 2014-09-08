@@ -1,0 +1,21 @@
+echo on
+create test_db
+execute ../inskeysrand.bt
+find
+list
+execute ../delkeysrand.bt
+find
+list
+execute ../inskeysrand.bt
+find
+list
+execute ../delkeysord.bt
+find
+list
+execute ../inskeysrand.bt
+find
+list
+execute ../delkeysrord.bt
+find 
+list
+quit

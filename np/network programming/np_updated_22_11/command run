@@ -1,0 +1,8 @@
+//chay cac command sau de bien dich (command dau de down thu vien ncurses ve)
+sudo apt-get install ncurses-dev
+
+gcc -c mlibrary.h
+
+gcc -o server mserver.c mlibrary.c -lncurses
+
+gcc -o client mclient.c mlibrary.c -lncurses

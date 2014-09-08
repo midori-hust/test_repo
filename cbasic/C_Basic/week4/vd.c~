@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stdlib.h>
+typedef struct student
+{       
+  int order;
+  int id;
+  char name[20];
+  int mark;
+}student;
+main()
+{
+  FILE *f;
+  int i,n;
+  f=fopen("grade.dat","rb");
+  n=ftell(f)/sizeof(student);
+  printf("%d",n);
+
+
+
+}

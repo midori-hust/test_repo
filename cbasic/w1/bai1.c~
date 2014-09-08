@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void swap(int a, int b)
+{
+  int temp;
+  temp = a;
+  a = b;
+  temp = b;
+}
+
+int main()
+{
+  int i, n;
+  int a[];
+
+  printf("Hay nhap so phan tu cua mang: "); scanf("%d", n);
+  printf("Hay nhap lan luot cac phan tu cua mang: \n");
+  for(i=0; i<n; i++)
+    {
+      printf("\tPhan tu thu %d la: ", i+1); scanf("%d", a[i]);
+    }
+  for(i=0; i<(n/2); i++) swap(a[i]; a[n-1-i]);
+  return 0;
+}

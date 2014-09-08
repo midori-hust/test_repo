@@ -1,0 +1,1331 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Vít Pelčák <vit@pelcak.org>, 2010, 2011, 2012.
+# Pavel Fric <fripohled@blogspot.com>, 2010.
+#
+# Pavel Fric, 2010.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugs.kde.org\n"
+"POT-Creation-Date: 2012-08-10 04:11+0200\n"
+"PO-Revision-Date: 2012-01-11 08:59+0100\n"
+"Last-Translator: Vít Pelčák <vit@pelcak.org>\n"
+"Language-Team: Czech <kde-i18n-doc@kde.org>\n"
+"Language: cs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 1.2\n"
+
+#: proto/chatwidget.cpp:88
+msgid " says: "
+msgstr " říká: "
+
+#: proto/chatwidget.cpp:125
+msgid "You: "
+msgstr "Vy: "
+
+#: proto/computerprotocol.cpp:56
+#, kde-format
+msgid ""
+"Program <code>%1</code> could not be started, please check that it is "
+"installed."
+msgstr ""
+"Program <code>%1</code> nemohl být spuštěn. Prosím zkontrolujte, zda je "
+"nainstalován"
+
+#: proto/computerprotocol.cpp:73
+#, kde-format
+msgid "Console for %1 (%2)"
+msgstr "Konzole pro %1 (%2)"
+
+#: proto/ficsdialog.cpp:79
+msgid "Session started"
+msgstr "Sezení začalo"
+
+#: proto/ficsdialog.cpp:93
+msgid "Logging in..."
+msgstr "Probíhá přihlašování..."
+
+#: proto/ficsdialog.cpp:124 proto/ficsdialog.cpp:133
+msgid "H:mm:ss"
+msgstr "H:mm:ss"
+
+#: proto/ficsdialog.cpp:151
+#, kde-format
+msgctxt "PlayerName (rating)"
+msgid "%1 (%2)"
+msgstr "%1 (%2)"
+
+#: proto/ficsdialog.cpp:230
+#, kde-format
+msgid "<font color='red'>Error: %1</font>"
+msgstr "<font color='red'>Chyba: %1</font>"
+
+#. i18n: file: proto/ficsdialog.ui:284
+#. i18n: ectx: property (text), widget (QPushButton, seekButton)
+#: proto/ficsprotocol.cpp:130 rc.cpp:161
+msgctxt "Start searching for opponents"
+msgid "Seek"
+msgstr "Hledat oponenta"
+
+#: proto/ficsprotocol.cpp:131
+msgctxt "Stop searching for opponents"
+msgid "Unseek"
+msgstr "Přestat hledat"
+
+#. i18n: file: popup.ui:37
+#. i18n: ectx: property (text), widget (KPushButton, acceptButton)
+#: proto/ficsprotocol.cpp:132 proto/ficsprotocol.cpp:212 offerwidget.cpp:35
+#: rc.cpp:296
+msgid "Accept"
+msgstr "Přijmout"
+
+#: proto/ficsprotocol.cpp:133
+msgid "Help"
+msgstr "Nápověda"
+
+#: proto/ficsprotocol.cpp:153
+msgid "Server Console"
+msgstr "Konzole serveru"
+
+#: proto/ficsprotocol.cpp:166
+#, kde-format
+msgid "Chat with %1"
+msgstr "Rozhovor s %1"
+
+#: proto/ficsprotocol.cpp:199
+msgid "Login failed"
+msgstr "Přihlášení selhalo"
+
+#: proto/ficsprotocol.cpp:205
+msgid "Chess server"
+msgstr "Šachový server"
+
+#. i18n: file: popup.ui:44
+#. i18n: ectx: property (text), widget (KPushButton, declineButton)
+#: proto/ficsprotocol.cpp:208 offerwidget.cpp:38 rc.cpp:299
+msgid "Decline"
+msgstr "Odmítnout"
+
+#: proto/ficsprotocol.cpp:315
+msgid "Invalid Password"
+msgstr "Neplatné heslo"
+
+#: proto/protocol.cpp:79
+msgid "No Error"
+msgstr "Žádná chyba"
+
+#: proto/protocol.cpp:82
+msgid "User Canceled"
+msgstr "Zrušeno uživatelem"
+
+#: proto/protocol.cpp:85
+msgid "Network Error"
+msgstr "Chyba sítě"
+
+#: proto/protocol.cpp:88
+msgid "Unknown Error"
+msgstr "Neznámá chyba"
+
+#: proto/protocol.cpp:91
+msgid "Program Error"
+msgstr "Chyba programu"
+
+#: proto/seekgraph.cpp:42
+msgid "Time limit [minutes]"
+msgstr "Omezení času [minuty]"
+
+#: proto/seekgraph.cpp:43
+msgid "Opponent's rating"
+msgstr "Hodnocení soupeře"
+
+#: board.cpp:694
+msgid "Promote"
+msgstr "Proměnit"
+
+#: board.cpp:695
+msgid "Promotion"
+msgstr "Proměna"
+
+#: enginesettings.cpp:78
+msgid "Invalid interface"
+msgstr "Neplatné rozhraní"
+
+#: enginesettings.cpp:81 enginesettings.cpp:140
+msgctxt "Protocol name"
+msgid "XBoard"
+msgstr "XBoard"
+
+#: enginesettings.cpp:84 enginesettings.cpp:140
+msgctxt "Protocol name"
+msgid "UCI"
+msgstr "UCI"
+
+#: gamedialog.cpp:271
+msgid " minute"
+msgid_plural " minutes"
+msgstr[0] " minuta"
+msgstr[1] " minuty"
+msgstr[2] " minut"
+
+#: gamedialog.cpp:272
+msgid " second"
+msgid_plural " seconds"
+msgstr[0] " sekunda"
+msgstr[1] " sekundy"
+msgstr[2] " sekund"
+
+#: gamedialog.cpp:273 gamemanager.cpp:923
+msgid " move"
+msgid_plural " moves"
+msgstr[0] " tah"
+msgstr[1] " tahy"
+msgstr[2] " tahů"
+
+#: gamemanager.cpp:466
+msgctxt "The player of this color"
+msgid "White"
+msgstr "Bílá"
+
+#: gamemanager.cpp:467
+msgctxt "The player of this color"
+msgid "Black"
+msgstr "Černá"
+
+#: gamemanager.cpp:587
+#, kde-format
+msgid "%1 offers you a draw"
+msgstr "%1 Vám nabízí remízu"
+
+#: gamemanager.cpp:590
+#, kde-format
+msgid "%2 would like to take back a half move"
+msgid_plural "%2 would like to take back %1 half moves"
+msgstr[0] "%2 chce vrátit svůj tah"
+msgstr[1] "%2 chce vrátit %1 své tahy"
+msgstr[2] "%2 chce vrátit %1 svých tahů"
+
+#: gamemanager.cpp:593
+#, kde-format
+msgid "%1 would like to adjourn the game"
+msgstr "%1 chce přerušit hru"
+
+#: gamemanager.cpp:596
+#, kde-format
+msgid "%1 would like to abort the game"
+msgstr "%1 chce ukončit hru"
+
+#: gamemanager.cpp:710
+#, kde-format
+msgctxt "string to be spoken when the opponent castles queenside"
+msgid "%1 castles queenside"
+msgstr "%1 provádí dlouhou rošádu"
+
+#: gamemanager.cpp:715
+#, kde-format
+msgctxt "string to be spoken when the opponent castles queenside"
+msgid "%1 castles kingside"
+msgstr "%1 provádí krátkou rošádu"
+
+#: gamemanager.cpp:721
+#, kde-format
+msgctxt "string to be spoken when the opponent makes a normal  move"
+msgid "%1 to %2"
+msgstr "z %1 na %2"
+
+#: gamemanager.cpp:733
+msgctxt "Your king is under attack"
+msgid "Check"
+msgstr "Šach"
+
+#: gamemanager.cpp:737
+msgctxt "Your king is dead"
+msgid "Checkmate"
+msgstr "Mat"
+
+#: knights.cpp:87
+#, fuzzy
+msgid "Custom"
+msgstr "Vlastní"
+
+#: knights.cpp:130
+msgid "Resign"
+msgstr "Vzdát se"
+
+#: knights.cpp:131
+msgid "Admit your inevitable defeat"
+msgstr "Přiznat nevyhnutelnou porážku"
+
+#: knights.cpp:136
+msgid "Undo"
+msgstr "Zpět"
+
+#: knights.cpp:137
+msgid "Take back your last move"
+msgstr "Vrátit zpět svůj poslední tah"
+
+#: knights.cpp:143
+msgid "Redo"
+msgstr "Vpřed"
+
+#: knights.cpp:144
+msgid "Repeat your last move"
+msgstr "Opakovat poslední tah"
+
+#: knights.cpp:150
+msgid "Offer &Draw"
+msgstr "Nabí&dnout remízu"
+
+#: knights.cpp:151
+msgid "Offer a draw to your opponent"
+msgstr "Navrhnout soupeři remízu"
+
+#: knights.cpp:156
+msgid "Adjourn"
+msgstr "Přerušit"
+
+#: knights.cpp:157
+msgid "Continue this game at a later time"
+msgstr "Pokračovat ve hře později"
+
+#: knights.cpp:162
+msgid "Abort"
+msgstr "Přerušit"
+
+#: knights.cpp:163
+msgid "End the game immediately"
+msgstr "Okamžitě ukončit hru"
+
+#: knights.cpp:167
+msgid "Show Clock"
+msgstr "Ukázat hodiny"
+
+#: knights.cpp:173
+msgid "Show History"
+msgstr "Zobrazit historii"
+
+#: knights.cpp:180
+msgid "Show White Console"
+msgstr "Zobrazit konzoli bílého"
+
+#: knights.cpp:186
+msgid "Show Black Console"
+msgstr "Zobrazit konzoli černého"
+
+#: knights.cpp:192
+msgid "Show Chat"
+msgstr "Zobrazit rozhovor"
+
+#: knights.cpp:214
+msgid "New Game"
+msgstr "Nová hra"
+
+#: knights.cpp:235 knights.cpp:646 knights.cpp:661
+msgid "*.pgn | Portable game notation"
+msgstr ""
+
+#: knights.cpp:259 knights.cpp:271
+msgid "This feature is not yet implemented in Knights"
+msgstr "Tato vlastnost v Knights zatím není implementována"
+
+#: knights.cpp:438
+msgid "Clock"
+msgstr "Hodiny"
+
+#: knights.cpp:472
+msgid "Move History"
+msgstr "Historie přesunů"
+
+#: knights.cpp:500
+msgid "General"
+msgstr "Obecné"
+
+#: knights.cpp:504
+msgid "Computer Engines"
+msgstr "Počítačové stroje"
+
+#: knights.cpp:509
+msgid "Accessibility"
+msgstr "Přístupnost"
+
+#: knights.cpp:512
+msgid "Theme"
+msgstr "Motiv"
+
+#: knights.cpp:598
+#, kde-format
+msgid "%1 vs. %2"
+msgstr "%1 vs %2"
+
+#: knights.cpp:623
+msgid ""
+"This will end your game.\n"
+"Would you like to save the move history?"
+msgstr ""
+
+#: knightsview.cpp:129
+msgid "Game over"
+msgstr "Konec hry"
+
+#: knightsview.cpp:134
+msgid "The game ended in a draw"
+msgstr "Hra skončila remízou"
+
+#: knightsview.cpp:144
+msgctxt "White as in the player with white pieces"
+msgid "The game ended with a victory for <emphasis>White</emphasis>"
+msgstr "Hra skončila vítězstvím <emphasis>bílého</emphasis>"
+
+#: knightsview.cpp:149
+msgctxt "Black as in the player with black pieces"
+msgid "The game ended with a victory for <emphasis>Black</emphasis>"
+msgstr "Hra skončila vítězstvím <emphasis>černého</emphasis>"
+
+#: knightsview.cpp:157
+#, kde-format
+msgctxt "Player name, then <White as in the player with white pieces"
+msgid ""
+"The game ended with a victory for <emphasis>%1</emphasis>, playing White"
+msgstr ""
+"Hra skončila vítězstvím hráče <emphasis>%1</emphasis>, hrajícího s bílými"
+
+#: knightsview.cpp:162
+#, kde-format
+msgctxt "Player name, then Black as in the player with black pieces"
+msgid ""
+"The game ended with a victory for <emphasis>%1</emphasis>, playing Black"
+msgstr ""
+"Hra skončila vítězstvím hráče <emphasis>%1</emphasis>, hrajícího s černými"
+
+#: knightsview.cpp:180
+msgid "Settings changed"
+msgstr "Nastavení změněna"
+
+#: main.cpp:30
+msgid "Chess board based on KDE Development Platform 4"
+msgstr "Šachovnice založená na vývojářské platformě KDE 4"
+
+#. i18n: file: knightsview_base.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, KnightsView)
+#: main.cpp:36 rc.cpp:65
+msgid "Knights"
+msgstr "Knights"
+
+#: main.cpp:37
+msgid "(C) 2009-2011 Miha Čančula"
+msgstr "(C) 2009-2011 Miha Čančula"
+
+#: main.cpp:38
+msgid "Miha Čančula"
+msgstr "Miha Čančula"
+
+#: main.cpp:39
+msgid "Troy Corbin"
+msgstr "Troy Corbin"
+
+#: main.cpp:39
+msgid "Original Knights for KDE3 and theme author"
+msgstr "Původní hra Knights pro KDE 3 a autor motivu vzhledu hry"
+
+#: main.cpp:40
+msgid "Dave Kaye"
+msgstr "Dave Kaye"
+
+#: main.cpp:40
+msgid "Help with new theme features and rendering without KGameRenderer"
+msgstr "Pomoc s novými vlastnostmi motivu a vykreslování bez KGameRendereru"
+
+#: main.cpp:41
+msgid "Thomas Kamps"
+msgstr "Thomas Kamps"
+
+#: main.cpp:41
+msgid "Clock displaying the remaining time"
+msgstr "Hodiny zobrazující zbývající čas"
+
+#: main.cpp:45
+msgid "Document to open"
+msgstr "Dokument k otevření"
+
+#: rc.cpp:1
+msgctxt "NAME OF TRANSLATORS"
+msgid "Your names"
+msgstr "Pavel Fric,David Kolibáč"
+
+#: rc.cpp:2
+msgctxt "EMAIL OF TRANSLATORS"
+msgid "Your emails"
+msgstr "pavelfric@seznam.cz,david@kolibac.cz"
+
+#. i18n: file: clockwidget.ui:17
+#. i18n: ectx: property (title), widget (QGroupBox, groupB)
+#. i18n: file: gamedialog.ui:113
+#. i18n: ectx: property (text), widget (QRadioButton, colorBlack)
+#: rc.cpp:5 rc.cpp:29
+msgid "Black"
+msgstr "Černé"
+
+#. i18n: file: clockwidget.ui:44
+#. i18n: ectx: property (title), widget (QGroupBox, groupW)
+#. i18n: file: gamedialog.ui:100
+#. i18n: ectx: property (text), widget (QRadioButton, colorWhite)
+#: rc.cpp:8 rc.cpp:26
+msgid "White"
+msgstr "Bílé"
+
+#. i18n: file: gamedialog.ui:29
+#. i18n: ectx: property (title), widget (QGroupBox, player1Box)
+#: rc.cpp:11
+msgid "Player 1"
+msgstr "Hráč 1"
+
+#. i18n: file: gamedialog.ui:35
+#. i18n: ectx: property (text), widget (QRadioButton, player1Human)
+#: rc.cpp:14
+msgid "Human (You)"
+msgstr "Člověk (vy)"
+
+#. i18n: file: gamedialog.ui:47
+#. i18n: ectx: property (text), widget (QRadioButton, player1Comp)
+#. i18n: file: gamedialog.ui:157
+#. i18n: ectx: property (text), widget (QRadioButton, player2Comp)
+#: rc.cpp:17 rc.cpp:41
+msgid "Computer engine:"
+msgstr "Počítačový stroj:"
+
+#. i18n: file: gamedialog.ui:70
+#. i18n: ectx: property (text), widget (KPushButton, player1Engines)
+#. i18n: file: gamedialog.ui:167
+#. i18n: ectx: property (text), widget (QToolButton, player2Engines)
+#: rc.cpp:20 rc.cpp:44
+#, fuzzy
+#| msgid "Computer Engines"
+msgid "Configure Engines"
+msgstr "Počítačové stroje"
+
+#. i18n: file: gamedialog.ui:88
+#. i18n: ectx: property (title), widget (QGroupBox, colorGroup)
+#: rc.cpp:23
+msgid "Player 1's Color"
+msgstr "Barva hráče 1"
+
+#. i18n: file: gamedialog.ui:126
+#. i18n: ectx: property (text), widget (QRadioButton, colorRandom)
+#: rc.cpp:32
+msgid "Choose randomly"
+msgstr "Vybrat náhodně"
+
+#. i18n: file: gamedialog.ui:139
+#. i18n: ectx: property (title), widget (QGroupBox, player2Box)
+#: rc.cpp:35
+msgid "Player 2"
+msgstr "Hráč 2"
+
+#. i18n: file: gamedialog.ui:145
+#. i18n: ectx: property (text), widget (QRadioButton, player2Human)
+#: rc.cpp:38
+msgid "Human"
+msgstr "Člověk"
+
+#. i18n: file: gamedialog.ui:191
+#. i18n: ectx: property (text), widget (QRadioButton, player2Fics)
+#: rc.cpp:47
+msgid "Chess server:"
+msgstr "Šachový server:"
+
+#. i18n: file: gamedialog.ui:213
+#. i18n: ectx: property (title), widget (QGroupBox, timeGroup)
+#: rc.cpp:50
+msgid "Use Time Control"
+msgstr "Používat měření času"
+
+#. i18n: file: gamedialog.ui:228
+#. i18n: ectx: property (text), widget (QLabel, numberOfMovesLabel)
+#: rc.cpp:53
+msgid "Time control period"
+msgstr "Přidělený čas"
+
+#. i18n: file: gamedialog.ui:244
+#. i18n: ectx: property (specialValueText), widget (KIntSpinBox, numberOfMoves)
+#: rc.cpp:56
+msgctxt "Time control mode"
+msgid "Timer Only"
+msgstr "Pouze časovač"
+
+#. i18n: file: gamedialog.ui:257
+#. i18n: ectx: property (text), widget (QLabel, timeLimitLabel)
+#: rc.cpp:59
+msgid "Initial time limit"
+msgstr "Výchozí omezení času"
+
+#. i18n: file: gamedialog.ui:280
+#. i18n: ectx: property (text), widget (QLabel, timeIncrementLabel)
+#: rc.cpp:62
+msgid "Increment per move"
+msgstr "Přírůstek za čas"
+
+#. i18n: file: promotiondialog.ui:14
+#. i18n: ectx: property (windowTitle), widget (QWidget, PromotionWidget)
+#: rc.cpp:68
+msgid "Pawn Promotion"
+msgstr "Proměna pěšce"
+
+#. i18n: file: promotiondialog.ui:26
+#. i18n: ectx: property (text), widget (QLabel, labelPawn)
+#: rc.cpp:71
+msgid "Promote pawn to:"
+msgstr "Povýšit pěšce na:"
+
+#. i18n: file: promotiondialog.ui:36
+#. i18n: ectx: property (text), widget (QRadioButton, radioButtonQueen)
+#: rc.cpp:74
+msgid "Queen"
+msgstr "Královna"
+
+#. i18n: file: promotiondialog.ui:46
+#. i18n: ectx: property (text), widget (QRadioButton, radioButtonRook)
+#: rc.cpp:77
+msgid "Rook"
+msgstr "Věž"
+
+#. i18n: file: promotiondialog.ui:53
+#. i18n: ectx: property (text), widget (QRadioButton, radioButtonBishop)
+#: rc.cpp:80
+msgid "Bishop"
+msgstr "Střelec"
+
+#. i18n: file: promotiondialog.ui:60
+#. i18n: ectx: property (text), widget (QRadioButton, radioButtonKnight)
+#: rc.cpp:83
+msgid "Knight"
+msgstr "Kůň"
+
+#. i18n: file: proto/chatwidget.ui:20
+#. i18n: ectx: property (text), widget (KPushButton, sendButton)
+#: rc.cpp:86
+msgid "Send"
+msgstr "Odeslat"
+
+#. i18n: file: proto/chatwidget.ui:51
+#. i18n: ectx: property (text), widget (QToolButton, toolButton)
+#: rc.cpp:89
+msgid "..."
+msgstr "..."
+
+#. i18n: file: proto/ficsdialog.ui:36
+#. i18n: ectx: attribute (title), widget (QWidget, accountTab)
+#: rc.cpp:92
+msgid "Account"
+msgstr "Účet"
+
+#. i18n: file: proto/ficsdialog.ui:39
+#. i18n: ectx: attribute (toolTip), widget (QWidget, accountTab)
+#: rc.cpp:95
+msgid "Log in to the chess server"
+msgstr "Přihlásit se k šachovému serveru"
+
+#. i18n: file: proto/ficsdialog.ui:58
+#. i18n: ectx: property (text), widget (QLabel, usernameLabel)
+#: rc.cpp:98
+msgid "&Username"
+msgstr "&Uživatelské jméno"
+
+#. i18n: file: proto/ficsdialog.ui:78
+#. i18n: ectx: property (text), widget (QCheckBox, registeredCheckBox)
+#: rc.cpp:101
+msgid "This is a registered account"
+msgstr "Toto je registrovaný účet"
+
+#. i18n: file: proto/ficsdialog.ui:88
+#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
+#: rc.cpp:104
+msgid "&Password"
+msgstr "&Heslo"
+
+#. i18n: file: proto/ficsdialog.ui:111
+#. i18n: ectx: property (text), widget (QCheckBox, rememberCheckBox)
+#: rc.cpp:107
+msgid "Log me in automatically"
+msgstr "Automaticky přihlašovat"
+
+#. i18n: file: proto/ficsdialog.ui:118
+#. i18n: ectx: property (text), widget (KPushButton, logInButton)
+#: rc.cpp:110
+msgid "Log in"
+msgstr "Přihlásit"
+
+#. i18n: file: proto/ficsdialog.ui:138
+#. i18n: ectx: property (text), widget (KPushButton, registerButton)
+#: rc.cpp:113
+msgid "Create an account"
+msgstr "Vytvořit účet"
+
+#. i18n: file: proto/ficsdialog.ui:162
+#. i18n: ectx: attribute (title), widget (QWidget, joinTab)
+#: rc.cpp:116
+msgid "Seek List"
+msgstr "Seznam hledání oponentů"
+
+#. i18n: file: proto/ficsdialog.ui:165
+#. i18n: ectx: attribute (toolTip), widget (QWidget, joinTab)
+#: rc.cpp:119
+msgid "Current ads arranged in a list"
+msgstr "Aktuální nabídky hry v seznamu"
+
+#. i18n: file: proto/ficsdialog.ui:202
+#. i18n: ectx: property (text), widget (QTableWidget, offerTable)
+#: rc.cpp:122
+msgid "Player"
+msgstr "Hráč"
+
+#. i18n: file: proto/ficsdialog.ui:207
+#. i18n: ectx: property (text), widget (QTableWidget, offerTable)
+#: rc.cpp:125
+msgid "Rating"
+msgstr "Hodnocení"
+
+#. i18n: file: proto/ficsdialog.ui:212
+#. i18n: ectx: property (text), widget (QTableWidget, offerTable)
+#: rc.cpp:128
+msgid "Time"
+msgstr "Čas"
+
+#. i18n: file: proto/ficsdialog.ui:217
+#. i18n: ectx: property (text), widget (QTableWidget, offerTable)
+#: rc.cpp:131
+msgid "Increment"
+msgstr "Zvýšení"
+
+#. i18n: file: proto/ficsdialog.ui:222
+#. i18n: ectx: property (text), widget (QTableWidget, offerTable)
+#: rc.cpp:134
+msgid "Rated"
+msgstr "Hodnoceno"
+
+#. i18n: file: proto/ficsdialog.ui:227
+#. i18n: ectx: property (text), widget (QTableWidget, offerTable)
+#: rc.cpp:137
+msgid "Variant"
+msgstr "Varianta"
+
+#. i18n: file: proto/ficsdialog.ui:232
+#. i18n: ectx: property (text), widget (QTableWidget, offerTable)
+#: rc.cpp:140
+msgid "Your color"
+msgstr "Vaše barva"
+
+#. i18n: file: proto/ficsdialog.ui:241
+#. i18n: ectx: attribute (title), widget (QWidget, graphTab)
+#: rc.cpp:143
+msgid "Seek Graph"
+msgstr "Graf hledání oponentů"
+
+#. i18n: file: proto/ficsdialog.ui:244
+#. i18n: ectx: attribute (toolTip), widget (QWidget, graphTab)
+#: rc.cpp:146
+msgid "Current ads arranged by rating and duration"
+msgstr "Aktuální nabídky hry seřazené podle hodnocení a doby trvání"
+
+#. i18n: file: proto/ficsdialog.ui:261
+#. i18n: ectx: attribute (title), widget (QWidget, challengeTab)
+#: rc.cpp:149
+msgid "Challenges"
+msgstr "Výzvy"
+
+#. i18n: file: proto/ficsdialog.ui:264
+#. i18n: ectx: attribute (toolTip), widget (QWidget, challengeTab)
+#: rc.cpp:152
+msgid "Post an ad for other players"
+msgstr "Poslat nabídku ke hře ostatním hráčům"
+
+#. i18n: file: proto/ficsdialog.ui:270
+#. i18n: ectx: property (text), widget (QCheckBox, ratedCheckBox)
+#: rc.cpp:155
+msgid "Rated match"
+msgstr "Hodnocené utkání"
+
+#. i18n: file: proto/ficsdialog.ui:277
+#. i18n: ectx: property (text), widget (QCheckBox, autoCheckBox)
+#: rc.cpp:158
+msgid "Automatically start the game"
+msgstr "Automaticky začít hru"
+
+#. i18n: file: proto/ficsdialog.ui:298
+#. i18n: ectx: attribute (title), widget (QWidget, consoleTab)
+#: rc.cpp:164
+msgid "Console"
+msgstr "Konzole"
+
+#. i18n: file: proto/ficsdialog.ui:301
+#. i18n: ectx: attribute (toolTip), widget (QWidget, consoleTab)
+#: rc.cpp:167
+msgid "Use custom commands"
+msgstr "Použít vlastní příkazy"
+
+#. i18n: file: prefs_access.ui:17
+#. i18n: ectx: property (title), widget (QGroupBox, external_box)
+#: rc.cpp:170
+msgid "External Programs"
+msgstr "Externí programy"
+
+#. i18n: file: prefs_access.ui:23
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_speakOpponentsMoves)
+#: rc.cpp:173
+msgid "Speak opponent's moves"
+msgstr "Číst soupeřovy pohyby"
+
+#. i18n: file: prefs_access.ui:30
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_allowExternalControl)
+#: rc.cpp:176
+msgid "Allow other programs to control Knights"
+msgstr "Povolit jiným programům ovládat Knights"
+
+#. i18n: file: knights.kcfg:9
+#. i18n: ectx: label, entry (Theme), group (KGameTheme)
+#: rc.cpp:179
+msgid "Theme file for the board"
+msgstr "Soubor s motivem vzhledu šachovnice"
+
+#. i18n: file: knights.kcfg:15
+#. i18n: ectx: label, entry (askDiscard), group (Notification Messages)
+#: rc.cpp:182
+msgid "whether to show a confirmation dialog before discarding game history"
+msgstr ""
+
+#. i18n: file: knights.kcfg:19
+#. i18n: ectx: label, entry (dontAskInternal), group (Notification Messages)
+#: rc.cpp:185
+msgid "internal variable controlling the confirm dialog"
+msgstr ""
+
+#. i18n: file: knights.kcfg:31
+#. i18n: ectx: label, entry (animationSpeed), group (Preferences)
+#: rc.cpp:188
+msgid "Moves animation speed"
+msgstr "Rychlost kreslení tahů"
+
+#. i18n: file: knights.kcfg:35
+#. i18n: ectx: label, entry (animateBoard), group (Preferences)
+#: rc.cpp:191
+msgid "whether the Board is animated during rotating and resizing"
+msgstr "jestli má být šachovnice animována během rotace nebo změny velikosti"
+
+#. i18n: file: knights.kcfg:39
+#. i18n: ectx: label, entry (flipBoard), group (Preferences)
+#: rc.cpp:194
+msgid "whether to rotate the board when in local two-player mode"
+msgstr "zda rotovat desku při hře v režimu dvou hráčů"
+
+#. i18n: file: knights.kcfg:48
+#. i18n: ectx: label, entry (borderDisplayType), group (Preferences)
+#: rc.cpp:197
+msgid "chessboard border type"
+msgstr "typ okrajů šachovnice"
+
+#. i18n: file: knights.kcfg:52
+#. i18n: ectx: label, entry (showDanger), group (Preferences)
+#: rc.cpp:200
+msgid "show check marker"
+msgstr "zobrazit ukazatel šachu"
+
+#. i18n: file: knights.kcfg:56
+#. i18n: ectx: label, entry (showMarker), group (Preferences)
+#: rc.cpp:203
+msgid "show legal moves marker"
+msgstr "zobrazit ukazatel možných tahů"
+
+#. i18n: file: knights.kcfg:60
+#. i18n: ectx: label, entry (showMotion), group (Preferences)
+#: rc.cpp:206
+msgid "show opponents move marker"
+msgstr "zobrazit ukazatel soupeřových tahů"
+
+#. i18n: file: knights.kcfg:64
+#. i18n: ectx: label, entry (showClock), group (Preferences)
+#: rc.cpp:209
+msgid "show clocks when time control is in use"
+msgstr "zobrazit hodiny, když se používá měření času"
+
+#. i18n: file: knights.kcfg:68
+#. i18n: ectx: label, entry (showChat), group (Preferences)
+#: rc.cpp:212
+msgid "show chat window, if supported by the protocol"
+msgstr "zobrazit okno rozhovoru, pokud je podporován protokolem"
+
+#. i18n: file: knights.kcfg:72
+#. i18n: ectx: label, entry (showConsole), group (Preferences)
+#: rc.cpp:215
+msgid "show the text console, if supported by the protocol"
+msgstr "zobrazit textovou konzoli, pokud je podporována protokolem"
+
+#. i18n: file: knights.kcfg:76
+#. i18n: ectx: label, entry (showHistory), group (Preferences)
+#: rc.cpp:218
+msgid "show move history"
+msgstr "zobrazit historii přesunů"
+
+#. i18n: file: knights.kcfg:82
+#. i18n: ectx: label, entry (timeLimit), group (Time Control)
+#: rc.cpp:221
+msgid "initial time limit for both players"
+msgstr "výchozí omezení času pro oba hráče"
+
+#. i18n: file: knights.kcfg:86
+#. i18n: ectx: label, entry (timeIncrement), group (Time Control)
+#: rc.cpp:224
+msgid "time increment per move (for Incremental time control)"
+msgstr "časový přírůstek na tah (pro Přírůstkové měření času)"
+
+#. i18n: file: knights.kcfg:90
+#. i18n: ectx: label, entry (numberOfMoves), group (Time Control)
+#: rc.cpp:227
+msgid ""
+"the number of moves the player has to make in the specified time (for "
+"Conventional time control)"
+msgstr ""
+"počet tahů, které hráč musí stihnout v uvedeném čase (pro Obvyklé měření "
+"času)"
+
+#. i18n: file: knights.kcfg:94
+#. i18n: ectx: label, entry (timeEnabled), group (Time Control)
+#: rc.cpp:230
+msgid "whether time limits are enabled and displayed"
+msgstr "zda jsou omezení času povolena nebo zakázána"
+
+#. i18n: file: knights.kcfg:104
+#. i18n: ectx: label, entry (player1Protocol), group (Protocols)
+#. i18n: file: knights.kcfg:113
+#. i18n: ectx: label, entry (player2Protocol), group (Protocols)
+#: rc.cpp:233 rc.cpp:236
+msgid "protocol to be used for player 1"
+msgstr "protokol, který se má použít pro hráče 1"
+
+#. i18n: file: knights.kcfg:122
+#. i18n: ectx: label, entry (color), group (Protocols)
+#: rc.cpp:239
+msgid ""
+"the local human player's color in a game against a computer or over the "
+"Internet."
+msgstr "barva hráče ve hře proti počítači nebo přes Internet."
+
+#. i18n: file: knights.kcfg:126
+#. i18n: ectx: label, entry (programs), group (Protocols)
+#: rc.cpp:242
+msgid "list of programs to run for playing against the computer"
+msgstr "seznam programů pro hru proti počítači"
+
+#. i18n: file: knights.kcfg:130
+#. i18n: ectx: label, entry (player1Program), group (Protocols)
+#: rc.cpp:245
+msgid "the last selected program for player 1"
+msgstr "minule zvolený program pro hráče 1"
+
+#. i18n: file: knights.kcfg:134
+#. i18n: ectx: label, entry (player2Program), group (Protocols)
+#: rc.cpp:248
+msgid "the last selected program for player 2"
+msgstr "minule zvolený program pro hráče 2"
+
+#. i18n: file: knights.kcfg:138
+#. i18n: ectx: label, entry (computerSearchDepth), group (Protocols)
+#: rc.cpp:251
+msgid ""
+"the search depth of computer engines, when the difficulty is set to "
+"Configurable"
+msgstr ""
+
+#. i18n: file: knights.kcfg:142
+#. i18n: ectx: label, entry (computerMemorySize), group (Protocols)
+#: rc.cpp:254
+msgid ""
+"the memory size used by computer engines, when the difficulty is set to "
+"Configurable"
+msgstr ""
+
+#. i18n: file: knights.kcfg:146
+#. i18n: ectx: label, entry (servers), group (Protocols)
+#: rc.cpp:257
+msgid "list of servers for playing over the Internet"
+msgstr "seznam serverů pro hru přes Internet"
+
+#. i18n: file: knights.kcfg:150
+#. i18n: ectx: label, entry (currentServer), group (Protocols)
+#: rc.cpp:260
+msgid "the last selected server"
+msgstr "minule zvolený server"
+
+#. i18n: file: knights.kcfg:154
+#. i18n: ectx: label, entry (ficsUsername), group (Protocols)
+#: rc.cpp:263
+msgid "username for the Free Internet Chess Server"
+msgstr ""
+"uživatelské jméno pro Svobodný internetový šachový server (Free Internet "
+"Chess Server)"
+
+#. i18n: file: knights.kcfg:158
+#. i18n: ectx: label, entry (guest), group (Protocols)
+#: rc.cpp:266
+msgid "whether to log in as guest"
+msgstr "jestli se přihlásit jako host"
+
+#. i18n: file: knights.kcfg:162
+#. i18n: ectx: label, entry (autoLogin), group (Protocols)
+#: rc.cpp:269
+msgid "whether to log in to chess server automatically"
+msgstr "jestli se automaticky přihlašovat k šachovému serveru"
+
+#. i18n: file: knights.kcfg:166
+#. i18n: ectx: label, entry (computerDelay), group (Protocols)
+#: rc.cpp:272
+msgid "delay before a computer's move is reported, in milliseconds"
+msgstr "zpoždění před oznámením tahu počítače, v milisekundách"
+
+#. i18n: file: knights.kcfg:170
+#. i18n: ectx: label, entry (engineConfigurations), group (Protocols)
+#: rc.cpp:275
+msgid "stored configurations of engine-specific settings"
+msgstr ""
+
+#. i18n: file: knights.kcfg:176
+#. i18n: ectx: label, entry (speakOpponentsMoves), group (Accessibility)
+#: rc.cpp:278
+msgid "whether opponents' moves are spoken by Jovie"
+msgstr "jestli mají být tahy soupeře vyslovovány pomocí Jovie"
+
+#. i18n: file: knights.kcfg:180
+#. i18n: ectx: label, entry (allowExternalControl), group (Accessibility)
+#: rc.cpp:281
+msgid "whether commands over D-Bus are accepted"
+msgstr "zda jsou akceptovány příkazy přes D-Bus"
+
+#. i18n: file: knightsui.rc:21
+#. i18n: ectx: Menu (move)
+#: rc.cpp:284
+msgid "Move"
+msgstr "Tah"
+
+#. i18n: file: knightsui.rc:37
+#. i18n: ectx: ToolBar (mainToolBar)
+#: rc.cpp:287
+msgid "Main Toolbar"
+msgstr "Hlavní nástrojová lišta"
+
+#. i18n: file: knightsui.rc:44
+#. i18n: ectx: ToolBar (actionsToolbar)
+#: rc.cpp:290
+#, fuzzy
+#| msgid "Main Toolbar"
+msgid "Game Actions Toolbar"
+msgstr "Hlavní nástrojová lišta"
+
+#. i18n: file: knightsui.rc:55
+#. i18n: ectx: ToolBar (dockToolBar)
+#: rc.cpp:293
+msgid "Dockable Windows Toolbar"
+msgstr "Dokovatelná nástrojová lišta"
+
+#. i18n: file: popup.ui:51
+#. i18n: ectx: property (text), widget (KPushButton, closeButton)
+#: rc.cpp:302
+msgid "Close"
+msgstr "Zavřít"
+
+#. i18n: file: enginesettings.ui:19
+#. i18n: ectx: property (text), widget (KPushButton, addButton)
+#: rc.cpp:305
+msgid "Add"
+msgstr "Přidat"
+
+#. i18n: file: enginesettings.ui:26
+#. i18n: ectx: property (text), widget (KPushButton, removeButton)
+#: rc.cpp:308
+msgid "Remove"
+msgstr "Odstranit"
+
+#. i18n: file: enginesettings.ui:61
+#. i18n: ectx: property (text), widget (QTableWidget, tableWidget)
+#: rc.cpp:311
+msgid "Name"
+msgstr "Název"
+
+#. i18n: file: enginesettings.ui:66
+#. i18n: ectx: property (text), widget (QTableWidget, tableWidget)
+#: rc.cpp:314
+msgid "Command"
+msgstr "Příkaz"
+
+#. i18n: file: enginesettings.ui:71
+#. i18n: ectx: property (text), widget (QTableWidget, tableWidget)
+#: rc.cpp:317
+msgid "Protocol"
+msgstr "Protokol"
+
+#. i18n: file: enginesettings.ui:76
+#. i18n: ectx: property (text), widget (QTableWidget, tableWidget)
+#: rc.cpp:320
+msgid "Installed"
+msgstr "Nainstalováno"
+
+#. i18n: file: prefs_base.ui:17
+#. i18n: ectx: property (title), widget (QGroupBox, animationGroup)
+#: rc.cpp:323
+msgid "Animations"
+msgstr "Animace"
+
+#. i18n: file: prefs_base.ui:23
+#. i18n: ectx: property (text), widget (QLabel, animationSpeedLabel)
+#: rc.cpp:326
+msgid "Animation &speed:"
+msgstr "Rychlo&st animace:"
+
+#. i18n: file: prefs_base.ui:34
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_animationSpeed)
+#: rc.cpp:329
+msgid "Instant (no animation)"
+msgstr "Okamžitá (žádné kreslení tahů)"
+
+#. i18n: file: prefs_base.ui:39
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_animationSpeed)
+#: rc.cpp:332
+msgid "Fast"
+msgstr "Rychlá"
+
+#. i18n: file: prefs_base.ui:44
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_animationSpeed)
+#: rc.cpp:335
+msgid "Normal"
+msgstr "Obvyklá"
+
+#. i18n: file: prefs_base.ui:49
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_animationSpeed)
+#: rc.cpp:338
+msgid "Slow"
+msgstr "Pomalá"
+
+#. i18n: file: prefs_base.ui:57
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_animateBoard)
+#: rc.cpp:341
+msgid "Animate the board as well"
+msgstr "Rovněž animovat desku"
+
+#. i18n: file: prefs_base.ui:67
+#. i18n: ectx: property (title), widget (QGroupBox, appearanceGroup)
+#: rc.cpp:344
+msgid "Appearance"
+msgstr "Vzhled"
+
+#. i18n: file: prefs_base.ui:76
+#. i18n: ectx: property (text), widget (QLabel, showMarkersForLabel)
+#: rc.cpp:347
+msgid "Show &markers for:"
+msgstr ""
+
+#. i18n: file: prefs_base.ui:86
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_showMarker)
+#: rc.cpp:350
+msgctxt "Option to show markers for"
+msgid "Legal moves"
+msgstr "Přípustné tahy"
+
+#. i18n: file: prefs_base.ui:99
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_showMotion)
+#: rc.cpp:353
+msgctxt "Option to show markers for"
+msgid "Opponent's move"
+msgstr "Soupeřův pohyb"
+
+#. i18n: file: prefs_base.ui:109
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_showDanger)
+#: rc.cpp:356
+msgctxt "Option to show markers for"
+msgid "Check"
+msgstr "Šach"
+
+#. i18n: file: prefs_base.ui:119
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: rc.cpp:359
+msgid "Border display:"
+msgstr "Zobrazení okrajů:"
+
+#. i18n: file: prefs_base.ui:127
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_borderDisplayType)
+#: rc.cpp:362
+msgid "No borders"
+msgstr "Bez okrajů"
+
+#. i18n: file: prefs_base.ui:132
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_borderDisplayType)
+#: rc.cpp:365
+msgid "Only borders"
+msgstr "Pouze okraje"
+
+#. i18n: file: prefs_base.ui:137
+#. i18n: ectx: property (text), item, widget (KComboBox, kcfg_borderDisplayType)
+#: rc.cpp:368
+msgid "Borders and notation"
+msgstr "Okraje a souřadnice"
+
+#. i18n: file: prefs_base.ui:148
+#. i18n: ectx: property (title), widget (QGroupBox, groupBox)
+#: rc.cpp:371
+msgid "Behavior"
+msgstr "Chování"
+
+#. i18n: file: prefs_base.ui:154
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_flipBoard)
+#: rc.cpp:374
+msgid "Flip the board in local matches between humans"
+msgstr "Otočit desku při místních zápasech mezi lidmi"
+
+#. i18n: file: prefs_base.ui:161
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_askDiscard)
+#: rc.cpp:377
+msgid "Show confirmation dialog before closing"
+msgstr ""
+
+#. i18n: file: customdifficultydialog.ui:20
+#. i18n: ectx: property (text), widget (QLabel, searchDepthLabel)
+#: rc.cpp:380
+msgid "Search &depth:"
+msgstr ""
+
+#. i18n: file: customdifficultydialog.ui:30
+#. i18n: ectx: property (specialValueText), widget (KIntSpinBox, searchDepthIntSpinBox)
+#: rc.cpp:383
+msgctxt "Let the engine determine the search depth"
+msgid "Engine default"
+msgstr ""
+
+#. i18n: file: customdifficultydialog.ui:37
+#. i18n: ectx: property (text), widget (QLabel, memorySizeLabel)
+#: rc.cpp:386
+msgid "Memory &size:"
+msgstr "Veliko&st paměti:"
+
+#. i18n: file: customdifficultydialog.ui:47
+#. i18n: ectx: property (suffix), widget (KIntSpinBox, memorySizeIntSpinBox)
+#: rc.cpp:389
+msgctxt "Megabytes"
+msgid " MB"
+msgstr " MB"
+
+#. i18n: file: historywidget.ui:25
+#. i18n: ectx: property (text), widget (QLabel, notationLabel)
+#: rc.cpp:392
+msgid "&Notation:"
+msgstr ""
+
+#. i18n: file: historywidget.ui:36
+#. i18n: ectx: property (text), item, widget (KComboBox, notationComboBox)
+#: rc.cpp:395
+msgid "Short Algebraic"
+msgstr ""
+
+#. i18n: file: historywidget.ui:41
+#. i18n: ectx: property (text), item, widget (KComboBox, notationComboBox)
+#: rc.cpp:398
+msgid "Long Algebraic"
+msgstr ""
+
+#. i18n: file: historywidget.ui:46
+#. i18n: ectx: property (text), item, widget (KComboBox, notationComboBox)
+#: rc.cpp:401
+msgid "Coordinate"
+msgstr "Souřadnice"
+
+#. i18n: file: historywidget.ui:56
+#. i18n: ectx: property (text), widget (KPushButton, saveButton)
+#: rc.cpp:404
+msgid "&Save History"
+msgstr "&Uložit historii"
+
+#, fuzzy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#, fuzzy
+
+
+
+
+
+
+
+
+
+#, fuzzy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#, fuzzy

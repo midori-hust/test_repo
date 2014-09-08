@@ -1,0 +1,12 @@
+<!DOCTYPE piklab>
+<piklab>
+  <general>
+    <device>16F84A</device>
+    <tool>gputils</tool>
+    <programmer>custom</programmer>
+    <files>
+      <item>firstproject.bas</item>
+    </files>
+  </general>
+  <editors/>
+</piklab>

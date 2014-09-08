@@ -1,0 +1,32 @@
+// $Revision$
+
+#ifndef _FRAME1_HH
+#  include "frame1_glade.hh"
+#  define _FRAME1_HH
+
+# define X_dimension 320
+# define Y_dimension 320
+
+#include <gtkmm/label.h>
+
+/*
+#include <libgnomecanvasmm/init.h>
+#include <libgnomecanvasmm/canvas.h>
+#include <libgnomecanvasmm/pixbuf.h>
+#include <libgnomecanvasmm/group.h>
+#include <libgnomecanvasmm/rect.h>
+*/
+
+#include "config.h"
+
+// board it's embeded inside frame1
+#include "board.hh"
+//#include "pieces.hh"
+
+class frame1 : public frame1_glade
+{  
+public:
+
+        frame1(GlademmData *_data);
+};
+#endif

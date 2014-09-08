@@ -1,0 +1,122 @@
+2010-07-01  Mark Willson  <mark@amber.hydrus.org.uk>
+
+	* bterr.c: Null'd return arguments before population.
+
+	* bsuper.c: Improved error message on I/O error reading superroot.
+
+	* btdelr.c: Forbid deletion of superroot.
+
+2010-06-18  Mark Willson  <mark@amber.hydrus.org.uk>
+
+	* btcmd.c: Moved bt command handling into this module.  Revamped
+	command handling completely.
+
+2010-06-07  Mark Willson  <mark@amber.hydrus.org.uk>
+
+	* bt.c, Makefile: Added support for readline when reading
+	interactive commands.  Readline support is only compiled in if the
+	readline include files are detected.
+
+	* btcrt.c: Fixed bug - super.smode not set to zero.
+
+2010-06-04  Mark Willson  <mark@amber.hydrus.org.uk>
+
+	* kcp.c: Improved error handling; use btcerr array size constants.
+
+	* bt.c: Added interrupt handling.
+
+	* bigt.c, bigtdel.c: Promoted to src-main; added interrupt handling.
+
+2010-06-02  Mark Willson  <mark@amber.hydrus.org.uk>
+
+	* bterr.c: Returned routine name and error message for btcerr
+	constrained to constant-defined sizes (ZRNAMESZ and ZMSGSZ).
+
+2010-05-28  Mark Willson  <mark@amber.hydrus.org.uk>
+
+	* bgtfre.c: Write newly acquired block to file immediately to
+	ensure sufficient disk space exists.
+
+	* bsptbk.c: Fix off-by-one error when splitting non-root block
+	with even number of keys.
+
+	* bterr.c: Improve handling of diagnostics involving system errors.
+	Added new error messages.
+	
+2010-05-26  Mark Willson  <mark@amber.hydrus.org.uk>
+
+	* All: Added support for large files (> 2GiB), as compile option.
+	
+2008-05-23  Mark Willson  <mark@gold>
+
+	* btdata.c: Reset error code in btins after determining existence of
+	key.
+	
+2008-05-21  Mark Willson  <mark@gold>
+
+	* bxdump.c: Make routine of type void, as defined in "btree_int.h"
+
+2008-05-09  Mark Willson  <mark@gold>
+
+	* bterr.c: QNOOPN text changed to indicate unused.
+
+	* btopn.c: QNOOPN error code replaced by the correct error code of
+	QOPNIO.
+
+2008-05-08    <mark@OPAL>
+
+	* bt.c: Replace use of FILENO macro by fileno function.
+
+	* bacini.c: Replace use of FILENO macro by fileno function.
+
+	* bc.h: Remove macro defining FILENO - replaced by standard C
+	library function fileno.
+
+	* bsemap.c: Included file <sys/fcntl.h> replaced by <fcntl.h>.
+
+2006-08-18  Mark Willson  <mark@gold>
+
+	* btopn.c: Fix memory leak on btact initialisation error.
+
+2006-04-09  Mark Willson  <mark@gold>
+
+	* bc.h: Make sleep time for locked file an implementation constant
+
+	* bsemap.c: Fix hardcoded error message for signal setup failure
+
+2005-12-27  Mark Willson  <mark@gold>
+
+	* btdata.c: Allow zero-length data records to be stored.  Fix
+	index file block leak when attempting to define a duplicate key.  
+
+2005-10-30  Mark Willson  <mark@gold>
+
+	* bclrlf.c: Initialise lfblk
+	* bnxtky.c: Handle calls if bfndky has not been called before
+
+2004-09-25  Mark Willson  <mark@gold>
+
+	* Detect and fail gracefully when the index file reaches maximum
+	size (that's 2^31-1 bytes on a 32 bit int implementation).
+
+2004-09-22  Mark Willson  <mark@gold>
+
+	* Detect overflow of data block addressing.
+
+2004-09-08  Mark Willson  <mark@crimson>
+
+	* Verify correct version of Btree file on open.  This involves a
+	small change to the structure of the B tree index file.  The first
+	word now contains a version identified in the most significant
+	halfword, while the ZROOT flag lives in the least significant
+	halfword. The routines which get and set block data cater for this
+	automatically.
+
+2004-05-31  Mark Willson  <mark@crimson>
+
+	* All: changes to API - removal of int *ok from function argument
+	  lists.
+	
+2003-12-15  Mark Willson  <mark@crimson>
+
+	* All: Revised for first public release.

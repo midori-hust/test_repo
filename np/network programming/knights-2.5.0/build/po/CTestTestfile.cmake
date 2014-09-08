@@ -1,0 +1,38 @@
+# CMake generated Testfile for 
+# Source directory: /home/library/hungpd/np/knights-2.5.0/po
+# Build directory: /home/library/hungpd/np/knights-2.5.0/build/po
+# 
+# This file includes the relevent testing commands required for 
+# testing this directory and lists subdirectories to be tested as well.
+SUBDIRS(ca@valencia)
+SUBDIRS(da)
+SUBDIRS(el)
+SUBDIRS(bs)
+SUBDIRS(sv)
+SUBDIRS(de)
+SUBDIRS(gl)
+SUBDIRS(pt_BR)
+SUBDIRS(nb)
+SUBDIRS(it)
+SUBDIRS(km)
+SUBDIRS(sr@latin)
+SUBDIRS(pl)
+SUBDIRS(et)
+SUBDIRS(uk)
+SUBDIRS(fi)
+SUBDIRS(nds)
+SUBDIRS(sr)
+SUBDIRS(cs)
+SUBDIRS(zh_TW)
+SUBDIRS(pt)
+SUBDIRS(sr@ijekavian)
+SUBDIRS(nl)
+SUBDIRS(lt)
+SUBDIRS(sl)
+SUBDIRS(nn)
+SUBDIRS(fr)
+SUBDIRS(ca)
+SUBDIRS(es)
+SUBDIRS(sr@ijekavianlatin)
+SUBDIRS(ga)
+SUBDIRS(ru)

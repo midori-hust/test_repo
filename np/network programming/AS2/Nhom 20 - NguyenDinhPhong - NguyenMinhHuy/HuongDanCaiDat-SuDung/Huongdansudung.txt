@@ -1,0 +1,14 @@
+Chuong trinh Ghe Nong - Ai la trieu phu
+
+- Cau truc chuong trình bao gom cac file server.c, client.c,  library.c, library.h va bo thu vien Btree cho viec luu cau truc du lieu tai khoan
+- Chuong trinh chay tren Terminal
+	* Tien hanh thao tac dich chuong trinh
+	gcc -c library.h // Dich thu vien
+	gcc -o server server.c library.c libbt.a //Dich file 	server
+	gcc -o client client.c library.c libbt.a //Dich file 	client
+	* Chay chuong trinh
+	 - Chay server: ./server 3500 //Cong socket do nguoi dung 	nhap tuy chon
+	 - Chay client: ./client 127.0.0.1 3500 (chay localhost)
+	 Chuong trinh demo voi 3 client nen chi khi 3 client ket 	noi toi chuong trinh moi bat dau chay
+	
+	

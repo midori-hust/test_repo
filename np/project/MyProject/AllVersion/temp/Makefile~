@@ -1,0 +1,24 @@
+CC = gcc
+CFLAGS = -g -std=c99
+
+all: Server Client
+
+Server: Server.o message.o
+	$(CC) Server.o message.o -o Server
+
+Server.o: Server.c
+	$(CC) $(CFLAGS) -c Server.c -o Server.o
+
+Client: Client.o message.o ClientHandle.o
+	$(CC) Client.o message.o ClientHandle.o -o Client
+
+Client.o: Client.c
+	$(CC) $(CFLAGS) -c Client.c -o Client.o
+
+ClientHandle.o: ClientHandle.c ClientHandle.h
+	$(CC) $(CFLAGS) -c ClientHandle.c -o ClientHandle.o
+
+message.o: message.c message.h
+	$(CC) $(CFLAGS) -c message.c -o message.o
+
+clean: rm -f *.o

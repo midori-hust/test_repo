@@ -1,0 +1,33 @@
+K 10
+svn:ignore
+V 246
+Makefile
+Makefile.in
+*.pws
+*.so
+*.o
+*_new
+.*
+*.bak
+*.cache
+config.h
+config.log
+config.status
+config.guess
+config.h.in
+config.sub
+ltmain.sh
+configure
+libtool
+stamp-h
+stamp*h[0-9]*
+intl
+COPYING
+depcomp
+INSTALL
+install-sh
+missing
+aclocal.m4
+stamp-*
+
+END

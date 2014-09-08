@@ -1,0 +1,11 @@
+Cau 15:
+Thong tin ve mot thi sinh bao gom:
+So bao danh (max 10 ky tu)
+Ho va ten (Max 30 ky tu)
+Diem thi (so thap phan)
+Hay viet chuong trinh nhap tu ban phim thong tin 
+cac thi sinh cho den khi nhap vao so bao danh la -1.
+Thong tin moi thi sinh duoc ghi ra file van ban 
+"thisinh.txt" (khong su dung mang de luu o buoc nay)
+Sau do, mo lai file de doc thong tin vao mang ts. 
+Hien thi mang ts ra man hinh, Tiep do duyet mang ts de luu thong tin nhung thi sinh co diem thi >= 5 vao file van ban "thisinh2.txt"

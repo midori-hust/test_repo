@@ -1,0 +1,15 @@
+CC = gcc
+CFLAGS = -g -std=c99
+
+all: libra
+
+libra: test.o linklist.o
+	$(CC) test.o linklist.o -o libra
+
+test.o: test.c
+	$(CC) $(CFLAGS) -c test.c -o test.o
+
+linklist.o: linklist.c linklist.h
+	$(CC) $(CFLAGS) -c linklist.c -o linklist.o
+
+clean: rm -rf *.o libra

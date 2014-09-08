@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<gtodo>
+  <category title="ChessLan 0.2" place="0">
+    <item>
+      <attribute id="1162621541" priority="2" done="0" start_date="732619" notify="0" last_edited="1163857031"/>
+      <summary>Add Gconf support for preferences</summary>
+      <comment>Enable network, colors, flipping and other minor settings from Preferences</comment>
+    </item>
+    <item>
+      <attribute id="1163827886" priority="2" done="0" start_date="732633" notify="0" last_edited="1163857031"/>
+      <summary>XMLRPC server</summary>
+      <comment>allow a customizable port to listen for conections from an XMLRPC client (chesslan itself)</comment>
+    </item>
+    <item>
+      <attribute id="1169306456" priority="2" done="0" start_date="732696" enddate="99999999" notify="0" endtime="-60" last_edited="1169306456"/>
+      <summary>Add Queuing system</summary>
+      <comment>We need a way to queue moves globally. the queue might comprise 2 databases, one with move list represented in the same way that they will be done in text ( move 1: e4 e5 ). and also in a notation that displays the full board when this move happened: ppppppppp|RNBQK...</comment>
+    </item>
+  </category>
+  <category title="ChessLan 0.4" place="1">
+    <item>
+      <attribute id="1163828250" priority="1" done="0" start_date="732633" enddate="99999999" notify="0" endtime="-60" last_edited="1163828250"/>
+      <summary>Authentication</summary>
+      <comment>allows server/client to connect using a secret string (passphrase) and allow guests to optionally use a password or not</comment>
+    </item>
+  </category>
+  <category title="ChessLan 0.6" place="2"/>
+  <category title="ChessLan 0.8" place="3"/>
+  <category title="ChessLan 1.0" place="4"/>
+</gtodo>

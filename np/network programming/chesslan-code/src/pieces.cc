@@ -1,0 +1,20 @@
+
+// $Revision: 59 $
+
+#include "config.h"
+#include "pieces.hh"
+
+// debugging
+//#include "error.hh"
+pieces::pieces() 
+{
+}
+
+pieces::pieces (Gnome::Canvas::Group & root, int n_x, int n_y)
+{
+}
+
+pieces::~pieces ()
+{
+}
+

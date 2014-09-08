@@ -1,0 +1,10 @@
+Bien dich client:
+gcc -o c client client.c sockhelp.c
+
+Bien dich server:
+gcc -g -o thu thu.c supportLib.c sockhelp.c `pkg-config --cflags --libs gtk+-2.0` -export-dynamic
+
+Chay client:
+./c 127.0.0.1 5000
+Chay server:
+./thu 127.0.0.1 5000

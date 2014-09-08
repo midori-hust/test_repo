@@ -1,0 +1,12 @@
+1
+Pham Duy Hung
+10.000000
+2
+Pham Dieu Huyen
+9.000000
+3
+Hoang Quynh Trang
+4.000000
+4
+Hoang Quynh Hoa
+3.000000

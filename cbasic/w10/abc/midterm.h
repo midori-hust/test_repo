@@ -1,0 +1,20 @@
+#ifndef __MIDTERM_H__
+#define __MIDTERM_H__
+
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+#define MAXLENGTH 100
+
+struct bus_info
+{
+  int id;
+  char name[MAXLENGTH];
+};
+
+typedef struct bus_info * BusInfo;
+
+char menu();
+
+#endif

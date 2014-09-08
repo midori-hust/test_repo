@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+
+#define MAXLENGTH 100
+
+char *timten(char[] hoten)
+{
+  int i;
+  i = strlen(hoten)-1;
+
+  //Tim ky tu cuoi cung trong xau
+  while (i>=0 && hoten[i] != ' ') i--;
+  return hoten + i + 1;
+}
+
+int main()
+{
+
+
+}

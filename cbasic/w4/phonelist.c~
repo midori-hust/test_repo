@@ -1,0 +1,61 @@
+#include "phonelist.h"
+
+//Tao moi 1 phan tu moi
+AddressList *newAddress(char *name, int tel, char *address)
+{
+  AddressList* new;
+  new = (AddressList*)malloc(sizeof(AddressList));
+  new->name = name;
+  new->tel = tel;
+  new->address = address;
+  new->next = NULL;
+  return new;
+}
+
+//Chen 1 phan tu vao dau danh sach
+void insertTop(AddressList* root, AddressList* new_item)
+{
+  if(root == NULL) root = new_item;
+  else
+    {
+      new_item->next = root;
+      root = new_item;
+    }
+}
+
+//Chen 1 phan tu vao sau phan tu tro boi cur torng danh sach
+void insert(AddressList* root, AddressList* cur, AddressList* new_item)
+{
+  if(root == NULL) root = cur = new_item;
+  else
+    {
+      new_item->next = cur->next;
+      cur->next = new_item;
+      cur = new_item; //Hoac cur=cur->next;
+    }
+}
+
+//Hien thi danh sach ra man hinh
+void displayList(AddressList* root)
+{
+  AddressList* cur;
+  for(cur = root; cur != NULL; cur = cur->next)
+    {
+      //Hien thi cur->element ra man hinh
+      //(Cai nay phai biet duoc kieu cua element thi moi printf duoc)
+      printf("\n");
+      printf("%d\n", cur->element);
+    }
+}
+
+
+//Xoa phan tu ngay sau phan tu cur trong danh sach
+void deleteAddress(AddressList* root, AddressList* cur)
+{
+  AddressList* prev;
+
+  prev = cur;
+  cur = prev->next;
+  prev->next = cur->next;
+  free(cur);    
+}

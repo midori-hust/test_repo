@@ -1,0 +1,6 @@
+client: client.o resource.o	
+	gcc -o client client.o resource.o
+resource.o: resource.c resource.h
+	    gcc -c resource.c
+client.o: client.c resource.h
+	  gcc -c client.c

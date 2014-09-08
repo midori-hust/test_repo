@@ -1,0 +1,29 @@
+#include "stack.h"
+
+void initialize()
+{
+  top = 0;
+}
+
+int empty()
+{
+  return top == 0;
+}
+
+int full()
+{
+  return top == MAXLENGTH;
+}
+
+void push(StudentInfo *item)
+{
+  if(full(*stack)) printf("Stack overflow.\n");
+  else stack[top++] = *item;
+}
+
+StudentInfo pop()
+{
+  if(empty(stack))
+    printf("Stack underflow.\n");
+  else return stack[--top];
+}

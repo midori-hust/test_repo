@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FicsDialog</class>
+ <widget class="QWidget" name="FicsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>568</width>
+    <height>269</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="margin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="KTabWidget" name="tabWidget">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="movable">
+      <bool>true</bool>
+     </property>
+     <property name="automaticResizeTabs">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="accountTab">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <attribute name="title">
+       <string>Account</string>
+      </attribute>
+      <attribute name="toolTip">
+       <string>Log in to the chess server</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QGroupBox" name="logInGroup">
+         <property name="title">
+          <string/>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <item row="0" column="0" colspan="5">
+           <widget class="QLabel" name="logInStatusLabel">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="usernameLabel">
+            <property name="text">
+             <string>&amp;Username</string>
+            </property>
+            <property name="buddy">
+             <cstring>usernameLineEdit</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1" colspan="3">
+           <widget class="KLineEdit" name="usernameLineEdit">
+            <property name="urlDropsEnabled">
+             <bool>false</bool>
+            </property>
+            <property name="showClearButton" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="4">
+           <widget class="QCheckBox" name="registeredCheckBox">
+            <property name="text">
+             <string>This is a registered account</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="passwordLabel">
+            <property name="text">
+             <string>&amp;Password</string>
+            </property>
+            <property name="buddy">
+             <cstring>passwordLineEdit</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1" colspan="3">
+           <widget class="KLineEdit" name="passwordLineEdit">
+            <property name="urlDropsEnabled">
+             <bool>false</bool>
+            </property>
+            <property name="showClearButton" stdset="0">
+             <bool>true</bool>
+            </property>
+            <property name="passwordMode">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="4">
+           <widget class="QCheckBox" name="rememberCheckBox">
+            <property name="text">
+             <string>Log me in automatically</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="1">
+           <widget class="KPushButton" name="logInButton">
+            <property name="text">
+             <string>Log in</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="2">
+           <spacer name="horizontalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="3" column="3">
+           <widget class="KPushButton" name="registerButton">
+            <property name="text">
+             <string>Create an account</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="joinTab">
+      <attribute name="title">
+       <string>Seek List</string>
+      </attribute>
+      <attribute name="toolTip">
+       <string>Current ads arranged in a list</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QTableWidget" name="offerTable">
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="showDropIndicator" stdset="0">
+          <bool>false</bool>
+         </property>
+         <property name="dragDropOverwriteMode">
+          <bool>false</bool>
+         </property>
+         <property name="alternatingRowColors">
+          <bool>true</bool>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::SingleSelection</enum>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <attribute name="horizontalHeaderCascadingSectionResizes">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="verticalHeaderVisible">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="verticalHeaderHighlightSections">
+          <bool>false</bool>
+         </attribute>
+         <column>
+          <property name="text">
+           <string>Player</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Rating</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Time</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Increment</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Rated</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Variant</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Your color</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="graphTab">
+      <attribute name="title">
+       <string>Seek Graph</string>
+      </attribute>
+      <attribute name="toolTip">
+       <string>Current ads arranged by rating and duration</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="Knights::SeekGraph" name="graphView">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="challengeTab">
+      <attribute name="title">
+       <string>Challenges</string>
+      </attribute>
+      <attribute name="toolTip">
+       <string>Post an ad for other players</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QCheckBox" name="ratedCheckBox">
+         <property name="text">
+          <string>Rated match</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="autoCheckBox">
+         <property name="text">
+          <string>Automatically start the game</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="seekButton">
+         <property name="text">
+          <string comment="Start searching for opponents">Seek</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QListView" name="challengeListView"/>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="consoleTab">
+      <attribute name="title">
+       <string>Console</string>
+      </attribute>
+      <attribute name="toolTip">
+       <string>Use custom commands</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_4"/>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KPushButton</class>
+   <extends>QPushButton</extends>
+   <header>kpushbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>klineedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KTabWidget</class>
+   <extends>QTabWidget</extends>
+   <header>ktabwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Knights::SeekGraph</class>
+   <extends>QFrame</extends>
+   <header>proto/seekgraph.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>registeredCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>passwordLineEdit</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>498</x>
+     <y>71</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>348</x>
+     <y>103</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>registeredCheckBox</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ratedCheckBox</receiver>
+   <slot>setEnabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>452</x>
+     <y>65</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>283</x>
+     <y>39</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

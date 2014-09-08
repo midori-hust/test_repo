@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAXLENGTH 100
+
+
+
+int main(int argc, const char *argv[])
+{
+    int i, max, n, k;
+    int list[MAXLENGTH];
+
+    printf("Set the size of the array\n");
+    while(scanf("%d", &n) != 1) {
+    printf("Invalid input, please retry.\n");
+    while(getchar() != '\n');
+    }
+
+    printf("The max value is \n");
+
+    for (i=0; <|i<n ; <|i|>++) {
+
+    }<`5`>
+
+    return 0;
+}
+
+

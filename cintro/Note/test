@@ -1,0 +1,11 @@
+Cho truoc 1 so thuc N thuoc doan [0, 100], co tat ca la M nguoi choi. Nhiem vu cua moi nguoi choi la phai co gang doan ra duoc so N. Moi nguoi se choi toi da la 4 lan, tai lan thu i nguoi choi se dua ra 1 so thuc la Ni, neu so nay bang voi so N thi thong boa cho nguoi choi la "Ban da doan dung!" va chuyen nguoi choi tiep theo, nguoc lai se dua ra thong bao "So ban vua doan lon hon (hay be hon) so can tim!" (de goi y cho lan doan tiep theo). Cac nguoi choi se choi lan luot het nguoi nay den nguoi kia. ket qua moi nguoi choi duoc tinh dua vao lan doan cuoi cung N4 cua anh ta, gia tri do sai lech |N4/N - 1| cang nho cua nghia la doan cang gan dung so N, neu doan dung tai lan i <= 4 thi gia tri nay = 0.
+Ket qua cua tat ca nguoi choi duoc luu tru trong 1 mang 1 chieu voi kieu cau truc nhu sau:
+
+typedef struct {
+	char[25] name;
+	float suggest[4];
+} Result;
+
+Result Person[Total];
+
+Trong do: name la xau ky tu chua ten nguoi choi co khoang trang, suggest chua cac gia tri toi da 4 lan doa (neu doan dung tai lan i < 4 thi khong can luu het)

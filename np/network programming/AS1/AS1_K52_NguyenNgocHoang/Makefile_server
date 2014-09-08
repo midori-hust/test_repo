@@ -1,0 +1,6 @@
+server: resource.o server.o
+	gcc -o server resource.o server.o
+resource.o: resource.c resource.h
+	    gcc -c resource.c
+server.o: server.c resource.h
+	  gcc -c server.c

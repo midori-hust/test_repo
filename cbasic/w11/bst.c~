@@ -1,0 +1,34 @@
+#include "bst.h"
+
+
+Node* Search(char *key, Node* Root)
+{
+  if(Root == NULL) return NULL;
+  else
+    if(strcmp(Root->key, key) == 0)
+      return Root;
+    else
+      if(strcmp(Root->key, key) < 0)
+	return Search(key, Root->right);
+      else
+	{
+	  return Search(key, Root->left);
+	}
+}
+
+void InsertNode(char *key, Node* Root)
+{
+  if(Root == NULL)
+    {
+      Root = (Node*)malloc(sizeof(Node));
+      strcpy(Root->key, key);
+      Root->left = NULL;
+      Root->right = NULL;
+      Root->frequency = 0;
+    }
+  else
+    if(strcmp(key, Root->key) < 0)
+      InsertNode(key, Root->left);
+    else if(strcmp(key, Root->key) > 0)
+      InsertNode(key, Root->left);
+}

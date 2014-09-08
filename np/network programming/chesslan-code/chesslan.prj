@@ -1,0 +1,146 @@
+# Anjuta Version 1.1.97 
+Compatibility Level: 1 
+
+<PROJECT_DESCRIPTION_START>
+A peer-to-peer lan-based chess game for Linux and MacOSX. The purpose is to get a very high quality game that's easily portable to other platforms and that overall works as promised.<PROJECT_DESCRIPTION_END>
+<CONFIG_PROGS_START>
+<CONFIG_PROGS_END>
+<CONFIG_LIBS_START>
+<CONFIG_LIBS_END>
+<CONFIG_HEADERS_START>
+<CONFIG_HEADERS_END>
+<CONFIG_CHARACTERISTICS_START>
+<CONFIG_CHARACTERISTICS_END>
+<CONFIG_LIB_FUNCS_START>
+<CONFIG_LIB_FUNCS_END>
+<CONFIG_ADDITIONAL_START>
+<CONFIG_ADDITIONAL_END>
+<CONFIG_FILES_START>
+<CONFIG_FILES_END>
+<MAKEFILE_AM_START>
+<MAKEFILE_AM_END>
+
+props.file.type=project
+
+anjuta.version=1.1.97
+anjuta.compatibility.level=1
+
+project.name=chesslan
+project.type=gtkmm 2.0
+project.target.type=EXECUTABLE
+project.version=0.1
+project.author=Luis Mondesi
+project.source.target=chesslan
+project.has.gettext=1
+project.gui.command=
+project.programming.language=C_C++
+project.excluded.modules=intl
+
+project.config.extra.modules.before=
+project.config.extra.modules.after=
+project.config.blocked=0
+project.config.disable.overwriting=0 0 0 0 0 0 0 0 0 
+
+project.menu.entry=chesslan Version 0.1
+project.menu.group=Applications
+project.menu.comment=chesslan Version 0.1
+project.menu.icon=
+project.menu.need.terminal=0
+
+project.configure.options=
+anjuta.program.arguments=
+preferences.build.option.jobs=0
+preferences.build.option.silent=0
+preferences.build.option.autosave=1
+preferences.anjuta.make.options=-j3
+preferences.make=make
+preferences.build.option.keep.going=1
+preferences.build.option.warn.undef=0
+preferences.autoformat.custom.style= -i8 -sc -bli0 -bl0 -cbi0 -ss
+preferences.autoformat.style=GNU coding style
+preferences.indent.opening=0
+preferences.autoformat.disable=0
+preferences.indent.automatic=1
+preferences.use.tabs=1
+preferences.indent.size=4
+preferences.tabsize=4
+preferences.indent.closing=0
+
+module.include.name=include
+module.include.type=
+module.include.files=
+
+module.source.name=src
+module.source.type=
+module.source.files=\
+	chesslan.cc\
+	chesslan1.cc\
+	frame1.cc\
+	menubar1.cc\
+	notebook1.cc\
+	statusbar1.cc\
+	toolbar1.cc\
+	treeview1.cc\
+	chesslan1_glade.cc\
+	menubar1_glade.cc\
+	frame1_glade.cc\
+	notebook1_glade.cc\
+	statusbar1_glade.cc\
+	toolbar1_glade.cc\
+	treeview1_glade.cc\
+	board.cc\
+	network.cc\
+	pieces.cc
+
+module.pixmap.name=pixmaps
+module.pixmap.type=
+module.pixmap.files=\
+	B.png\
+	K.png\
+	N.png\
+	P.png\
+	Q.png\
+	R.png\
+	b.png\
+	k.png\
+	n.png\
+	p.png\
+	q.png\
+	r.png
+
+module.data.name=data
+module.data.type=
+module.data.files=
+
+module.help.name=help
+module.help.type=
+module.help.files=
+
+module.doc.name=doc
+module.doc.type=
+module.doc.files=
+
+module.po.files=
+
+compiler.options.supports=
+compiler.options.include.paths=\
+	/usr/include/libgnomecanvasmm-2.0/\
+	/usr/include/libgnomecanvas-2.0/\
+	/usr/lib/libgnomecanvasmm-2.0/include\
+	/usr/include/sigc++-1.2\
+	/usr/lib/sigc++-1.2/include\
+	/usr/include/libart-2.0
+compiler.options.library.paths=
+compiler.options.libraries=
+compiler.options.libraries.selected=
+compiler.options.defines=\
+	ORBIT2=1
+compiler.options.defines.selected=
+compiler.options.warning.buttons=1 0 1 1 1 1 1 1 1 1 0 0 1 1 0 1 
+compiler.options.optimize.buttons=1 0 0 0 
+compiler.options.other.buttons=1 0 
+compiler.options.other.c.flags=-I/usr/include/libgnomecanvasmm-2.0 -I/usr/lib/libgnomecanvasmm-2.0/include -I/usr/include/gtkmm-2.4 -I/usr/lib/gtkmm-2.4/include -I/usr/include/libgnomecanvas-2.0 -I/usr/include/gtk-2.0 -I/usr/lib/sigc++-1.2/include -I/usr/include/sigc++-1.2 -I/usr/include/glib-2.0 -I/usr/lib/glib-2.0/include -I/usr/lib/gtk-2.0/include -I/usr/include/pango-1.0 -I/usr/include/freetype2 -I/usr/X11R6/include -I/usr/include/atk-1.0 -I/usr/include/libart-2.0
+compiler.options.other.l.flags=-Wl,--export-dynamic -lgnomecanvasmm-2.0 -lgtkmm-2.4 -lgnomecanvas-2 -lgdkmm-2.0 -latkmm-1.0 -lpangomm-1.0 -lglibmm-2.0 -lsigc-1.2 -lart_lgpl_2 -lpangoft2-1.0 -lgtk-x11-2.0 -lgdk-x11-2.0 -latk-1.0 -lgdk_pixbuf-2.0 -lm -lpangoxft-1.0 -lpangox-1.0 -lpango-1.0 -lgobject-2.0 -lgmodule-2.0 -ldl -lglib-2.0
+compiler.options.other.l.libs=
+
+project.src.paths=

@@ -1,0 +1,65 @@
+/*
+$Revision: 60 $
+	Defines the pieces and their
+	movement restrictions
+*/
+
+
+#ifndef _PIECES_HH
+#  define _PIECES_HH
+
+#include "network.hh"
+
+typedef struct Piece {
+        const char* name;       /** the friendly name of this piece. ex: pawn0 for the first black pawn. Pawn0 for the first white pawn **/
+        const char* file_path;      /** pixmap path in case you need to re-do this image later **/
+        gdouble x;              /** where in the board is this piece currently located **/
+        gdouble y;              /** where in the board is this piece currently located **/
+        Gnome::Canvas::Pixbuf* pixbuf; /** picture holder in the canvas **/
+        bool deleted;           /** have this piece been captured? **/
+};
+
+class pieces: public network
+{
+      public:
+	pieces ();
+	pieces (Gnome::Canvas::Group& root, int n_x, int n_y);
+	  virtual ~ pieces ();
+
+	// dragging inside canvas
+	bool on_item_event (GdkEvent * event, Gnome::Canvas::Item * item);
+
+	// pieces images names
+	//const char *get_white_pawn ();
+	//const char *get_black_pawn ();
+
+	// pawns
+	/* pieces specific move 
+	 * routine:
+	 * check for valid moves,
+	 * calls pieces::move() to
+	 * update history stack plus
+	 * doing the actual move.
+	 */
+	
+	//bool on_key_press(GdkEventKey *event, Gnome::Canvas::Canvas* canvas);
+
+      protected:
+	/* Low-level move routine:
+	 * updating the stack,
+	 * capturing pieces
+	 */
+	//FIXME bool move (Gnome::Canvas::Group& root, char *name, double row, double col);
+	/*  pieces images
+	 * is it a good idea to have all images here?
+	 * for now, all images are located in their own classes
+	 */
+	// follow by a number: 
+	// White King is: K1
+	// White Pawn 4: P4
+	// Black rook 2: r2
+	//char *m_white_pawn_name;
+	//char *m_black_pawn_name;
+
+};
+#endif

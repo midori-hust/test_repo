@@ -1,0 +1,15 @@
+1:Dong vat nao lon nhat trai dat hien nay?:Ca map:Gau Bac Cuc: Ca voi xanh:Kien:3
+2:Mang Internet co bat dau tu nam nao?:1734:1874:1935:1979:4
+3:Noi ra doi cua the van hoi Olympic?:Viet Nam:Lao:Hy Lap:Anh:3
+4:Dot ret cuoi cung vao thang 3 o mien Bac ten la gi:ret nang Han:ret nang Ban:ret cam cam:ret Han doi:2
+5:De dat de nuoc la kho su thi cua dan toc nao:Thai:Muong:H'mong:Bede:2
+6:Doi bong nao vo dich V-League nam 2005:Gach Dong Tam Long An:The Cong:Hoang Anh Gia Lai:Nghe An:1
+7:He so thap phan la phat minh cua nuoc nao:Trung Quoc:My:An Do:Viet Nam:3
+8:Tinh nao khong co bo bien chay qua:Hai Duong:Thai Binh:Nam Dinh:Hai Binh:1
+9:Vy tuyen 17 chay ngang qua dia phan tinh nao nuoc ta:Ha Tinh:Quang Binh:Quang Tri:Quang Nam:3
+10:Tren cac ban do the gioi co xua nguoi ta thuong ghi ten vi than nao:Than Zeus:than Hera:than Cratos:than Atlat:4
+11:Dai duong nao giap cac chau A, My, Dai Duong:Bac Bang Duong:Dai Tay Duong:An Do Duong:Thai Binh Duong:4
+12:Ai la nguoi duoc tang Huan Chuong Sao vang dau tien o nuoc ta:Ho Chi Minh:Ton Duc Thang:Vo Nguyen Giap:Nguyen Van Linh:2
+13:Hanh tinh nao be nhat trong he mat troi:Trai Dat:Sao Diem Vuong:Sao Hai Vuong:Sao Tho:2
+14:Nguoi chau A nao dat giai thuong dao dien xuat sac nhat trong Oscar 2005:Ly An(Dai Loan):Le Hoang(Viet Nam):James Cameron(My):John Pretit(Phap):1
+15:Ai la tac gia cua "Dai Viet su ky toan thu":Ngo Sy Lien:Phan Huy Chu:Le Van Huu:Lai Van Sam:1

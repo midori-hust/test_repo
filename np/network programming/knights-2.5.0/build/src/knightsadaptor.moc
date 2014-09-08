@@ -1,0 +1,132 @@
+/****************************************************************************
+** Meta object code from reading C++ file 'knightsadaptor.h'
+**
+** Created: Thu Sep 26 16:52:39 2013
+**      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
+**
+** WARNING! All changes made in this file will be lost!
+*****************************************************************************/
+
+#include "knightsadaptor.h"
+#if !defined(Q_MOC_OUTPUT_REVISION)
+#error "The header file 'knightsadaptor.h' doesn't include <QObject>."
+#elif Q_MOC_OUTPUT_REVISION != 63
+#error "This file was generated using the moc from 4.8.4. It"
+#error "cannot be used with the include files from this version of Qt."
+#error "(The moc has changed too much.)"
+#endif
+
+QT_BEGIN_MOC_NAMESPACE
+static const uint qt_meta_data_KnightsAdaptor[] = {
+
+ // content:
+       6,       // revision
+       0,       // classname
+       2,   14, // classinfo
+       8,   18, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       1,       // signalCount
+
+ // classinfo: key, value
+      31,   15,
+     462,   47,
+
+ // signals: signature, parameters, type, tag, flags
+     488,  483,  482,  482, 0x05,
+
+ // slots: signature, parameters, type, tag, flags
+     506,  482,  482,  482, 0x0a,
+     514,  482,  482,  482, 0x0a,
+     524,  483,  482,  482, 0x0a,
+     543,  482,  482,  482, 0x0a,
+     555,  482,  482,  482, 0x0a,
+     567,  482,  482,  482, 0x0a,
+     580,  482,  482,  482, 0x0a,
+
+       0        // eod
+};
+
+static const char qt_meta_stringdata_KnightsAdaptor[] = {
+    "KnightsAdaptor\0org.kde.Knights\0"
+    "D-Bus Interface\0"
+    "  <interface name=\"org.kde.Knights\">\n    <signal name=\"moveMade\">"
+    "\n      <arg direction=\"out\" type=\"s\" name=\"move\"/>\n    </signa"
+    "l>\n    <method name=\"movePiece\">\n      <arg direction=\"in\" type="
+    "\"s\" name=\"move\"/>\n    </method>\n    <method name=\"pauseGame\"/>"
+    "\n    <method name=\"resumeGame\"/>\n    <method name=\"undo\"/>\n    "
+    "<method name=\"offerDraw\"/>\n    <method name=\"adjourn\"/>\n    <met"
+    "hod name=\"abort\"/>\n  </interface>\n\0"
+    "D-Bus Introspection\0\0move\0moveMade(QString)\0"
+    "abort()\0adjourn()\0movePiece(QString)\0"
+    "offerDraw()\0pauseGame()\0resumeGame()\0"
+    "undo()\0"
+};
+
+void KnightsAdaptor::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
+{
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        Q_ASSERT(staticMetaObject.cast(_o));
+        KnightsAdaptor *_t = static_cast<KnightsAdaptor *>(_o);
+        switch (_id) {
+        case 0: _t->moveMade((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 1: _t->abort(); break;
+        case 2: _t->adjourn(); break;
+        case 3: _t->movePiece((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 4: _t->offerDraw(); break;
+        case 5: _t->pauseGame(); break;
+        case 6: _t->resumeGame(); break;
+        case 7: _t->undo(); break;
+        default: ;
+        }
+    }
+}
+
+const QMetaObjectExtraData KnightsAdaptor::staticMetaObjectExtraData = {
+    0,  qt_static_metacall 
+};
+
+const QMetaObject KnightsAdaptor::staticMetaObject = {
+    { &QDBusAbstractAdaptor::staticMetaObject, qt_meta_stringdata_KnightsAdaptor,
+      qt_meta_data_KnightsAdaptor, &staticMetaObjectExtraData }
+};
+
+#ifdef Q_NO_DATA_RELOCATION
+const QMetaObject &KnightsAdaptor::getStaticMetaObject() { return staticMetaObject; }
+#endif //Q_NO_DATA_RELOCATION
+
+const QMetaObject *KnightsAdaptor::metaObject() const
+{
+    return QObject::d_ptr->metaObject ? QObject::d_ptr->metaObject : &staticMetaObject;
+}
+
+void *KnightsAdaptor::qt_metacast(const char *_clname)
+{
+    if (!_clname) return 0;
+    if (!strcmp(_clname, qt_meta_stringdata_KnightsAdaptor))
+        return static_cast<void*>(const_cast< KnightsAdaptor*>(this));
+    return QDBusAbstractAdaptor::qt_metacast(_clname);
+}
+
+int KnightsAdaptor::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
+{
+    _id = QDBusAbstractAdaptor::qt_metacall(_c, _id, _a);
+    if (_id < 0)
+        return _id;
+    if (_c == QMetaObject::InvokeMetaMethod) {
+        if (_id < 8)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 8;
+    }
+    return _id;
+}
+
+// SIGNAL 0
+void KnightsAdaptor::moveMade(const QString & _t1)
+{
+    void *_a[] = { 0, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 0, _a);
+}
+QT_END_MOC_NAMESPACE

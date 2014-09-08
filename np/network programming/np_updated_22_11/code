@@ -1,0 +1,76 @@
+
+//		if (mpd->help[2] == INVALID) {
+//			printf("You have used this help !\n");
+//			return 0;
+//		} else {
+//
+//			int i;
+//			int random[4];
+//			int ans = mpd->ques.ans - 1;
+//			Question question = mpd->ques;
+//			if (mpd->selectionStatus[0]
+//					== mpd->selectionStatus[1]||mpd->selectionStatus[1]==AVAILABLE) {
+//				random[ans] = randomNumber(20) + 50; //ti le cua cau tra loi dung luon tren 50%
+//			int remain = 100 - random[ans];
+//			switch(ans) {
+//				case 0 :
+//				random[1] = randomNumber(remain / 3);
+//				random[2] = remain - random[0] + randomNumber(remain * 11 / 15);
+//				random[3] = remain - (random[0] + random[1]);
+//				break;
+//				case 1:
+//				random[0] = randomNumber(remain / 3);
+//				random[2] = remain - random[0] + randomNumber(remain * 11 / 15);
+//				random[3] = remain - (random[0] + random[1]);
+//				break;
+//				case 2:
+//				random[0] = randomNumber(remain / 3);
+//				random[1] = remain - random[0] + randomNumber(remain * 11 / 15);
+//				random[3] = remain - (random[0] + random[1]);
+//				case 3:
+//				random[0] = randomNumber(remain / 3);
+//				random[1] = remain - random[0] + randomNumber(remain * 11 / 15);
+//				random[2] = remain - (random[0] + random[1]);
+//				break;
+//			}
+//			printf(">>>Ask The Expert<<<\n");
+//			printf("A.%-25s : %d%%\nB.%-25s : %d%%\n", question.answerList[0],random[0], question.answerList[1],random[1]);
+//			printf("C.%-25s : %d%%\nD.%-25s : %d%%\n", question.answerList[2],random[2], question.answerList[3],random[3]);
+//
+//		} else {
+//			int random[2];
+//			char c;
+//			random[0]= randomNumber(25) + 50;
+//			random[1]= 100-random[0];
+//			for(i=0;i<4;i++) {
+//				if(mpd->selectionStatus[i]==AVAILABLE) {
+//					switch(i) {
+//						case 0:
+//						c='A';
+//						break;
+//						case 1:
+//						c='B';
+//						break;
+//						case 2:
+//						c='C';
+//						break;
+//						case 3:
+//						c='D';
+//						break;
+//					}
+//
+//					if(i==ans) {
+//						printf("%c.%-25s : %d%%\n",c,mpd->ques.answerList[i],random[0]);
+//					}
+//					else {
+//						printf("%c.%-25s : %d%%\n",c,mpd->ques.answerList[i],random[1]);
+//					}
+//
+//				}
+//			}
+//		}
+//			return 1;
+//
+//		}
+//
+//	

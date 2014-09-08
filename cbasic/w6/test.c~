@@ -1,0 +1,12 @@
+#include<stdio.h>
+#define NotFound {-1}
+
+typedef int ElementType;
+int BinarySearch(ElementType A[], ElementType X, int N)
+{
+  int Low, Mid, High;
+  Low = 0;
+  High = N-1;
+  while(Low <= High)
+
+}

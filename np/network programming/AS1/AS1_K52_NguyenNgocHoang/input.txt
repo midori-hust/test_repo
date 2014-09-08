@@ -1,0 +1,20 @@
+Shannon-Fano coding was invented by Claude Shannon (often regarded as the father of information
+theory) and Robert Fano in 1949. It is a very good compression method, but since David Huffman later
+improved the method (see 2.3), the original Shannon-Fano coding method is almost never used.
+However, it is presented here for completeness.
+The Shannon-Fano coding method replaces each symbol with an alternate binary representation, whose
+length is determined by the probability of the particular symbol. Common symbols are represented by
+few bits, while uncommon symbols are represented by many bits.
+The Shannon-Fano algorithm produces a very compact representation of each symbol that is almost
+optimal (it approaches optimal when the number of different symbols approaches infinite). However, it
+does not deal with the ordering or repetition of symbols or sequences of symbols.
+I will not go into all the practical details about Shannon-Fano coding, but the basic principle is to find
+new binary representations for each symbol so that common symbols use few bits per symbol, while
+uncommon symbols use more bits per symbol.
+The solution to this problem is, in short, to make a histogram of the uncompressed data stream in order
+to find how common each symbol is. A binary tree is then created by recursively splitting this histogram
+in halves, where each half in each recursion should weigh as much as the other half (the weight is
+N
+k=1 symbolcountk , where N is the number of symbols in the branch and symbolcountk is the
+number of occurrences of symbol k).
+

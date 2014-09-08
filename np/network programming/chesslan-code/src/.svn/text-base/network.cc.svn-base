@@ -1,0 +1,15 @@
+
+// $Revision$
+
+#include "config.h"
+#include "network.hh"
+
+
+network::network()
+{  
+	
+}
+
+network::~network()
+{  
+}

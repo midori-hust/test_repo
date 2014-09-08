@@ -1,0 +1,7 @@
+1  NgocAnh		as1	cntt
+2  TuanAnh		as2	cntt
+3  XuanCuong		is2	cntt
+4  NgocCuong		is1	cntt
+5  TruongGiang		is1	cntt
+6  NgocSon		is3	cntt
+7  ABCDEF		is	cntt

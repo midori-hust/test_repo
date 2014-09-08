@@ -1,0 +1,13 @@
+/* $Revision$
+*/
+#ifndef _ERROR_HH
+#  define _ERROR_HH
+
+#include <iostream>
+using namespace std;
+
+void debug_msg (const char *msg)
+{
+	cerr << "ERROR: " << msg << endl;
+}
+#endif

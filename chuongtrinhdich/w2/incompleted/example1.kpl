@@ -1,0 +1,4 @@
+Function ADD(a:integer):integer;
+Begin
+	ADD := 10 + a;
+End;

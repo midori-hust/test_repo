@@ -1,0 +1,109 @@
+#include "linklist.h"
+
+int main() {
+  int option;
+  int id;
+  char name[MAXLENGTH];
+  float grade;
+  node *temp;
+  FILE *f1, *f2;
+  char filename1[] = "DSSV.dat";
+  char filename2[] = "SAPXEP.dat";
+
+  if((f1 = fopen(filename1, "w+")) == NULL) {
+    printf("Cannot open %s\n", filename1);
+    return 1;
+  }
+
+  if((f2 = fopen(filename2, "w+")) == NULL) {
+    printf("Cannot open %s\n", filename2);
+    return 1;
+  }
+
+  while(1) {
+    option = menu();
+    switch(option) {
+
+    case 1:
+      printf("You choose option #%d\n", option);
+      while(1) {
+	printf("Enter the information of student:\n");
+	printf("Student ID: ");
+	while(scanf("%d", &id) != 1) {
+	  printf("Wrong input! Please retry\n");
+	while(getchar() != '\n');
+	}
+	while(getchar() != '\n');
+	if(id == 0) break;
+	printf("Student name: ");
+	gets(name);
+	while(1) {
+	  printf("Student grade: ");
+	  while(scanf("%f", &grade) != 1) {
+	    printf("Wrong input! Please retry\n");
+	    while(getchar() != '\n');
+	  }
+	  while(getchar() != '\n');
+	  if(grade<=10 && grade>=0) break;
+	  printf("Wrong input! Please retry.\n");
+	}
+	printf("%d %s %f\n", id, name, grade);
+	insertTop(id, name, grade);
+	printf("Done.\n");
+      }
+      
+      for(temp = root; temp != NULL; temp = temp->next) {
+       	fwrite(&temp->element, sizeof(elementType), 1, f1);
+      }
+      pritnf("Save to file: done\n");
+      continue;
+
+    case 2:
+      printf("You choose option #%d\n", option);
+      printf("Enter the student id which you want to search:\n");
+      while(scanf("%d", &id) != 1) {
+	printf("Wrong input! Please retry\n");
+	while(getchar() != '\n');
+      }
+      temp = searchNode(id);
+      if(temp != NULL) {
+	printf("The student information:\n");
+	printf("Student ID: %d\nStudent name: %s\nStudent grade: %f\n\n", temp->element.id, temp->element.name, temp->element.grade);
+      }
+      continue;
+
+    case 3:
+      printf("You choose option #%d\n", option);
+      printf("Enter the student id which you want to delete:\n");
+      while(scanf("%d", &id) != 1) {
+	printf("Wrong input! Please retry\n");
+	while(getchar() != '\n');
+      }
+      deleteNode(id);
+      printf("Done.\n");
+      continue;
+
+    case 4:
+      printf("You choose option #%d\n", option);
+      displayList();
+      continue;
+
+    case 5:
+      printf("You choose option #%d\n", option);
+      printf("Free list...\n");
+      freeList();
+      printf("Done.\n");
+      fclose(f1);
+      fclose(f2);
+      printf("Program exit...\n");
+      break;
+
+    default:
+      printf("You choose wrong option, please retry\n");
+      continue;
+    }
+    break;
+  }
+  printf("CU again!\n");
+  return 0;
+}
